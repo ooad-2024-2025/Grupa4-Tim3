@@ -1,16 +1,7 @@
 
 # MediPLan Klinika
 
-
-<!-- LOGO PROJEKTA  -->
-<br />
-<div align="center">
-  
-    ![logo](https://github.com/user-attachments/assets/77c6b260-7e12-4621-8125-55c478ce8c2d)
-
-  
-
-</div>
+![logo](https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e)
 
 <!-- O ROJEKTU -->
 ## O projektu
