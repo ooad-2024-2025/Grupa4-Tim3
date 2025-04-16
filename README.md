@@ -5,9 +5,10 @@
 <!-- LOGO PROJEKTA  -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="desktop/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  
+    ![logo](https://github.com/user-attachments/assets/77c6b260-7e12-4621-8125-55c478ce8c2d)
+
+  
 
 </div>
 
@@ -37,26 +38,14 @@ Prikaz statistika o radu klinike
   <ol>
     <li><a href="#o-projektu">O projektu</a></li>
     <li>
-      <a href="#tehnologije">Tehnologije</a>
+      <a href="#platforme/i/alati">Platforme i alati</a>
     </li>
-    <li>
-      <a href="#pokretanje-projekta">Pokretanje projekta</a>
-      <ul>
-        <li><a href="#zahtjevi">Zahtjevi</a></li>
-        <li><a href="#instalacija">Instalacija</a></li>
-      </ul>
-    </li>
-    <li><a href="#korištenje">Korištenje</a></li>
-    <li><a href="#plan-razvoja">Plan razvoja</a></li>
-    <li><a href="#doprinos">Doprinos</a></li>
-    <li><a href="#licenca">Licenca</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-    <li><a href="#zahvale">Zahvale</a></li>
+    
   </ol>
 </details>
 
 ---
-
+## Platforme i alati
 Projekt je izgrađen korištenjem:
 - C# (.NET)
 
