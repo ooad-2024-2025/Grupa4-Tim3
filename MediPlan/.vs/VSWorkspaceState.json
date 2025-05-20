@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Data",
+    "\\Models"
   ],
+  "SelectedNode": "\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }
