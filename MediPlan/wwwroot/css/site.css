@@ -1,5 +1,6 @@
 /* ======== OSNOVNE POSTAVKE ======== */
 html {
+
     font-size: 14px;
     position: relative;
     min-height: 100%;
@@ -31,7 +32,7 @@ body {
     position: relative;
     height: 100vh; /* zauzima cijeli ekran */
     width: 100%;
-    margin: 0;
+    margin-top: 0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -73,6 +74,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
     background-color: #00465F; /* tamno plava */
     color: white;
 }
