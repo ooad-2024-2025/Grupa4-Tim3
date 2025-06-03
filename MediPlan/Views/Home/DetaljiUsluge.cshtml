@@ -1,7 +1,7 @@
-﻿@model MediPlan.Models.Usluga
+﻿@model MediPlan.Models.DetaljiUslugeViewModel
 
 @{
-    ViewData["Title"] = Model.Naziv;
+    ViewData["Title"] = Model.Usluga.Naziv;
 }
 
 <style>
@@ -29,16 +29,48 @@
             background-color: #002244;
             color: white;
         }
+
+    .doktor-kartica {
+        background-color: #f5f8fa;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .doktor-ime {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #003366;
+    }
 </style>
 
 <div class="container py-5">
-    <h2 class="naslov-usluga">@Model.Naziv</h2>
+    <h2 class="naslov-usluga">@Model.Usluga.Naziv</h2>
     <div class="row align-items-center">
-        <div class="col-md-4 text-center">
-            <img src="~/@Model.Ikona" alt="@Model.Naziv" class="img-fluid detalji-ikonica" />
+        <div class="col-md-4 d-flex justify-content-center">
+            <img src="~/@Model.Usluga.Ikona" alt="@Model.Usluga.Naziv" class="img-fluid detalji-ikonica" style="margin-right: 40px;" />
         </div>
         <div class="col-md-8">
-            <p style="font-size:1.2rem;">@Model.Opis</p>
+            <p style="font-size:1.2rem;">@Model.Usluga.Opis</p>
+
+            <h4 class="mt-4" style="color:#003366;">Doktori za ovu uslugu:</h4>
+            @if (Model.Doktori != null && Model.Doktori.Count > 0)
+            {
+                foreach (var doktor in Model.Doktori)
+                {
+                    <div class="doktor-kartica">
+                        <div class="doktor-ime">@doktor.Ime @doktor.Prezime</div>
+                        <div>Email: @doktor.Email</div>
+                        <div>Odjel: @doktor.Odjel</div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Nema dostupnih doktora za ovu uslugu.</p>
+            }
+
             <a href="@Url.Action("Usluge", "Home")" class="btn btn-nazad mt-3">Nazad na usluge</a>
         </div>
     </div>
