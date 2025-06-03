@@ -8,11 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Termin\Index.cshtml" />
+    <Content Remove="Views\Termin\Zakazi.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Termin\Index.cshtml" />
+    <None Include="Views\Termin\Zakazi.cshtml" />
   </ItemGroup>
 
 </Project>

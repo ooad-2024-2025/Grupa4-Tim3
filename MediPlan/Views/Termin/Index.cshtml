@@ -1,0 +1,29 @@
+﻿@model List<MediPlan.Models.Termin>
+
+<h2>Zakazani termini</h2>
+
+<a class="btn btn-primary" asp-action="Zakazi">+ Novi termin</a>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Vrijeme početka</th>
+            <th>Vrijeme kraja</th>
+            <th>Doktor ID</th>
+            <th>Pacijent ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var termin in Model)
+        {
+            <tr>
+                <td>@termin.DatumIVrijemePocetak.Date.ToShortDateString()</td>
+                <td>@termin.DatumIVrijemePocetak.ToShortTimeString()</td>
+                <td>@termin.DatumVrijemeKraj.ToShortTimeString()</td>
+                <td>@termin.DoktorId</td>
+                <td>@termin.PacijentId</td>
+            </tr>
+        }
+    </tbody>
+</table>
