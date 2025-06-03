@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Data",
+    "\\Data\\Migrations",
     "\\Models"
   ],
-  "SelectedNode": "\\appsettings.json",
+  "SelectedNode": "\\MediPlan.sln",
   "PreviewInSolutionExplorer": false
 }
