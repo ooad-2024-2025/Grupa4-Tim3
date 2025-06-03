@@ -1,22 +1,123 @@
+/* ======== OSNOVNE POSTAVKE ======== */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+/* Fokus efekti */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* ======== HERO SEKCIJA (FULLSCREEN) ======== */
+.hero-section {
+    background: url('/images/mediplan.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    height: 100vh; /* zauzima cijeli ekran */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.overlay {
+    background-color: rgba(0, 70, 95, 0.6); /* providna tamna nijansa */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .hero-content .brand {
+        color: #66d0f4;
+    }
+
+/* ======== NAVIGACIJA ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00465F; /* tamno plava */
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+        height: 100px;
+        margin-right: 10px;
+    }
+
+    .logo span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+        .nav-links li a:hover {
+            color: #66d0f4;
+        }
+
+.user-profile a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .user-profile a:hover {
+        color: #66d0f4;
+    }
