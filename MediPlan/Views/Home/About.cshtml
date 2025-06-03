@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "O nama";
+}
+
+<style>
+    .about-section {
+        padding: 80px 0; /* malo više prostora */
+        background-color: #f8f9fa;
+    }
+
+    .about-image {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        max-height: 450px; /* povećana visina slike */
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .about-title {
+        font-size: 3rem; /* veći naslov */
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: #004080;
+        letter-spacing: 1px;
+    }
+
+    .about-text {
+        font-size: 1.3rem; /* veći tekst */
+        line-height: 1.8;
+        color: #333;
+    }
+
+    /* Tamno plava pozadina za misiju i viziju, sa paddingom i zaobljenim uglovima */
+    .mission-vision {
+        background-color: #004080; /* tamno plava kao naslov */
+        color: #fff;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 64, 128, 0.3);
+        margin-bottom: 50px;
+    }
+
+        .mission-vision h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .mission-vision p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Stil ikona unutar misije i vizije */
+        .mission-vision i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+            vertical-align: middle;
+            color: #ffc107; /* zlatna boja za kontrast */
+        }
+
+    /* Cardovi sa ikonama */
+    .card {
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 1.05rem;
+        color: #555;
+    }
+</style>
+
+<div class="container about-section">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="~/images/hospital.jpg" alt="MediPlan bolnica" class="img-fluid about-image" />
+        </div>
+        <div class="col-md-6">
+            <h2 class="about-title">O NAMA</h2>
+            <p class="about-text">
+                MediPlan je moderna bolnica posvećena pružanju kvalitetne i pouzdane zdravstvene njege.
+            </p>
+            <p class="about-text">
+                Naš stručni tim koristi savremenu opremu i metode kako bi svakom pacijentu omogućio sigurno,
+                efikasno i personalizirano liječenje.
+            </p>
+            <p class="about-text">
+                Bez obzira da li dolazite na pregled, dijagnostiku ili terapiju – u MediPlanu ste u sigurnim rukama.
+                Vaše zdravlje je naš prioritet!
+            </p>
+        </div>
+
+        <!-- Misija i Vizija -->
+        <div class="row mission-vision">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h4><i class="bi bi-bullseye"></i> Naša misija</h4>
+                <p>
+                    Naša misija je pružiti pacijentima vrhunsku zdravstvenu zaštitu uz human pristup, stručnost i dostupnost,
+                    vodeći se najvišim etičkim i profesionalnim standardima.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h4><i class="bi bi-eye"></i> Naša vizija</h4>
+                <p>
+                    Težimo da postanemo vodeća zdravstvena ustanova u regiji, prepoznatljiva po kvaliteti usluge,
+                    inovacijama i povjerenju pacijenata.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sekcije s ikonama -->
+        <div class="row text-center mb-5">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-primary fs-1"><i class="bi bi-heart-pulse"></i></div>
+                        <h5 class="card-title fw-bold">Vrijednosti</h5>
+                        <p class="card-text">
+                            U MediPlanu njegujemo kulturu povjerenja, odgovornosti i brige za pacijente.
+                            Empatija i stručnost su temelj našeg rada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-primary fs-1"><i class="bi bi-shield-check"></i></div>
+                        <h5 class="card-title fw-bold">Kvaliteta</h5>
+                        <p class="card-text">
+                            Stalno unaprjeđujemo zdravstvene standarde kako bismo osigurali sigurnost,
+                            preciznost i zadovoljstvo pacijenata.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-primary fs-1"><i class="bi bi-people"></i></div>
+                        <h5 class="card-title fw-bold">Usluga</h5>
+                        <p class="card-text">
+                            Pacijent je u središtu naše pažnje. Posvećeni smo brzoj, efikasnoj i ljubaznoj usluzi na svakom koraku.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -40,7 +40,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     <img src="~/images/logo.jpg" alt="MediPlan Logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,23 +48,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                        <li class="nav-item @(currentController == "Home" ? "active-tab" : "")">
+                        <li class="nav-item @(currentAction == "Index" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Index">HOME</a>
                         </li>
-                        <li class="nav-item @(currentController == "About" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="About" asp-action="Index">O NAMA</a>
+                        <li class="nav-item @(currentAction == "About" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">O NAMA</a>
                         </li>
-                        <li class="nav-item @(currentController == "Usluge" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Usluge" asp-action="Index">USLUGE</a>
+                        <li class="nav-item @(currentAction == "Usluge" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Usluge">USLUGE</a>
                         </li>
-                        <li class="nav-item @(currentController == "Tim" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Tim" asp-action="Index">NAŠ TIM</a>
+                        <li class="nav-item @(currentAction == "Tim" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Tim">NAŠ TIM</a>
                         </li>
-                        <li class="nav-item @(currentController == "Kontakt" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Kontakt" asp-action="Index">KONTAKT</a>
+                        <li class="nav-item @(currentAction == "Kontakt" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Kontakt">KONTAKT</a>
                         </li>
-                        <li class="nav-item @(currentController == "Termin" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Termin" asp-action="Zakazi">ZAKAŽITE TERMIN</a>
+                        <li class="nav-item @(currentAction == "Zakazi" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Zakazi">ZAKAŽITE TERMIN</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">

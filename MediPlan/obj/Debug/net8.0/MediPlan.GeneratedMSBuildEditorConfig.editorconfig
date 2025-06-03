@@ -24,12 +24,24 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Home/DetaljiUsluge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhbGppVXNsdWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Home/Usluge.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2x1Z2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WIN10/Documents/GitHub/Grupa4-Tim3/MediPlan/Views/Shared/Error.cshtml]
