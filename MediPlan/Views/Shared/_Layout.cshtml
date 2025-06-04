@@ -57,12 +57,14 @@
                         <li class="nav-item @(currentAction == "Usluge" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Usluge">USLUGE</a>
                         </li>
-                        <li class="nav-item @(currentAction == "Tim" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Home" asp-action="Tim">NAŠ TIM</a>
+                        <li class="nav-item @(currentAction == "NasTim" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="NasTim">NAŠ TIM</a>
                         </li>
+
                         <li class="nav-item @(currentAction == "Kontakt" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Kontakt">KONTAKT</a>
                         </li>
+
                         <li class="nav-item @(currentAction == "Zakazi" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Zakazi">ZAKAŽITE TERMIN</a>
                         </li>
