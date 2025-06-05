@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MediPlan.Controllers
 {
     public class TerminController : Controller
     {
-        // Pomoćna klasa za podatke
+        // Pomoćna klasa za podatke s validacijom
         public class TerminModel
         {
+            [Required(ErrorMessage = "Morate odabrati doktora.")]
             public string Doktor { get; set; }
-            public DateTime Datum { get; set; }
+
+            [Required(ErrorMessage = "Morate odabrati datum.")]
+            public DateTime? Datum { get; set; }
         }
 
         // GET metoda za prikaz forme
@@ -22,18 +25,17 @@ namespace MediPlan.Controllers
 
         // POST metoda za obradu forme
         [HttpPost]
-        public IActionResult Zakazi(string doktor, DateTime datum)
+        public IActionResult Zakazi(TerminModel model)
         {
-            if (string.IsNullOrEmpty(doktor) || datum == default)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Svi podaci su obavezni.");
-                return View();
+                return View(model);
             }
 
             // Ovdje bi išla logika za spremanje u bazu podataka
-            // npr. dbContext.Termini.Add(new Termin { Doktor = doktor, Datum = datum });
+            // npr. dbContext.Termini.Add(new Termin { Doktor = model.Doktor, Datum = model.Datum.Value });
 
-            TempData["Poruka"] = $"Uspješno ste zakazali termin kod doktora {doktor} za {datum:dd.MM.yyyy}.";
+            TempData["Poruka"] = $"Uspješno ste zakazali termin kod doktora {model.Doktor} za {model.Datum:dd.MM.yyyy}.";
             return RedirectToAction("Potvrda");
         }
 
