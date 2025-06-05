@@ -121,27 +121,28 @@ namespace MediPlan.Controllers
         public IActionResult Kontakt()
         {
             var lokacije = new List<LokacijaInfo>
-    {
-        new LokacijaInfo
-        {
-            Grad = "Grbavica",
-            Adresa = " Kemala Kapetanovića 3,",
-            Telefon = "+387 33 123 456",
-            Email = "info@mediplan.ba",
-            SlikaPutanja = "images/lokacija1.jpg"
-        },
-        new LokacijaInfo
-        {
-            Grad = "Ilidža",
-            Adresa = "Butmirska Cesta 9",
-            Telefon = "+387 36 654 321",
-            Email = "info@mediplan.ba",
-            SlikaPutanja = "images/butmirska.jpg"
-        }
-    };
+            {
+                new LokacijaInfo
+                {
+                    Grad = "Sarajevo",
+                    Adresa = "Zmaja od Bosne 12",
+                    Telefon = "+387 33 123 456",
+                    Email = "info@mediplan.ba",
+                    Slika = "images/grbavica.jpg"
+                },
+                new LokacijaInfo
+                {
+                    Grad = "Ilidža",
+                    Adresa = "Butmirska Cesta 9",
+                    Telefon = "+387 36 654 321",
+                    Email = "info@mediplan.ba",
+                    Slika = "images/butmir.jpg"
+                }
+            };
 
-            return View(lokacije); // moraš onda promijeniti i View
+            return View(lokacije);
         }
+
 
 
         public IActionResult MojProfil()
