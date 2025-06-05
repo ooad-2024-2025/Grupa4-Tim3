@@ -7,16 +7,32 @@
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\lokacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\lokacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\termin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\termin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\kontaktviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\kontaktviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\home\\kontakt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\kontakt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\ocjena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\ocjena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\home\\nastim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\nastim.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\clantima.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\detaljiusluge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\home\\kontakt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\kontakt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\historijagenerisanihnalaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\historijagenerisanihnalaza.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\views\\home\\usluge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -61,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\usluga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\usluga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\uloga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\vrstamedicinskihusluga.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\recenzija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\recenzija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -95,16 +95,8 @@
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\ocjena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\ocjena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\medicinskeusluge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\medicinskeusluge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\models\\lokacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:models\\lokacija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\harun\\desktop\\ooadg4t3\\mediplan\\data\\migrations\\20250520145101_testnamigracija.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,51 +110,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAkwJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T10:54:16.86Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{26341fe2-71dd-46fd-bb1b-2e51a92a0d64}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClanTima.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ClanTima.cs",
-              "RelativeDocumentMoniker": "Models\\ClanTima.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ClanTima.cs",
-              "RelativeToolTip": "Models\\ClanTima.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T19:43:06.522Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DetaljiUslugeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\DetaljiUslugeViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\DetaljiUslugeViewModel.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\DetaljiUslugeViewModel.cs",
-              "RelativeToolTip": "Models\\DetaljiUslugeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T14:03:27.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "DocumentIndex": 2,
+              "Title": "Termin.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Termin.cs",
+              "RelativeDocumentMoniker": "Models\\Termin.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Termin.cs",
+              "RelativeToolTip": "Models\\Termin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:36:56.68Z"
+              "WhenOpened": "2025-06-05T14:14:17.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KontaktViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\KontaktViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\KontaktViewModel.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\KontaktViewModel.cs",
+              "RelativeToolTip": "Models\\KontaktViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T14:02:27.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Kontakt.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Kontakt.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Kontakt.cshtml",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Kontakt.cshtml",
+              "RelativeToolTip": "Views\\Home\\Kontakt.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-04T20:55:37.751Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Lokacija.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Lokacija.cs",
+              "RelativeDocumentMoniker": "Models\\Lokacija.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Lokacija.cs",
+              "RelativeToolTip": "Models\\Lokacija.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T14:35:27.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ocjena.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Ocjena.cs",
+              "RelativeDocumentMoniker": "Models\\Ocjena.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Ocjena.cs",
+              "RelativeToolTip": "Models\\Ocjena.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T14:36:41.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T10:55:40.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "NasTim.cshtml",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\NasTim.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\NasTim.cshtml",
@@ -174,56 +225,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Korisnik.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Korisnik.cs",
-              "RelativeDocumentMoniker": "Models\\Korisnik.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Korisnik.cs",
-              "RelativeToolTip": "Models\\Korisnik.cs",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:23:49.349Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-03T10:55:18.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAwI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T10:54:16.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T14:36:56.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Kontakt.cshtml",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Kontakt.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Kontakt.cshtml",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Kontakt.cshtml",
-              "RelativeToolTip": "Views\\Home\\Kontakt.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T20:55:37.751Z"
+              "Title": "DetaljiUslugeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\DetaljiUslugeViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\DetaljiUslugeViewModel.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\DetaljiUslugeViewModel.cs",
+              "RelativeToolTip": "Models\\DetaljiUslugeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T14:03:27.707Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "ClanTima.cs",
+              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ClanTima.cs",
+              "RelativeDocumentMoniker": "Models\\ClanTima.cs",
+              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\ClanTima.cs",
+              "RelativeToolTip": "Models\\ClanTima.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T19:43:06.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
@@ -235,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "DetaljiUsluge.cshtml",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\DetaljiUsluge.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\DetaljiUsluge.cshtml",
@@ -247,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Odjel.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Odjel.cs",
               "RelativeDocumentMoniker": "Models\\Odjel.cs",
@@ -259,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "HistorijaGenerisanihNalaza.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\HistorijaGenerisanihNalaza.cs",
               "RelativeDocumentMoniker": "Models\\HistorijaGenerisanihNalaza.cs",
@@ -271,19 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-03T10:55:40.233Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Usluge.cshtml",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Home\\Usluge.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Usluge.cshtml",
@@ -295,19 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Uloga.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Uloga.cs",
-              "RelativeDocumentMoniker": "Models\\Uloga.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Uloga.cs",
-              "RelativeToolTip": "Models\\Uloga.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:36:08.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Usluga.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Usluga.cs",
               "RelativeDocumentMoniker": "Models\\Usluga.cs",
@@ -319,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "VrstaMedicinskihUsluga.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\VrstaMedicinskihUsluga.cs",
               "RelativeDocumentMoniker": "Models\\VrstaMedicinskihUsluga.cs",
@@ -331,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
@@ -343,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -352,18 +366,6 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAcwCMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-06-03T10:56:56.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Recenzija.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Recenzija.cs",
-              "RelativeDocumentMoniker": "Models\\Recenzija.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Recenzija.cs",
-              "RelativeToolTip": "Models\\Recenzija.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:33:40.23Z"
             },
             {
               "$type": "Document",
@@ -391,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "20250520145101_TestnaMigracija.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Data\\Migrations\\20250520145101_TestnaMigracija.cs",
               "RelativeDocumentMoniker": "Data\\Migrations\\20250520145101_TestnaMigracija.cs",
@@ -403,19 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Lokacija.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Lokacija.cs",
-              "RelativeDocumentMoniker": "Models\\Lokacija.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Lokacija.cs",
-              "RelativeToolTip": "Models\\Lokacija.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:35:27.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "MedicinskeUsluge.cs",
               "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\MedicinskeUsluge.cs",
               "RelativeDocumentMoniker": "Models\\MedicinskeUsluge.cs",
@@ -424,18 +414,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T14:24:24.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Ocjena.cs",
-              "DocumentMoniker": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Ocjena.cs",
-              "RelativeDocumentMoniker": "Models\\Ocjena.cs",
-              "ToolTip": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\MediPlan\\Models\\Ocjena.cs",
-              "RelativeToolTip": "Models\\Ocjena.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:36:41.168Z"
             },
             {
               "$type": "Document",
@@ -448,10 +426,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-20T14:39:13.798Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
