@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\views\\termin\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\termin\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\controllers\\termincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:controllers\\termincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\views\\home\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\home\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\controllers\\termincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:controllers\\termincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\views\\termin\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|solutionrelative:views\\termin\\zakazi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99D2B79A-1640-4D52-8873-DAA76C0287C5}|MediPlan.csproj|c:\\users\\win10\\documents\\github\\grupa4-tim3\\mediplan\\views\\home\\usluge.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -171,13 +171,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Zakazi.cshtml",
               "DocumentMoniker": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\Views\\Termin\\Zakazi.cshtml",
               "RelativeDocumentMoniker": "Views\\Termin\\Zakazi.cshtml",
-              "ToolTip": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\Views\\Termin\\Zakazi.cshtml*",
-              "RelativeToolTip": "Views\\Termin\\Zakazi.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\Views\\Termin\\Zakazi.cshtml",
+              "RelativeToolTip": "Views\\Termin\\Zakazi.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-05T12:27:15.964Z",
               "EditorCaption": ""
@@ -210,13 +210,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TerminController.cs",
               "DocumentMoniker": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\Controllers\\TerminController.cs",
               "RelativeDocumentMoniker": "Controllers\\TerminController.cs",
               "ToolTip": "C:\\Users\\WIN10\\Documents\\GitHub\\Grupa4-Tim3\\MediPlan\\Controllers\\TerminController.cs",
               "RelativeToolTip": "Controllers\\TerminController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwDEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCUAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T10:39:08.984Z",
               "EditorCaption": ""
