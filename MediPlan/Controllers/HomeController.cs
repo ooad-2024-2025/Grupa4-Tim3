@@ -118,28 +118,29 @@ namespace MediPlan.Controllers
 
             return View(model);
         }
-
-        
-
-        public IActionResult Kontakt() => View();
-       
-        [HttpPost]
-        public IActionResult Kontakt(string ime, string email, string poruka)
+        public IActionResult Kontakt()
         {
-            TempData["Poruka"] = "Hvala na poruci, " + ime + "! Odgovorit ćemo vam uskoro.";
-            return RedirectToAction("Kontakt");
+            var lokacije = new List<LokacijaInfo>
+    {
+        new LokacijaInfo
+        {
+            Grad = "Grbavica",
+            Adresa = " Kemala Kapetanovića 3,",
+            Telefon = "+387 33 123 456",
+            Email = "info@mediplan.ba",
+            SlikaPutanja = "images/lokacija1.jpg"
+        },
+        new LokacijaInfo
+        {
+            Grad = "Ilidža",
+            Adresa = "Butmirska Cesta 9",
+            Telefon = "+387 36 654 321",
+            Email = "info@mediplan.ba",
+            SlikaPutanja = "images/butmirska.jpg"
         }
+    };
 
-
-        public IActionResult Zakazi() => View();
-        public IActionResult NasTim()
-        {
-            var model = _korisnici
-                .Where(k => k.Uloga == Uloga.Doktor)
-                .GroupBy(k => k.Odjel)
-                .ToDictionary(g => g.Key, g => g.ToList());
-
-            return View(model);
+            return View(lokacije); // moraš onda promijeniti i View
         }
 
 
