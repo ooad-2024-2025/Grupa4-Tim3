@@ -143,8 +143,14 @@ namespace MediPlan.Controllers
         }
 
 
+        public IActionResult MojProfil()
+        {
+            return View();
+        }
 
 
         public IActionResult Privacy() => View();
+
+
     }
 }
