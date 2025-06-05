@@ -1,7 +1,11 @@
 
-# MediPlan Klinika
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e" alt="MediPlan Logo" width="200" />
+</p>
 
-![logo](https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e)
+<h1 align="center">MediPlan Klinika</h1>
+
+<p align="center">Sistem za upravljanje radom moderne medicinske klinike</p>
 
 ---
 
@@ -46,7 +50,7 @@ Projekt je izgrađen korištenjem:
 
 ---
 
-## ⚙️ Instalacija
+## perInstalacija
 
 1. Kloniraj repozitorij:
    ```bash
