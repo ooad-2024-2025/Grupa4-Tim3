@@ -149,6 +149,8 @@ namespace MediPlan.Controllers
         }
 
 
+
+
         public IActionResult Privacy() => View();
 
 
