@@ -1,43 +1,57 @@
 
-# MediPLan Klinika
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e" alt="MediPlan Logo" width="200" />
+</p>
 
-![logo](https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e)
+<h1 align="center">MediPlan Klinika</h1>
 
-<!-- O ROJEKTU -->
+<p align="center">Sistem za upravljanje radom moderne medicinske klinike</p>
+
+---
+
+<!-- O PROJEKTU -->
 ## O projektu
 
+**MediPlan** je sistem za upravljanje medicinskom klinikom. Cilj sistema je digitalizacija i optimizacija procesa u radu klinike, uz jednostavno i intuitivno radno okruženje za korisnike – pacijente, medicinsko osoblje i administratore.
 
-**MediPlan** je sistem za upravljanje medicinskom klinikom. Cilj sistema je digitalizacija i optimizacija procesa u radu klinike, uz jednostavno i intuitivno radno okruženje za korisnika, medicinsko osoblje, tako i za pacijente.
+### Funkcionalnosti:
 
-Sistem omogućava:
-
-Registraciju i autentifikaciju korisnika (pacijenti i osoblje)
-Zakazivanje, izmjenu i otkazivanje termina
-Slanje email notifikacija o zakazanim pregledima
-QR kod prijavu pacijenata pri dolasku na pregled
-Upravljanje pacijentima, pregledima i ordinacijama
-Unos i prikaz medicinskih nalaza
-Ostavljanje recenzija i povratnih informacija
-Prikaz statistika o radu klinike
-
+- Registracija i autentifikacija korisnika 
+- Zakazivanje, izmjena i otkazivanje termina
+- Slanje email notifikacija o zakazanim pregledima
+- QR kod prijava pacijenata pri dolasku na pregled
+- Upravljanje pacijentima, pregledima i ordinacijama
+- Unos i prikaz medicinskih nalaza
+- Ostavljanje recenzija i povratnih informacija
+- Prikaz statistika o radu klinike
 
 <p align="right">(<a href="#readme-top">nazad na početak</a>)</p>
 
+---
 
 <details>
-  <summary><strong>Sadržaj</strong></summary>
+  <summary><strong> Sadržaj</strong></summary>
   <ol>
-    <li><a href="#o-projektu">O projektu</a></li>
-    <li>
-      <a href="#platforme/i/alati">Platforme i alati</a>
-    </li>
-    
+    <li><a href="#-o-projektu">O projektu</a></li>
+    <li><a href="#-platforme-i-alati">Platforme i alati</a></li>
+    <li><a href="#-instalacija">Instalacija</a></li>
+    <li><a href="#-korištenje">Korištenje</a></li>
+    <li><a href="#-autori">Autori</a></li>
   </ol>
 </details>
 
 ---
+
 ## Platforme i alati
+
 Projekt je izgrađen korištenjem:
-- C# (.NET)
+
+- `C# (.NET)` – backend logika i Windows Forms UI
 
 ---
+
+## perInstalacija
+
+1. Kloniraj repozitorij:
+   ```bash
+   git clone https://github.com/ooad-2024-2025/Grupa4-Tim3.git

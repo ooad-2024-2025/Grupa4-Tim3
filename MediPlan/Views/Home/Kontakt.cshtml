@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Kontakt";
+}
+
+<style>
+    .kontakt-header {
+        background-color: #084c7e;
+        color: white;
+        padding: 20px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .lokacije-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .lokacija {
+        text-align: center;
+        width: 280px;
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+    }
+
+        .lokacija:hover {
+            transform: translateY(-5px);
+        }
+
+        .lokacija img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lokacija h3 {
+            color: #084c7e;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .lokacija p {
+            color: #084c7e;
+            font-size: 15px;
+            margin: 3px 0;
+        }
+
+    .lokacija-icon {
+        font-size: 26px;
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    .kontakt-wrapper {
+        padding: 40px 20px;
+    }
+</style>
+
+<div class="kontakt-header">
+    <i class="fas fa-phone me-2"></i> KONTAKT
+</div>
+
+<div class="kontakt-wrapper">
+    <div class="lokacije-container">
+        <div class="lokacija">
+            <img src="~/images/grbavica.jpg" alt="Grbavica Lokacija" />
+            <div class="lokacija-icon">📍</div>
+            <h3>Sarajevo</h3>
+            <p>Zmaja od Bosne 12</p>
+            <p>+387 33 123 456</p>
+            <p>info@mediplan.ba</p>
+        </div>
+        <div class="lokacija">
+            <img src="~/images/butmir.jpg" alt="Ilidža Lokacija" />
+            <div class="lokacija-icon">📍</div>
+            <h3>Ilidža</h3>
+            <p>Butmirska Cesta 9</p>
+            <p>+387 36 654 321</p>
+            <p>info@mediplan.ba</p>
+        </div>
+    </div>
+</div>

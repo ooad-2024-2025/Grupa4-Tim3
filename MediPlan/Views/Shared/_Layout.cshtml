@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MediPlan.styles.css" asp-append-version="true" />
+    <!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <style>
         .navbar-nav .nav-item.active-tab {
@@ -57,19 +60,21 @@
                         <li class="nav-item @(currentAction == "Usluge" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Usluge">USLUGE</a>
                         </li>
-                        <li class="nav-item @(currentAction == "Tim" ? "active-tab" : "")">
-                            <a class="nav-link" asp-controller="Home" asp-action="Tim">NAŠ TIM</a>
+                        <li class="nav-item @(currentAction == "NasTim" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="NasTim">NAŠ TIM</a>
                         </li>
+
                         <li class="nav-item @(currentAction == "Kontakt" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Kontakt">KONTAKT</a>
                         </li>
+
                         <li class="nav-item @(currentAction == "Zakazi" ? "active-tab" : "")">
                             <a class="nav-link" asp-controller="Home" asp-action="Zakazi">ZAKAŽITE TERMIN</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item @(currentController == "Account" ? "active-tab" : "")">
-                            <a class="nav-link fw-bold" asp-controller="Account" asp-action="Profil">Moj profil</a>
+                           <a class="nav-link fw-bold @(currentAction == "MojProfil" ? "active-tab" : "")" asp-controller="Home" asp-action="MojProfil">Moj profil</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

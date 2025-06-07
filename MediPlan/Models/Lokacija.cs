@@ -1,6 +1,8 @@
-﻿using System;
-public enum Lokacija
+﻿namespace MediPlan.Models
 {
-    KemalaKapetanovica3,
-    ButmirskaCesta9
+    public enum Lokacija
+    {
+        KemalaKapetanovica3,
+        ButmirskaCesta9
+    }
 }

@@ -1,4 +1,6 @@
 using System;
+using MediPlan.Models;
+
 public class Termin
 {
     public int Id { get; set; }
