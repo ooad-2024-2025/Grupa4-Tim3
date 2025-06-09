@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <Content Remove="Views\Termin\Index.cshtml" />
-    <Content Remove="Views\Termin\Zakazi.cshtml" />
+    <Content Remove="Views\Termin\ZakaziTermin.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <None Include="Views\Termin\Index.cshtml" />
-    <None Include="Views\Termin\Zakazi.cshtml" />
+    <None Include="Views\Termin\ZakaziTermin.cshtml" />
   </ItemGroup>
 
 </Project>

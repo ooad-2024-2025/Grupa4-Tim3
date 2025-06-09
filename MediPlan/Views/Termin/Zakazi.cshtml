@@ -1,27 +1,93 @@
-﻿@model MediPlan.Models.Termin
+﻿@{
+    ViewData["Title"] = "Zakaži termin";
+}
 
-<h2>Zakazi novi termin</h2>
+<!-- Uključi Flatpickr stil -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-<form asp-action="Zakazi" method="post">
-    <div class="form-group">
-        <label asp-for="DatumIVrijemePocetak">Datum i vrijeme početka</label>
-        <input asp-for="DatumIVrijemePocetak" type="datetime-local" class="form-control" />
-    </div>
+<style>
+    .zakazi-wrapper {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+    }
 
-    <div class="form-group">
-        <label asp-for="DatumVrijemeKraj">Datum i vrijeme kraja</label>
-        <input asp-for="DatumVrijemeKraj" type="datetime-local" class="form-control" />
-    </div>
+    .zakazi-wrapper h2 {
+        text-align: center;
+        color: #084c7e;
+        margin-bottom: 25px;
+    }
 
-    <div class="form-group">
-        <label asp-for="DoktorId">Doktor ID</label>
-        <input asp-for="DoktorId" class="form-control" />
-    </div>
+    label {
+        font-weight: bold;
+        color: #084c7e;
+        margin-top: 15px;
+        display: block;
+    }
 
-    <div class="form-group">
-        <label asp-for="PacijentId">Pacijent ID</label>
-        <input asp-for="PacijentId" class="form-control" />
-    </div>
+    select, input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
-    <button type="submit" class="btn btn-success mt-3">Zakaži</button>
-</form>
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #084c7e;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #063b60;
+    }
+</style>
+
+<div class="zakazi-wrapper">
+    <h2>Zakažite termin</h2>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div style="color: red; font-weight: bold; margin-bottom: 15px;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
+    <form method="post" asp-controller="Termin" asp-action="Zakazi">
+        <label for="doktor">Odaberite doktora:</label>
+        <select id="doktor" name="doktor">
+            <option value="Doktor1">Doktor1</option>
+            <option value="Doktor2">Doktor2</option>
+            <option value="Doktor3">Doktor3</option>
+        </select>
+
+        <label for="datum">Odaberite termin:</label>
+        <input type="text" id="datum" name="datum" placeholder="Odaberite datum..." required />
+
+        <button type="submit">Zakaži termin</button>
+    </form>
+</div>
+
+<!-- Uključi Flatpickr skriptu -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#datum", {
+        altInput: true,
+        altFormat: "d.m.Y",
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+</script>
