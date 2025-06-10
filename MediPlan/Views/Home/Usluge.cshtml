@@ -1,0 +1,79 @@
+﻿@model List<MediPlan.Models.Usluga>
+
+@{
+    ViewData["Title"] = "Usluge";
+}
+
+<style>
+    .naslov-usluga {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #003366;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+        .naslov-usluga::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #003366;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+    .usluga-box {
+        background-color: #f8f9fa;
+        padding: 25px 15px;
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        height: 100%;
+        border: 2px solid transparent;
+    }
+
+        .usluga-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-color: #003366;
+        }
+
+        .usluga-box img {
+            max-height: 60px;
+            margin-bottom: 15px;
+            filter: brightness(0.95);
+        }
+
+    .usluga-naslov {
+        font-weight: 600;
+        color: #003366;
+        font-size: 1.1rem;
+    }
+
+    .usluga-link {
+        text-decoration: none;
+        display: block;
+        color: inherit;
+    }
+</style>
+
+<div class="container py-5">
+    <h2 class="naslov-usluga">Medicinske usluge</h2>
+
+    <div class="row g-4 mt-3">
+        @foreach (var usluga in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="@Url.Action("DetaljiUsluge", "Home", new { naziv = usluga.Naziv })" class="usluga-link">
+                    <div class="usluga-box h-100">
+                        <img src="~/@usluga.Ikona" alt="@usluga.Naziv" class="img-fluid" />
+                        <div class="usluga-naslov mt-2">@usluga.Naziv</div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
