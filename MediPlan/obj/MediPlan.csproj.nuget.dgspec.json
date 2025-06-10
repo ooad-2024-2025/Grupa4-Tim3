@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Korisnik\\Desktop\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\Korisnik\\Desktop\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Korisnik\\Desktop\\OOAD\\Grupa4-Tim3\\MediPlan\\obj\\",
+=======
+    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj",
+        "projectName": "MediPlan",
+        "projectPath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MediPlan.csproj",
+        "packagesPath": "C:\\Users\\AmilaB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\obj\\",
+>>>>>>> 578a4c0f35bbec65e1a164b78612921b6137ac07
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\AmilaB\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 578a4c0f35bbec65e1a164b78612921b6137ac07
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,6 +85,8 @@
               "version": "[8.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.15, )"
             }
@@ -90,7 +110,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 578a4c0f35bbec65e1a164b78612921b6137ac07
         }
       }
     }

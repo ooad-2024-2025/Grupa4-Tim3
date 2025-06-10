@@ -17,10 +17,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13fe520199e37064c05df67405fb4c120a98597c")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee4d07e60375bad47867eff74dc7202c851257b3")]
 >>>>>>> b8f026cfe48cdb9364431b826fcaeadaca303023
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d99a7127cfd2de1a8604a221293308e90271c0c")]
+>>>>>>> 578a4c0f35bbec65e1a164b78612921b6137ac07
 [assembly: System.Reflection.AssemblyProductAttribute("MediPlan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MediPlan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
