@@ -1,7 +1,8 @@
-﻿using System;
+﻿
+    using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using MediPlan.Models; 
 public class HistorijaGenerisanihNalaza
 {
     [Key]

@@ -1,42 +1,49 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using MediPlan.Data; // OVO PROMIJENI ako ti se projekat drugačije zove
-using MediPlan.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
 
-
-public class TerminController : Controller
+namespace MediPlan.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public TerminController(ApplicationDbContext context)
+    public class TerminController : Controller
     {
-        _context = context;
-    }
-
-    // Prikaz svih termina
-    public async Task<IActionResult> Index()
-    {
-        var termini = await _context.Termini.ToListAsync();
-        return View(termini);
-    }
-
-    // Forma za zakazivanje termina
-    public IActionResult Zakazi()
-    {
-        return View();
-    }
-
-    // Obrada forme kad korisnik klikne "Zakaži"
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Zakazi(Termin termin)
-    {
-        if (ModelState.IsValid)
+        // Pomoćna klasa za podatke s validacijom
+        public class TerminModel
         {
-            _context.Add(termin);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            [Required(ErrorMessage = "Morate odabrati doktora.")]
+            public string Doktor { get; set; }
+
+            [Required(ErrorMessage = "Morate odabrati datum.")]
+            public DateTime? Datum { get; set; }
         }
-        return View(termin);
+
+        // GET metoda za prikaz forme
+        [HttpGet]
+        public IActionResult Zakazi()
+        {
+            return View();
+        }
+
+        // POST metoda za obradu forme
+        [HttpPost]
+        public IActionResult Zakazi(TerminModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            // Ovdje bi išla logika za spremanje u bazu podataka
+            // npr. dbContext.Termini.Add(new Termin { Doktor = model.Doktor, Datum = model.Datum.Value });
+
+            TempData["Poruka"] = $"Uspješno ste zakazali termin kod doktora {model.Doktor} za {model.Datum:dd.MM.yyyy}.";
+            return RedirectToAction("Potvrda");
+        }
+
+        // GET metoda za potvrdu
+        public IActionResult Potvrda()
+        {
+            ViewBag.Poruka = TempData["Poruka"];
+            return View();
+        }
     }
 }

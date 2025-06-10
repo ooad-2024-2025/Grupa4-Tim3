@@ -1,31 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-MediPlan-0a79048c-e8ea-42b4-ac84-60a698b341a6</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>aspnet-MediPlan-0a79048c-e8ea-42b4-ac84-60a698b341a6</UserSecretsId>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Views\Termin\Index.cshtml" />
-    <Content Remove="Views\Termin\Zakazi.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.15" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.15" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.15">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Termin\Index.cshtml" />
-    <None Include="Views\Termin\Zakazi.cshtml" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.15" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.15">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>
