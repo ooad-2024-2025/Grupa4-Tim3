@@ -77,3 +77,35 @@
         }
     </div>
 </div>
+
+<!-- Link za preuzimanje PDF fajla -->
+<div class="text-center mt-5 mb-5">
+    <a href="~/file/Cjenovnik_MediPlan.pdf" download class="btn btn-outline-primary btn-lg">
+        📄 Preuzmi cjenovnik u PDF formatu
+    </a>
+    <a href="@Url.Action("Index", "Recenzije")" class="btn-recenzije" title="Pogledaj recenzije klinike">
+        💬 Recenzije klinike
+    </a>
+
+    <style>
+        .btn-recenzije {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #003366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-recenzije:hover {
+                background-color: #005599;
+            }
+    </style>
+
+</div>

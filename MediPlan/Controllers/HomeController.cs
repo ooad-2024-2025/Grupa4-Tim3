@@ -151,6 +151,12 @@ namespace MediPlan.Controllers
         }
 
 
+        public IActionResult Cjenovnik()
+        {
+            return View();
+        }
+
+
         public IActionResult ZakaziTermin()
         {
             return View();

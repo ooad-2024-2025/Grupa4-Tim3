@@ -8,6 +8,13 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="wwwroot\files\**" />
+	  <Content Remove="wwwroot\files\**" />
+	  <EmbeddedResource Remove="wwwroot\files\**" />
+	  <None Remove="wwwroot\files\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.15" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.15" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.15" />
@@ -16,6 +23,12 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\NewFolder1\" />
+	  <Folder Include="wwwroot\NewFolder2\" />
+	  <Folder Include="wwwroot\NewFolder\" />
 	</ItemGroup>
 
 </Project>
