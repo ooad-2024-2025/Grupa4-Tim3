@@ -72,9 +72,9 @@
                         @* Link za "Moj profil" prikazati samo ako je korisnik ulogovan *@
                         @if (User.Identity.IsAuthenticated)
                         {
-                                <li class="nav-item @(currentController == "Account" && currentAction == "MojProfil" ? "active-tab" : "")">
-                                    <a class="nav-link fw-bold" asp-controller="Account" asp-action="MojProfil">Moj profil</a>
-                                </li>
+                            <li class="nav-item @(currentController == "Account" && currentAction == "MojProfil" ? "active-tab" : "")">
+                                <a class="nav-link fw-bold" asp-controller="Account" asp-action="Profile">Moj profil</a>
+                            </li>
                         }
                     </ul>
                     <partial name="_LoginPartial" />

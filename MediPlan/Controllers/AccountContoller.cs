@@ -32,8 +32,8 @@ namespace MediPlan.Controllers
             }
 
             // Ako želiš da dobaviš dodatne podatke (npr. claimove, uloge, itd.)
-            var roles = await _userManager.GetRolesAsync(user);
-            ViewBag.Roles = roles;
+            //var roles = await _userManager.GetRolesAsync(user);
+            //ViewBag.Roles = roles;
 
             return View(user);
         }
