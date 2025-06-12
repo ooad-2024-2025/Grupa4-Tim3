@@ -18,17 +18,20 @@ namespace MEDIPLAN.Controllers
 
         public IActionResult Tim()
         {
-            // Uzmi doktore koji imaju ulogu Doktor
+            // Učitaj doktore zajedno sa njihovom MedicinskaUsluga (Include)
             var doktori = _context.Korisnici
+                .Include(k => k.MedicinskaUsluga) // učitaj uslugu
                 .Where(k => k.Uloga == (int)Uloga.Doktor)
                 .ToList();
 
-            // Grupisanje doktora po enumu Odjel
-            var doktoriPoOdjelima = doktori
-                .GroupBy(d => (Odjel)d.Odjel)  // cast int to enum
+            // Grupisanje doktora po nazivu medicinske usluge
+            var doktoriPoUslugama = doktori
+                .Where(d => d.MedicinskaUsluga != null)
+                .GroupBy(d => d.MedicinskaUsluga!.Napomena) // ili neki drugi property usluge
                 .ToDictionary(g => g.Key, g => g.ToList());
 
-            return View(doktoriPoOdjelima);
+            return View(doktoriPoUslugama);
         }
+
     }
 }
