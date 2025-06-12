@@ -53,7 +53,7 @@ namespace MEDIPLAN.Migrations
                     b.ToTable("HistorijaNalaza");
                 });
 
-            modelBuilder.Entity("Korisnik", b =>
+            modelBuilder.Entity("Korisnici", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -130,7 +130,7 @@ namespace MEDIPLAN.Migrations
                     b.ToTable("Termini");
                 });
 
-            modelBuilder.Entity("MEDIPLAN.Models.Usluga", b =>
+            modelBuilder.Entity("MEDIPLAN.Models.Usluge", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -181,7 +181,7 @@ namespace MEDIPLAN.Migrations
                     b.ToTable("MedicinskeUsluge");
                 });
 
-            modelBuilder.Entity("Recenzija", b =>
+            modelBuilder.Entity("Recenzije", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -192,7 +192,7 @@ namespace MEDIPLAN.Migrations
                     b.Property<DateTime>("Datum")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImeKorisnika")
+                    b.Property<string>("ImeKorisnicia")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -19,10 +19,10 @@ namespace MEDIPLAN.Controllers
         {
             // Uzmi doktore iz baze
             var doktori = _context.Korisnici
-                .Where(k => k.Uloga == Uloga.Doktor)
+                .Where(k => k.Uloga == (int)Uloga.Doktor)
                 .ToList();
 
-            // Grupisanje doktora po odjelu u Dictionary<Odjel, List<Korisnik>>
+            // Grupisanje doktora po odjelu u Dictionary<Odjel, List<Korisnici>>
             var doktoriPoOdjelima = doktori
                 .GroupBy(d => d.Odjel)
                 .ToDictionary(g => g.Key, g => g.ToList());

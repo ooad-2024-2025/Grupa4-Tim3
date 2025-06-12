@@ -7,7 +7,7 @@ public partial class Recenzije
 {
     public int Id { get; set; }
 
-    public string ImeKorisnika { get; set; } = null!;
+    public string ImeKorisnicia { get; set; } = null!;
 
     public string Tekst { get; set; } = null!;
 

@@ -23,20 +23,20 @@ namespace MEDIPLAN.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var korisnikIdString = HttpContext.Session.GetString("KorisnikId");
-            if (string.IsNullOrEmpty(korisnikIdString) || !int.TryParse(korisnikIdString, out int korisnikId))
+            var KorisniciIdString = HttpContext.Session.GetString("KorisniciId");
+            if (string.IsNullOrEmpty(KorisniciIdString) || !int.TryParse(KorisniciIdString, out int KorisniciId))
             {
                 return RedirectToAction("Login", "Account");
             }
 
-            var korisnik = await _context.Korisnici.FindAsync(korisnikId);
-            if (korisnik == null)
+            var Korisnici = await _context.Korisnici.FindAsync(KorisniciId);
+            if (Korisnici == null)
             {
                 return RedirectToAction("Login", "Account");
             }
 
             var sviTermini = await _context.Termini
-                .Where(t => t.PacijentId == korisnikId)
+                .Where(t => t.PacijentId == KorisniciId)
                 .ToListAsync();
 
             var doktorIds = sviTermini.Select(t => t.DoktorId).Distinct().ToList();
@@ -51,7 +51,7 @@ namespace MEDIPLAN.Controllers
                 .Where(t => t.DatumVrijemePocetak > danas)
                 .Select(t => new TerminViewModel
                 {
-                    TerminId = t.Id,
+                    Terminid = t.Id,
                     ImeDoktora = doktori.ContainsKey(t.DoktorId)
                         ? doktori[t.DoktorId].Ime + " " + doktori[t.DoktorId].Prezime
                         : "Nepoznat",
@@ -63,7 +63,7 @@ namespace MEDIPLAN.Controllers
                 .Where(t => t.DatumVrijemePocetak <= danas)
                 .Select(t => new TerminViewModel
                 {
-                    TerminId = t.Id,
+                    Terminid = t.Id,
                     ImeDoktora = doktori.ContainsKey(t.DoktorId)
                         ? doktori[t.DoktorId].Ime + " " + doktori[t.DoktorId].Prezime
                         : "Nepoznat",
@@ -73,9 +73,9 @@ namespace MEDIPLAN.Controllers
 
             var model = new ProfilViewModel
             {
-                Ime = korisnik.Ime,
-                Prezime = korisnik.Prezime,
-                DatumRodjenja = korisnik.DatumRodjenja,
+                Ime = Korisnici.Ime,
+                Prezime = Korisnici.Prezime,
+                DatumRodjenja = Korisnici.DatumRodjenja,
                 ZakazaniTermini = zakazaniTermini,
                 ZavrseniTermini = zavrseniTermini
             };
@@ -84,35 +84,35 @@ namespace MEDIPLAN.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> OtkaziTermin(int terminId)
+        public async Task<IActionResult> OtkaziTermini(int Terminid)
         {
-            var termin = await _context.Termini.FindAsync(terminId);
-            if (termin != null)
+            var Termini = await _context.Termini.FindAsync(Terminid);
+            if (Termini != null)
             {
-                _context.Termini.Remove(termin);
+                _context.Termini.Remove(Termini);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public IActionResult IzmijeniTermin(int terminId)
+        public IActionResult IzmijeniTermini(int Terminid)
         {
-            // Preusmjeri korisnika na "Zakazite" u Termin kontroleru
-            return RedirectToAction("Zakazite", "Termin");
+            // Preusmjeri Korisnicia na "Zakazite" u Termini kontroleru
+            return RedirectToAction("Zakazite", "Termini");
         }
 
         [HttpPost]
-        public async Task<IActionResult> IzmijeniTermin(TerminEditViewModel model)
+        public async Task<IActionResult> IzmijeniTermini(TerminiEditViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var termin = await _context.Termini.FindAsync(model.Id);
-                if (termin == null)
+                var Termini = await _context.Termini.FindAsync(model.Id);
+                if (Termini == null)
                     return NotFound();
 
-                termin.DatumVrijemePocetak = model.DatumVrijemePocetak;
-                termin.DatumVrijemeKraj = model.DatumVrijemeKraj;
+                Termini.DatumVrijemePocetak = model.DatumVrijemePocetak;
+                Termini.DatumVrijemeKraj = model.DatumVrijemeKraj;
 
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");

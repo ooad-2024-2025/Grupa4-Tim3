@@ -53,7 +53,7 @@ namespace MEDIPLAN.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ImeKorisnika = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImeKorisnicia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tekst = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Datum = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -102,7 +102,7 @@ namespace MEDIPLAN.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TerminId = table.Column<int>(type: "int", nullable: false),
+                    Terminid = table.Column<int>(type: "int", nullable: false),
                     Opis = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     JeLiUspjesnoPoslano = table.Column<bool>(type: "bit", nullable: false),
                     DatumSlanja = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -111,17 +111,17 @@ namespace MEDIPLAN.Migrations
                 {
                     table.PrimaryKey("PK_HistorijaNalaza", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_HistorijaNalaza_Termini_TerminId",
-                        column: x => x.TerminId,
+                        name: "FK_HistorijaNalaza_Termini_Terminid",
+                        column: x => x.Terminid,
                         principalTable: "Termini",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_HistorijaNalaza_TerminId",
+                name: "IX_HistorijaNalaza_Terminid",
                 table: "HistorijaNalaza",
-                column: "TerminId");
+                column: "Terminid");
         }
 
         /// <inheritdoc />

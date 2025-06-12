@@ -1,0 +1,20 @@
+﻿@model List<MEDIPLAN.Controllers.UslugeController.UslugaViewModel>
+
+<h2>Medicinske Usluge</h2>
+
+<div class="row">
+    @foreach (var usluga in Model)
+    {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <a asp-controller="Usluge" asp-action="Detalji" asp-route-naziv="@usluga.Naziv">
+                        <img src="@usluga.SlikaUrl" class="card-img-top" alt="@usluga.Naziv" />
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">@usluga.Naziv</h5>
+                        <a asp-controller="Usluge" asp-action="Detalji" asp-route-naziv="@usluga.Naziv" class="btn btn-primary">Detalji</a>
+                    </div>
+                </div>
+            </div>
+    }
+</div>

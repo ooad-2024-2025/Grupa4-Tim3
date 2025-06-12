@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MEDIPLAN.Models;
 
 namespace MEDIPLAN.Models
 {

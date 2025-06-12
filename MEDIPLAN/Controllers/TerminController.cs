@@ -22,7 +22,7 @@ namespace MEDIPLAN.Controllers
         public async Task<IActionResult> Zakazi()
         {
             var doktori = await _context.Korisnici
-                .Where(k => k.Uloga == Uloga.Doktor)
+                .Where(k => k.Uloga == (int)Uloga.Doktor)
                 .Select(k => new { k.Id, ImePrezime = k.Ime + " " + k.Prezime + " (" + k.Odjel.ToString() + ")" })
                 .ToListAsync();
 
@@ -37,7 +37,7 @@ namespace MEDIPLAN.Controllers
             if (!ModelState.IsValid)
             {
                 var doktori = await _context.Korisnici
-                    .Where(k => k.Uloga == Uloga.Doktor)
+                    .Where(k => k.Uloga == (int)Uloga.Doktor)
                     .Select(k => new { k.Id, ImePrezime = k.Ime + " " + k.Prezime + " (" + k.Odjel.ToString() + ")" })
                     .ToListAsync();
 
@@ -49,7 +49,7 @@ namespace MEDIPLAN.Controllers
             var pacijentIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
             int pacijentId = int.Parse(pacijentIdString);
 
-            var termin = new Termin
+            var Termini = new Termini
             {
                 DoktorId = model.DoktorId,
                 PacijentId = pacijentId,
@@ -57,10 +57,10 @@ namespace MEDIPLAN.Controllers
                 DatumVrijemeKraj = model.Datum.Value.AddHours(1)
             };
 
-            _context.Termini.Add(termin);
+            _context.Termini.Add(Termini);
             await _context.SaveChangesAsync();
 
-            TempData["Poruka"] = $"Uspješno ste zakazali termin.";
+            TempData["Poruka"] = $"Uspješno ste zakazali Termini.";
             return RedirectToAction("Potvrda");
         }
 

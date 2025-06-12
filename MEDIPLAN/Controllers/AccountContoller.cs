@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using System.Security.Cryptography;
 using System.Text;
+using MEDIPLAN.Models;
 
 public class AccountController : Controller
 {
@@ -42,7 +43,7 @@ public class AccountController : Controller
             // Heširaj lozinku (preporuka!)
             var hashedLozinka = HashLozinka(model.Lozinka);
 
-            var korisnik = new Korisnik
+            var Korisnik = new Korisnici 
             {
                 Username = model.Username,
                 Ime = model.Ime,
@@ -50,16 +51,16 @@ public class AccountController : Controller
                 Email = model.Email,
                 Lozinka = hashedLozinka,
                 DatumRodjenja = model.DatumRodjenja,
-                Uloga = Uloga.Pacijent, // ili šta god ti treba kao default
+                Uloga = (int)Uloga.Pacijent, // ili šta god ti treba kao default
                 QrKod = "" // Postavi praznu vrednost ili generiši neki kod ako treba
             };
 
-            _context.Korisnici.Add(korisnik);
+            _context.Korisnici.Add(Korisnik);
             await _context.SaveChangesAsync();
 
             // Nakon registracije - možeš ga automatski logovati
-            HttpContext.Session.SetString("KorisnikId", korisnik.Id.ToString());
-            HttpContext.Session.SetString("Username", korisnik.Username);
+            HttpContext.Session.SetString("KorisniciId", Korisnik.Id.ToString());
+            HttpContext.Session.SetString("Username", Korisnik.Username);
 
             return RedirectToAction("Index", "Home");
         }
@@ -83,14 +84,14 @@ public class AccountController : Controller
         {
             var hashedLozinka = HashLozinka(model.Lozinka);
 
-            var korisnik = await _context.Korisnici
+            var Korisnici = await _context.Korisnici
                 .FirstOrDefaultAsync(x => x.Username == model.Username && x.Lozinka == hashedLozinka);
 
-            if (korisnik != null)
+            if (Korisnici != null)
             {
                 // Prijava - koristi Session
-                HttpContext.Session.SetString("KorisnikId", korisnik.Id.ToString());
-                HttpContext.Session.SetString("Username", korisnik.Username);
+                HttpContext.Session.SetString("KorisniciId", Korisnici.Id.ToString());
+                HttpContext.Session.SetString("Username", Korisnici.Username);
 
                 return RedirectToAction("Index", "Home");
             }

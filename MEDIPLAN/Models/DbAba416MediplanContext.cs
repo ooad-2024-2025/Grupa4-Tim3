@@ -37,15 +37,15 @@ public partial class DbAba416MediplanContext : DbContext
         {
             entity.ToTable("HistorijaNalaza");
 
-            entity.HasIndex(e => e.TerminId, "IX_HistorijaNalaza_TerminId");
+            entity.HasIndex(e => e.Terminid, "IX_HistorijaNalaza_Terminid");
         });
 
         modelBuilder.Entity<Korisnici>(entity =>
         {
             entity.ToTable("Korisnici");
 
-            entity.HasOne(d => d.MedicinskaUsluga).WithMany(p => p.Korisnicis)
-                .HasForeignKey(d => d.MedicinskaUslugaId)
+            entity.HasOne(d => d.MedicinskaUsluge).WithMany(p => p.Korisnicis)
+                .HasForeignKey(d => d.MedicinskaUslugeId)
                 .HasConstraintName("FK_Korisnici_MedicinskeUsluge");
         });
 

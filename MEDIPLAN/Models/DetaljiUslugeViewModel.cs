@@ -4,8 +4,8 @@ namespace MEDIPLAN.Models
 {
     public class DetaljiUslugeViewModel
     {
-        public Usluga Usluga { get; set; }
-        public List<Korisnik> Doktori { get; set; }
+        public Usluge Usluge { get; set; }
+        public List<Korisnici> Doktori { get; set; }
     }
 
 }

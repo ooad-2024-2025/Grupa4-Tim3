@@ -7,7 +7,7 @@ public partial class HistorijaNalaza
 {
     public int Id { get; set; }
 
-    public int TerminId { get; set; }
+    public int Terminid { get; set; }
 
     public string Opis { get; set; } = null!;
 

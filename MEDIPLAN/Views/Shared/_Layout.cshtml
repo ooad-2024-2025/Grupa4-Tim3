@@ -3,7 +3,7 @@
 @{
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
     var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
-    var korisnikId = Context.Session.GetString("KorisnikId");
+    var KorisniciId = Context.Session.GetString("KorisniciId");
     var username = Context.Session.GetString("Username");
 }
 
@@ -76,7 +76,7 @@
                     </ul>
 
                     <ul class="navbar-nav mb-2 mb-sm-0">
-                        @if (korisnikId == null)
+                        @if (KorisniciId == null)
                         {
                             <li class="nav-item @(currentAction == "Login" ? "active-tab" : "")">
                                 <a class="nav-link" asp-controller="Account" asp-action="Login">Prijava</a>

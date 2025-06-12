@@ -2,7 +2,7 @@
 
 namespace MEDIPLAN.Models
 {
-    public class TerminEditViewModel
+    public class TerminiEditViewModel
     {
         public int Id { get; set; }
         public DateTime DatumVrijemePocetak { get; set; }

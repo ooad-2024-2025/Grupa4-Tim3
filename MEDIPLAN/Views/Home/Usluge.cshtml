@@ -1,11 +1,11 @@
-﻿@model List<MEDIPLAN.Models.Usluga>
+﻿@model List<MEDIPLAN.Models.Usluge>
 
 @{
     ViewData["Title"] = "Usluge";
 }
 
 <style>
-    .naslov-usluga {
+    .naslov-Usluge {
         font-size: 2.5rem;
         font-weight: 700;
         color: #003366;
@@ -14,7 +14,7 @@
         position: relative;
     }
 
-        .naslov-usluga::after {
+        .naslov-Usluge::after {
             content: "";
             display: block;
             width: 80px;
@@ -24,7 +24,7 @@
             border-radius: 2px;
         }
 
-    .usluga-box {
+    .Usluge-box {
         background-color: #f8f9fa;
         padding: 25px 15px;
         border-radius: 12px;
@@ -35,25 +35,25 @@
         border: 2px solid transparent;
     }
 
-        .usluga-box:hover {
+        .Usluge-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             border-color: #003366;
         }
 
-        .usluga-box img {
+        .Usluge-box img {
             max-height: 60px;
             margin-bottom: 15px;
             filter: brightness(0.95);
         }
 
-    .usluga-naslov {
+    .Usluge-naslov {
         font-weight: 600;
         color: #003366;
         font-size: 1.1rem;
     }
 
-    .usluga-link {
+    .Usluge-link {
         text-decoration: none;
         display: block;
         color: inherit;
@@ -61,16 +61,16 @@
 </style>
 
 <div class="container py-5">
-    <h2 class="naslov-usluga">Medicinske usluge</h2>
+    <h2 class="naslov-Usluge">Medicinske usluge</h2>
 
     <div class="row g-4 mt-3">
-        @foreach (var usluga in Model)
+        @foreach (var Usluge in Model)
         {
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="@Url.Action("DetaljiUsluge", "Home", new { naziv = usluga.Naziv })" class="usluga-link">
-                    <div class="usluga-box h-100">
-                        <img src="~/@usluga.Ikona" alt="@usluga.Naziv" class="img-fluid" />
-                        <div class="usluga-naslov mt-2">@usluga.Naziv</div>
+                <a href="@Url.Action("DetaljiUsluge", "Home", new { naziv = Usluge.Naziv })" class="Usluge-link">
+                    <div class="Usluge-box h-100">
+                        <img src="~/@Usluge.Ikona" alt="@Usluge.Naziv" class="img-fluid" />
+                        <div class="Usluge-naslov mt-2">@Usluge.Naziv</div>
                     </div>
                 </a>
             </div>

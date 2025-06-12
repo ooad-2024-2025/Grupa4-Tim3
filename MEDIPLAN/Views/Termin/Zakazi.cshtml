@@ -1,7 +1,7 @@
 ﻿@model MEDIPLAN.Models.TerminModel
 
 @{
-    ViewData["Title"] = "Zakaži termin";
+    ViewData["Title"] = "Zakaži Termin";
 }
 
 <!-- Uključi Flatpickr stil -->
@@ -72,9 +72,9 @@
 </style>
 
 <div class="zakazi-wrapper">
-    <h2>Zakažite termin</h2>
+    <h2>Zakažite Termini</h2>
 
-    <form method="post" asp-controller="Termin" asp-action="Zakazi">
+    <form method="post" asp-controller="Termini" asp-action="Zakazi">
         <label for="doktor">Odaberite doktora:</label>
         <select asp-for="DoktorId" asp-items="ViewBag.Doktori" id="doktor"></select>
         <span asp-validation-for="DoktorId" class="field-validation-error"></span>
@@ -83,7 +83,7 @@
         <input asp-for="Datum" type="text" id="datum" placeholder="Odaberite datum i vrijeme..." />
         <span asp-validation-for="Datum" class="field-validation-error"></span>
 
-        <button type="submit">Zakaži termin</button>
+        <button type="submit">Zakaži Termin</button>
     </form>
 </div>
 

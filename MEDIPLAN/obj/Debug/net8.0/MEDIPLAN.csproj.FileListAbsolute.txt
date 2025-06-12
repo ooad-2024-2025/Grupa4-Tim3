@@ -685,8 +685,8 @@ C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\NoviProjekat-Grupa4Tim3\MEDIPLAN\obj\D
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\NoviProjekat-Grupa4Tim3\MEDIPLAN\obj\Debug\net8.0\ref\MEDIPLAN.dll
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\appsettings.json
-C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.staticwebassets.endpoints.json
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.staticwebassets.runtime.json
+C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.staticwebassets.endpoints.json
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.exe
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.deps.json
 C:\Users\AmilaB\Documents\4.SEMESTAR\OOAD\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MEDIPLAN.runtimeconfig.json

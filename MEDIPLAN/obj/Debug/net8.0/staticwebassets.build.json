@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2HpcN5dIl7Hy4sC8HNIhTEQJxeyvSv7aSq5i0idqRIE=",
+  "Hash": "YxKeljzR7jivdI54FxWOx/vRq43hywCIKLo9ffEFyLk=",
   "Source": "MEDIPLAN",
   "BasePath": "_content/MEDIPLAN",
   "Mode": "Default",
@@ -451,8 +451,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ozu22stjof",
-      "Integrity": "ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=",
+      "Fingerprint": "yv8knteye5",
+      "Integrity": "AiuGdELd8lGjey4ten6XgG9VYU0NFMLdGkXQ4wKqWX8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -472,8 +472,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "73kdqttayv",
-      "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
+      "Fingerprint": "zi5j29mgut",
+      "Integrity": "uwhCqr8p469TTQklDWXDUwRMcRkCD6edw/98+33tisQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
@@ -493,8 +493,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+      "Fingerprint": "n7uf5a6r0q",
+      "Integrity": "TQwnz8SzoJrHQoQlm0mz/ncYc8eGZi34jyN5wNdEHMs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -514,8 +514,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "Fingerprint": "4u0qlf55ot",
+      "Integrity": "vOfKUF2uJXgKmt6VWAE0gskd8VUl01YDzTmvJ6IP3So=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
@@ -535,8 +535,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gjcw7pocpk",
-      "Integrity": "hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg=",
+      "Fingerprint": "bl1srh50jq",
+      "Integrity": "8dkc4ON3X7n98nJeNzsgNZ9sANZsM4eIkeSERMoyOQE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
@@ -556,8 +556,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4gxs3k148c",
-      "Integrity": "VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=",
+      "Fingerprint": "s1a0qfyk89",
+      "Integrity": "4EjDFuUrIW54QXOs9HHjsSW5szBapTUHxC/YlLdDgHk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
@@ -577,8 +577,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6l4ir0ityv",
-      "Integrity": "ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=",
+      "Fingerprint": "67wbf1tp9a",
+      "Integrity": "wpqNAEkyg9hnZPPPBVHNlPSS/UyGCS+FSD+XX15Zt4s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
@@ -598,8 +598,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fctod5rc9n",
-      "Integrity": "j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=",
+      "Fingerprint": "ygq8x13zcw",
+      "Integrity": "Ao0q9t3R7mZdJtD8AHpxoX/CkAJi0K6a/2dZ+0XG0vY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
@@ -640,8 +640,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "st1cbwfwo5",
-      "Integrity": "QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=",
+      "Fingerprint": "9wievgehom",
+      "Integrity": "KTZkaVBF5Dds9tmNmYyKDCSmbn50oifw7smKz25LASs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
@@ -724,8 +724,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2q4vfeazbq",
-      "Integrity": "qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=",
+      "Fingerprint": "jrs8hmuk8k",
+      "Integrity": "n+yMpdQZPjA9yNBTA/psgeHQFAd6jK6p/mrIhvsHUdM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
@@ -808,8 +808,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jeal3x0ldm",
-      "Integrity": "FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws=",
+      "Fingerprint": "p46lf8wytp",
+      "Integrity": "t95j3382t5rAe6n5zn4b0cIPjIM29BAmi1g48icKlxk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
@@ -850,8 +850,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "okkk44j0xs",
-      "Integrity": "2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg=",
+      "Fingerprint": "r7zfk62iys",
+      "Integrity": "+ZOTkBOM2S7U2nizTkrk4SVeUNcfw73M6eM1vdBDzeg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
@@ -892,8 +892,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cwzlr5n8x4",
-      "Integrity": "/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8=",
+      "Fingerprint": "pwcjd5fo6v",
+      "Integrity": "5+b1T2utjhmvjkd4kgTLkobZjm96GPpzsd1MKMtu54E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
@@ -934,8 +934,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wmug9u23qg",
-      "Integrity": "GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs=",
+      "Fingerprint": "3n9jzyqpc2",
+      "Integrity": "j2I4YQXysItSfWivFKPLZhT025AxYmYOELYwdyS7xk4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
@@ -976,8 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "j75batdsum",
-      "Integrity": "4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20=",
+      "Fingerprint": "rxx8ueywn1",
+      "Integrity": "z1NPIKcKuN5jMpaLz7xbWXiUdEQq5wqf59k39ytKIT4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
@@ -1060,8 +1060,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ab1c3rmv7g",
-      "Integrity": "puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0=",
+      "Fingerprint": "xwywc5bgcj",
+      "Integrity": "wejxU/feSDBpUB9H7lS7Ef56buTwgbP6HSQPg/2disg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7s2n0ol71w",
-      "Integrity": "KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8=",
+      "Fingerprint": "zqs0667kqr",
+      "Integrity": "i5+mlGo2JzZ/t9k9Mw7gM+1/dBFKTLY564J0Uuw7tAQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
@@ -3122,7 +3122,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "215356"
+          "Value": "215357"
         },
         {
           "Name": "Content-Type",
@@ -3130,11 +3130,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
+          "Value": "\"AiuGdELd8lGjey4ten6XgG9VYU0NFMLdGkXQ4wKqWX8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3144,52 +3144,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "73kdqttayv"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+          "Value": "sha256-AiuGdELd8lGjey4ten6XgG9VYU0NFMLdGkXQ4wKqWX8="
         }
       ]
     },
@@ -3204,7 +3159,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536547"
+          "Value": "536562"
         },
         {
           "Name": "Content-Type",
@@ -3212,11 +3167,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=\""
+          "Value": "\"uwhCqr8p469TTQklDWXDUwRMcRkCD6edw/98+33tisQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3226,13 +3181,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q="
+          "Value": "sha256-uwhCqr8p469TTQklDWXDUwRMcRkCD6edw/98+33tisQ="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.css.zi5j29mgut.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3241,19 +3196,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "536562"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/plain"
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"uwhCqr8p469TTQklDWXDUwRMcRkCD6edw/98+33tisQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3263,15 +3218,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
+          "Value": "zi5j29mgut"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.css.map"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-uwhCqr8p469TTQklDWXDUwRMcRkCD6edw/98+33tisQ="
         }
       ]
     },
@@ -3286,7 +3241,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162726"
+          "Value": "162727"
         },
         {
           "Name": "Content-Type",
@@ -3294,11 +3249,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+          "Value": "\"TQwnz8SzoJrHQoQlm0mz/ncYc8eGZi34jyN5wNdEHMs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3308,12 +3263,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+          "Value": "sha256-TQwnz8SzoJrHQoQlm0mz/ncYc8eGZi34jyN5wNdEHMs="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.css.4u0qlf55ot.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3323,7 +3278,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449111"
+          "Value": "449119"
         },
         {
           "Name": "Content-Type",
@@ -3331,11 +3286,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+          "Value": "\"vOfKUF2uJXgKmt6VWAE0gskd8VUl01YDzTmvJ6IP3So=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3345,7 +3300,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8inm30yfxf"
+          "Value": "4u0qlf55ot"
         },
         {
           "Name": "label",
@@ -3353,7 +3308,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+          "Value": "sha256-vOfKUF2uJXgKmt6VWAE0gskd8VUl01YDzTmvJ6IP3So="
         }
       ]
     },
@@ -3368,7 +3323,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "449111"
+          "Value": "449119"
         },
         {
           "Name": "Content-Type",
@@ -3376,11 +3331,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+          "Value": "\"vOfKUF2uJXgKmt6VWAE0gskd8VUl01YDzTmvJ6IP3So=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3390,13 +3345,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+          "Value": "sha256-vOfKUF2uJXgKmt6VWAE0gskd8VUl01YDzTmvJ6IP3So="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.n7uf5a6r0q.css",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3405,7 +3360,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "215356"
+          "Value": "162727"
         },
         {
           "Name": "Content-Type",
@@ -3413,11 +3368,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=\""
+          "Value": "\"TQwnz8SzoJrHQoQlm0mz/ncYc8eGZi34jyN5wNdEHMs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3427,15 +3382,60 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ozu22stjof"
+          "Value": "n7uf5a6r0q"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA="
+          "Value": "sha256-TQwnz8SzoJrHQoQlm0mz/ncYc8eGZi34jyN5wNdEHMs="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.bl1srh50jq.css",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "215000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8dkc4ON3X7n98nJeNzsgNZ9sANZsM4eIkeSERMoyOQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bl1srh50jq"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8dkc4ON3X7n98nJeNzsgNZ9sANZsM4eIkeSERMoyOQE="
         }
       ]
     },
@@ -3450,7 +3450,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "214999"
+          "Value": "215000"
         },
         {
           "Name": "Content-Type",
@@ -3458,11 +3458,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg=\""
+          "Value": "\"8dkc4ON3X7n98nJeNzsgNZ9sANZsM4eIkeSERMoyOQE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3472,52 +3472,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "536461"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4gxs3k148c"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
+          "Value": "sha256-8dkc4ON3X7n98nJeNzsgNZ9sANZsM4eIkeSERMoyOQE="
         }
       ]
     },
@@ -3532,7 +3487,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "536461"
+          "Value": "536476"
         },
         {
           "Name": "Content-Type",
@@ -3540,11 +3495,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=\""
+          "Value": "\"4EjDFuUrIW54QXOs9HHjsSW5szBapTUHxC/YlLdDgHk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3554,13 +3509,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE="
+          "Value": "sha256-4EjDFuUrIW54QXOs9HHjsSW5szBapTUHxC/YlLdDgHk="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.s1a0qfyk89.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3569,19 +3524,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "214999"
+          "Value": "536476"
         },
         {
           "Name": "Content-Type",
-          "Value": "text/css"
+          "Value": "text/plain"
         },
         {
           "Name": "ETag",
-          "Value": "\"hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg=\""
+          "Value": "\"4EjDFuUrIW54QXOs9HHjsSW5szBapTUHxC/YlLdDgHk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3591,20 +3546,20 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "gjcw7pocpk"
+          "Value": "s1a0qfyk89"
         },
         {
           "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css"
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.css.map"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg="
+          "Value": "sha256-4EjDFuUrIW54QXOs9HHjsSW5szBapTUHxC/YlLdDgHk="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.67wbf1tp9a.css",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3614,7 +3569,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162831"
+          "Value": "162832"
         },
         {
           "Name": "Content-Type",
@@ -3622,11 +3577,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=\""
+          "Value": "\"wpqNAEkyg9hnZPPPBVHNlPSS/UyGCS+FSD+XX15Zt4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3636,7 +3591,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6l4ir0ityv"
+          "Value": "67wbf1tp9a"
         },
         {
           "Name": "label",
@@ -3644,7 +3599,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8="
+          "Value": "sha256-wpqNAEkyg9hnZPPPBVHNlPSS/UyGCS+FSD+XX15Zt4s="
         }
       ]
     },
@@ -3659,7 +3614,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162831"
+          "Value": "162832"
         },
         {
           "Name": "Content-Type",
@@ -3667,11 +3622,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=\""
+          "Value": "\"wpqNAEkyg9hnZPPPBVHNlPSS/UyGCS+FSD+XX15Zt4s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3681,52 +3636,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "661035"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "fctod5rc9n"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+          "Value": "sha256-wpqNAEkyg9hnZPPPBVHNlPSS/UyGCS+FSD+XX15Zt4s="
         }
       ]
     },
@@ -3741,7 +3651,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "661035"
+          "Value": "661044"
         },
         {
           "Name": "Content-Type",
@@ -3749,11 +3659,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=\""
+          "Value": "\"Ao0q9t3R7mZdJtD8AHpxoX/CkAJi0K6a/2dZ+0XG0vY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3763,7 +3673,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM="
+          "Value": "sha256-Ao0q9t3R7mZdJtD8AHpxoX/CkAJi0K6a/2dZ+0XG0vY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.ygq8x13zcw.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "661044"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ao0q9t3R7mZdJtD8AHpxoX/CkAJi0K6a/2dZ+0XG0vY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ygq8x13zcw"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ao0q9t3R7mZdJtD8AHpxoX/CkAJi0K6a/2dZ+0XG0vY="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.yv8knteye5.css",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "215357"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AiuGdELd8lGjey4ten6XgG9VYU0NFMLdGkXQ4wKqWX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yv8knteye5"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AiuGdELd8lGjey4ten6XgG9VYU0NFMLdGkXQ4wKqWX8="
         }
       ]
     },
@@ -3805,6 +3805,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.9wievgehom.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "196542"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KTZkaVBF5Dds9tmNmYyKDCSmbn50oifw7smKz25LASs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9wievgehom"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-grid.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KTZkaVBF5Dds9tmNmYyKDCSmbn50oifw7smKz25LASs="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
@@ -3815,7 +3860,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196535"
+          "Value": "196542"
         },
         {
           "Name": "Content-Type",
@@ -3823,11 +3868,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=\""
+          "Value": "\"KTZkaVBF5Dds9tmNmYyKDCSmbn50oifw7smKz25LASs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3837,52 +3882,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "196535"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "st1cbwfwo5"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-grid.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc="
+          "Value": "sha256-KTZkaVBF5Dds9tmNmYyKDCSmbn50oifw7smKz25LASs="
         }
       ]
     },
@@ -4133,7 +4133,7 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.jrs8hmuk8k.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4143,7 +4143,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196539"
+          "Value": "196546"
         },
         {
           "Name": "Content-Type",
@@ -4151,11 +4151,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=\""
+          "Value": "\"n+yMpdQZPjA9yNBTA/psgeHQFAd6jK6p/mrIhvsHUdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4165,7 +4165,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2q4vfeazbq"
+          "Value": "jrs8hmuk8k"
         },
         {
           "Name": "label",
@@ -4173,7 +4173,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g="
+          "Value": "sha256-n+yMpdQZPjA9yNBTA/psgeHQFAd6jK6p/mrIhvsHUdM="
         }
       ]
     },
@@ -4188,7 +4188,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "196539"
+          "Value": "196546"
         },
         {
           "Name": "Content-Type",
@@ -4196,11 +4196,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=\""
+          "Value": "\"n+yMpdQZPjA9yNBTA/psgeHQFAd6jK6p/mrIhvsHUdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4210,7 +4210,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g="
+          "Value": "sha256-n+yMpdQZPjA9yNBTA/psgeHQFAd6jK6p/mrIhvsHUdM="
         }
       ]
     },
@@ -4461,51 +4461,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "105138"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jeal3x0ldm"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
@@ -4516,7 +4471,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "105138"
+          "Value": "105146"
         },
         {
           "Name": "Content-Type",
@@ -4524,11 +4479,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws=\""
+          "Value": "\"t95j3382t5rAe6n5zn4b0cIPjIM29BAmi1g48icKlxk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4538,7 +4493,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws="
+          "Value": "sha256-t95j3382t5rAe6n5zn4b0cIPjIM29BAmi1g48icKlxk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.p46lf8wytp.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105146"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t95j3382t5rAe6n5zn4b0cIPjIM29BAmi1g48icKlxk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p46lf8wytp"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t95j3382t5rAe6n5zn4b0cIPjIM29BAmi1g48icKlxk="
         }
       ]
     },
@@ -4590,7 +4590,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "35330"
+          "Value": "35331"
         },
         {
           "Name": "Content-Type",
@@ -4598,11 +4598,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg=\""
+          "Value": "\"+ZOTkBOM2S7U2nizTkrk4SVeUNcfw73M6eM1vdBDzeg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4612,12 +4612,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg="
+          "Value": "sha256-+ZOTkBOM2S7U2nizTkrk4SVeUNcfw73M6eM1vdBDzeg="
         }
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.r7zfk62iys.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4627,7 +4627,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "35330"
+          "Value": "35331"
         },
         {
           "Name": "Content-Type",
@@ -4635,11 +4635,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg=\""
+          "Value": "\"+ZOTkBOM2S7U2nizTkrk4SVeUNcfw73M6eM1vdBDzeg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4649,7 +4649,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "okkk44j0xs"
+          "Value": "r7zfk62iys"
         },
         {
           "Name": "label",
@@ -4657,7 +4657,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg="
+          "Value": "sha256-+ZOTkBOM2S7U2nizTkrk4SVeUNcfw73M6eM1vdBDzeg="
         }
       ]
     },
@@ -4834,51 +4834,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "105151"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cwzlr5n8x4"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
@@ -4889,7 +4844,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "105151"
+          "Value": "105159"
         },
         {
           "Name": "Content-Type",
@@ -4897,11 +4852,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8=\""
+          "Value": "\"5+b1T2utjhmvjkd4kgTLkobZjm96GPpzsd1MKMtu54E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4911,7 +4866,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8="
+          "Value": "sha256-5+b1T2utjhmvjkd4kgTLkobZjm96GPpzsd1MKMtu54E="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.pwcjd5fo6v.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105159"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5+b1T2utjhmvjkd4kgTLkobZjm96GPpzsd1MKMtu54E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pwcjd5fo6v"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5+b1T2utjhmvjkd4kgTLkobZjm96GPpzsd1MKMtu54E="
         }
       ]
     },
@@ -4953,6 +4953,51 @@
       ]
     },
     {
+      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.3n9jzyqpc2.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41571"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j2I4YQXysItSfWivFKPLZhT025AxYmYOELYwdyS7xk4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3n9jzyqpc2"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j2I4YQXysItSfWivFKPLZhT025AxYmYOELYwdyS7xk4="
+        }
+      ]
+    },
+    {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
@@ -4963,7 +5008,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "41570"
+          "Value": "41571"
         },
         {
           "Name": "Content-Type",
@@ -4971,11 +5016,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs=\""
+          "Value": "\"j2I4YQXysItSfWivFKPLZhT025AxYmYOELYwdyS7xk4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4985,52 +5030,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "41570"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wmug9u23qg"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs="
+          "Value": "sha256-j2I4YQXysItSfWivFKPLZhT025AxYmYOELYwdyS7xk4="
         }
       ]
     },
@@ -5117,51 +5117,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "192271"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "j75batdsum"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
@@ -5172,7 +5127,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "192271"
+          "Value": "192278"
         },
         {
           "Name": "Content-Type",
@@ -5180,11 +5135,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20=\""
+          "Value": "\"z1NPIKcKuN5jMpaLz7xbWXiUdEQq5wqf59k39ytKIT4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5194,7 +5149,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20="
+          "Value": "sha256-z1NPIKcKuN5jMpaLz7xbWXiUdEQq5wqf59k39ytKIT4="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.rxx8ueywn1.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192278"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1NPIKcKuN5jMpaLz7xbWXiUdEQq5wqf59k39ytKIT4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rxx8ueywn1"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1NPIKcKuN5jMpaLz7xbWXiUdEQq5wqf59k39ytKIT4="
         }
       ]
     },
@@ -5400,51 +5400,6 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "192214"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ab1c3rmv7g"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
@@ -5455,7 +5410,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "192214"
+          "Value": "192221"
         },
         {
           "Name": "Content-Type",
@@ -5463,11 +5418,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0=\""
+          "Value": "\"wejxU/feSDBpUB9H7lS7Ef56buTwgbP6HSQPg/2disg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5477,7 +5432,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0="
+          "Value": "sha256-wejxU/feSDBpUB9H7lS7Ef56buTwgbP6HSQPg/2disg="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.xwywc5bgcj.map",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192221"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wejxU/feSDBpUB9H7lS7Ef56buTwgbP6HSQPg/2disg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xwywc5bgcj"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wejxU/feSDBpUB9H7lS7Ef56buTwgbP6HSQPg/2disg="
         }
       ]
     },
@@ -6802,51 +6802,6 @@
       ]
     },
     {
-      "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "299461"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7s2n0ol71w"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/jquery/dist/jquery.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8="
-        }
-      ]
-    },
-    {
       "Route": "lib/jquery/dist/jquery.js",
       "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
@@ -6857,7 +6812,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "299461"
+          "Value": "299473"
         },
         {
           "Name": "Content-Type",
@@ -6865,11 +6820,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8=\""
+          "Value": "\"i5+mlGo2JzZ/t9k9Mw7gM+1/dBFKTLY564J0Uuw7tAQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6879,7 +6834,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8="
+          "Value": "sha256-i5+mlGo2JzZ/t9k9Mw7gM+1/dBFKTLY564J0Uuw7tAQ="
         }
       ]
     },
@@ -7044,6 +6999,51 @@
         {
           "Name": "integrity",
           "Value": "sha256-OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I="
+        }
+      ]
+    },
+    {
+      "Route": "lib/jquery/dist/jquery.zqs0667kqr.js",
+      "AssetFile": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "299473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"i5+mlGo2JzZ/t9k9Mw7gM+1/dBFKTLY564J0Uuw7tAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 18:05:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zqs0667kqr"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/jquery/dist/jquery.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-i5+mlGo2JzZ/t9k9Mw7gM+1/dBFKTLY564J0Uuw7tAQ="
         }
       ]
     },
@@ -7808,7 +7808,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:35:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7853,7 +7853,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:35:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7898,7 +7898,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:35:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7935,7 +7935,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 11 Jun 2025 13:13:29 GMT"
+          "Value": "Thu, 12 Jun 2025 18:35:05 GMT"
         },
         {
           "Name": "Cache-Control",

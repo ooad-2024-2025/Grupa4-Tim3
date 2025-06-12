@@ -1,8 +1,8 @@
-﻿@model List<MEDIPLAN.Models.Termin>
+﻿@model List<MEDIPLAN.Models.Termini>
 
-<h2>Zakazani termini</h2>
+<h2>Zakazani Termini</h2>
 
-<a class="btn btn-primary" asp-action="Zakazi">+ Novi termin</a>
+<a class="btn btn-primary" asp-action="Zakazi">+ Novi Termini</a>
 
 <table class="table table-bordered mt-3">
     <thead>
@@ -15,14 +15,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var termin in Model)
+        @foreach (var Termini in Model)
         {
             <tr>
-                <td>@termin.DatumVrijemePocetak.Date.ToShortDateString()</td>
-                <td>@termin.DatumVrijemePocetak.ToShortTimeString()</td>
-                <td>@termin.DatumVrijemeKraj.ToShortTimeString()</td>
-                <td>@termin.DoktorId</td>
-                <td>@termin.PacijentId</td>
+                <td>@Termini.DatumVrijemePocetak.Date.ToShortDateString()</td>
+                <td>@Termini.DatumVrijemePocetak.ToShortTimeString()</td>
+                <td>@Termini.DatumVrijemeKraj.ToShortTimeString()</td>
+                <td>@Termini.DoktorId</td>
+                <td>@Termini.PacijentId</td>
             </tr>
         }
     </tbody>

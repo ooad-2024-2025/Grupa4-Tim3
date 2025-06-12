@@ -1,5 +1,5 @@
 ﻿using System;
-public enum VrstaMedicinskihUsluga
+public enum VrstaMedicinskihUsluge
 {
     InternaMedicina,
     Kardiologija,

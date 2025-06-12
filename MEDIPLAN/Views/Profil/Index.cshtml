@@ -37,17 +37,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var termin in Model.ZakazaniTermini)
+                            @foreach (var Termini in Model.ZakazaniTermini)
                             {
                                 <tr>
-                                    <td>@termin.ImeDoktora</td>
-                                    <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
+                                    <td>@Termini.ImeDoktora</td>
+                                    <td>@Termini.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
                                     <td class="text-center">
-                                        <a asp-controller="Profil" asp-action="IzmijeniTermin" asp-route-terminId="@termin.TerminId" class="btn btn-outline-primary btn-sm me-1">
+                                        <a asp-controller="Profil" asp-action="IzmijeniTermini" asp-route-Terminid="@Termini.Terminid" class="btn btn-outline-primary btn-sm me-1">
                                             <i class="bi bi-pencil"></i> Izmijeni
                                         </a>
-                                        <form asp-controller="Profil" asp-action="OtkaziTermin" method="post" class="d-inline" onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
-                                            <input type="hidden" name="terminId" value="@termin.TerminId" />
+                                        <form asp-controller="Profil" asp-action="OtkaziTermini" method="post" class="d-inline" onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
+                                            <input type="hidden" name="Terminid" value="@Termini.Terminid" />
                                             <button type="submit" class="btn btn-outline-danger btn-sm">
                                                 <i class="bi bi-x-circle"></i> Otkaži
                                             </button>
