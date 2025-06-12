@@ -25,7 +25,7 @@ public partial class Korisnici
 
     public int Odjel { get; set; }
 
-    public int? MedicinskaUslugeId { get; set; }
+    public int? MedicinskaUslugaId { get; set; }
 
-    public virtual MedicinskeUsluge? MedicinskaUsluge { get; set; }
+    public virtual MedicinskeUsluge? MedicinskaUsluga { get; set; }
 }
