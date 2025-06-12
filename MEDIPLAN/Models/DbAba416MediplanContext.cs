@@ -44,9 +44,10 @@ public partial class DbAba416MediplanContext : DbContext
         {
             entity.ToTable("Korisnici");
 
-            entity.HasOne(d => d.MedicinskaUsluge).WithMany(p => p.Korisnicis)
-                .HasForeignKey(d => d.MedicinskaUslugeId)
-                .HasConstraintName("FK_Korisnici_MedicinskeUsluge");
+            entity.HasOne(d => d.MedicinskaUsluga).WithMany(p => p.Korisnici)
+    .HasForeignKey(d => d.MedicinskaUslugaId)
+    .HasConstraintName("FK_Korisnici_MedicinskeUsluge");
+
         });
 
         modelBuilder.Entity<MedicinskeUsluge>(entity =>
