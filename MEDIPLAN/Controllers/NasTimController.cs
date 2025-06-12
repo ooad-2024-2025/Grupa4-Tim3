@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MEDIPLAN.Data;
 using MEDIPLAN.Models;
 using System.Linq;
@@ -17,17 +18,16 @@ namespace MEDIPLAN.Controllers
 
         public IActionResult Tim()
         {
-            // Uzmi doktore iz baze
+            // Uzmi doktore koji imaju ulogu Doktor
             var doktori = _context.Korisnici
                 .Where(k => k.Uloga == (int)Uloga.Doktor)
                 .ToList();
 
-            // Grupisanje doktora po odjelu u Dictionary<Odjel, List<Korisnici>>
+            // Grupisanje doktora po enumu Odjel
             var doktoriPoOdjelima = doktori
-                .GroupBy(d => d.Odjel)
+                .GroupBy(d => (Odjel)d.Odjel)  // cast int to enum
                 .ToDictionary(g => g.Key, g => g.ToList());
 
-            // Prosledi grupu doktor po odjelu u View
             return View(doktoriPoOdjelima);
         }
     }
