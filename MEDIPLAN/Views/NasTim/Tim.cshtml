@@ -1,0 +1,85 @@
+﻿@using MEDIPLAN.Models
+@model Dictionary<Odjel, List<Korisnik>>
+
+@{
+    ViewData["Title"] = "Naš tim";
+    Layout = "_Layout";
+}
+
+<h2 class="text-center my-5" style="color:#003366; font-weight: 800; font-size: 3rem;">Naš tim</h2>
+
+<div class="container">
+    @foreach (var grupa in Model)
+    {
+        <div class="mb-5 fade-in-on-scroll">
+            <h3 class="border-bottom pb-2" style="color:#003366; font-weight: 700; font-size: 1.8rem; padding-left: 15px;">
+                @grupa.Key
+            </h3>
+            <div class="row">
+                @{
+                    var doktori = grupa.Value;
+                }
+                @if (doktori.Count == 2)
+                {
+                    <div class="col-md-6 d-flex justify-content-start text-center mb-4 px-4">
+                        <div>
+                            <h5 class="mt-2" style="color:#003366;">@doktori[0].Ime @doktori[0].Prezime</h5>
+                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
+                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
+                            <p style="color:#003366;"><em>@doktori[0].Email</em></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end text-center mb-4 px-4">
+                        <div>
+                            <h5 class="mt-2" style="color:#003366;">@doktori[1].Ime @doktori[1].Prezime</h5>
+                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
+                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
+                            <p style="color:#003366;"><em>@doktori[1].Email</em></p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    foreach (var doktor in doktori)
+                    {
+                        <div class="col-md-4 text-center mb-4 px-4">
+                            <h5 class="mt-2" style="color:#003366;">@doktor.Ime @doktor.Prezime</h5>
+                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
+                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
+                            <p style="color:#003366;"><em>@doktor.Email</em></p>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <style>
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+            .fade-in-on-scroll.appear {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
+}

@@ -1,0 +1,107 @@
+﻿@model MEDIPLAN.Models.TerminModel
+
+@{
+    ViewData["Title"] = "Zakaži termin";
+}
+
+<!-- Uključi Flatpickr stil -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<style>
+    body {
+        background-color: #f4f8fb;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .zakazi-wrapper {
+        max-width: 550px;
+        margin: 50px auto;
+        padding: 30px 40px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+        .zakazi-wrapper h2 {
+            text-align: center;
+            color: #084c7e;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+    label {
+        font-weight: 600;
+        color: #333;
+        margin-top: 15px;
+        display: block;
+    }
+
+    select, input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        margin-bottom: 18px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        background-color: #084c7e;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: #063b60;
+        }
+
+    .field-validation-error {
+        color: red;
+        font-size: 14px;
+        margin-top: -12px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="zakazi-wrapper">
+    <h2>Zakažite termin</h2>
+
+    <form method="post" asp-controller="Termin" asp-action="Zakazi">
+        <label for="doktor">Odaberite doktora:</label>
+        <select asp-for="DoktorId" asp-items="ViewBag.Doktori" id="doktor"></select>
+        <span asp-validation-for="DoktorId" class="field-validation-error"></span>
+
+        <label for="datum">Odaberite datum i vrijeme:</label>
+        <input asp-for="Datum" type="text" id="datum" placeholder="Odaberite datum i vrijeme..." />
+        <span asp-validation-for="Datum" class="field-validation-error"></span>
+
+        <button type="submit">Zakaži termin</button>
+    </form>
+</div>
+
+<!-- Uključi Flatpickr i validaciju -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    flatpickr("#datum", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        altInput: true,
+        altFormat: "d.m.Y. H:i",
+        minDate: "today",
+        time_24hr: true,
+        minTime: "08:00",
+        maxTime: "16:00",
+        minuteIncrement: 60 // Samo puni sat vremena
+    });
+</script>

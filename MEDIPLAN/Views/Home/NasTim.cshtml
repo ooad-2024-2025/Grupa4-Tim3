@@ -1,0 +1,59 @@
+﻿@using MEDIPLAN.Models
+@model Dictionary<Odjel, List<Korisnik>>
+
+
+@{
+    ViewData["Title"] = "Naš tim";
+    Layout = "_Layout";
+}
+
+<h2 class="text-center my-4">Naš tim</h2>
+
+<div class="container">
+    @foreach (var grupa in Model)
+    {
+        <div class="mb-5 fade-in-on-scroll">
+            <h3 class="text-primary border-bottom pb-2">@grupa.Key</h3>
+            <div class="row">
+                @foreach (var doktor in grupa.Value)
+                {
+                    <div class="col-md-4 text-center mb-4">
+                        <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
+                             style="width: 150px; height: 150px; object-fit: cover;" alt="Doktor">
+                        <h5 class="mt-2">@doktor.Ime @doktor.Prezime</h5>
+                        <p><em>@doktor.Email</em></p>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <style>
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+            .fade-in-on-scroll.appear {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
+}

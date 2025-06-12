@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Potvrda termina";
+}
+
+<div class="zakazi-wrapper">
+    <h2>Potvrda termina</h2>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Poruka as string))
+    {
+        <div class="alert-success">
+            @ViewBag.Poruka
+        </div>
+    }
+
+    <a href="/Termin/Zakazi" class="btn-zakazi">Zakaži novi termin</a>
+</div>
+
+<style>
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .btn-zakazi {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #084c7e;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+    }
+
+        .btn-zakazi:hover {
+            background-color: #063b60;
+        }
+</style>

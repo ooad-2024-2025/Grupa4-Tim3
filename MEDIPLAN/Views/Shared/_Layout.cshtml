@@ -1,0 +1,134 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var korisnikId = Context.Session.GetString("KorisnikId");
+    var username = Context.Session.GetString("Username");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MEDIPLAN</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MEDIPLAN.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+    <style>
+        .navbar-nav .nav-item.active-tab {
+            background-color: #ADD8E6;
+            border-radius: 0.375rem;
+        }
+
+            .navbar-nav .nav-item.active-tab .nav-link {
+                color: white !important;
+            }
+
+        .navbar-nav .nav-link {
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #000;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.jpg" alt="MEDIPLAN Logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item @(currentController == "Home" && currentAction == "Index" ? "active-tab" : "")">
+
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">HOME</a>
+                        </li>
+                        <li class="nav-item @(currentAction == "About" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">O NAMA</a>
+                        </li>
+                        <li class="nav-item @(currentAction == "Usluge" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Usluge">USLUGE</a>
+                        </li>
+                        <li class="nav-item @(currentController == "NasTim" && currentAction == "Tim" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="NasTim" asp-action="Tim">NAŠ TIM</a>
+                        </li>
+
+                        <li class="nav-item @(currentAction == "Kontakt" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Home" asp-action="Kontakt">KONTAKT</a>
+                        </li>
+                        <li class="nav-item @(currentController == "Termin" && currentAction == "Zakazi" ? "active-tab" : "")">
+                            <a class="nav-link" asp-controller="Termin" asp-action="Zakazi">ZAKAŽITE TERMIN</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav mb-2 mb-sm-0">
+                        @if (korisnikId == null)
+                        {
+                            <li class="nav-item @(currentAction == "Login" ? "active-tab" : "")">
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">Prijava</a>
+                            </li>
+                            <li class="nav-item @(currentAction == "Register" ? "active-tab" : "")">
+                                <a class="nav-link" asp-controller="Account" asp-action="Register">Registracija</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item @(currentController == "Profil" && currentAction == "Index" ? "active-tab" : "")">
+                                <a class="nav-link" asp-controller="Profil" asp-action="Index">Moj profil</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Logout">Odjava</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link disabled">Prijavljen kao @username</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - MEDIPLAN - <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- U Development okruženju, koristi "non-min" skripte za lakše debugovanje -->
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    </environment>
+    <!-- U Production okruženju, koristi minifikovane skripte -->
+    <environment exclude="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    </environment>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

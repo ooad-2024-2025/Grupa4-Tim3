@@ -1,0 +1,64 @@
+﻿@model ProfilViewModel
+
+@if (Model == null)
+{
+    <div class="alert alert-danger text-center mt-5">
+        <p>Greška: Podaci profila nisu dostupni.</p>
+    </div>
+    return;
+}
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="card shadow-lg p-4 w-100" style="max-width: 800px;">
+        <h2 class="text-center text-primary mb-4">Moj profil</h2>
+
+        <div class="mb-4">
+            <h4 class="text-primary">Lični podaci</h4>
+            <p><strong>Ime i prezime:</strong> @Model.Ime @Model.Prezime</p>
+            <p><strong>Datum rođenja:</strong> @Model.DatumRodjenja.ToString("dd.MM.yyyy")</p>
+        </div>
+
+        <div>
+            <h4 class="text-primary">Zakazani pregledi</h4>
+
+            @if (Model.ZakazaniTermini == null || Model.ZakazaniTermini.Count == 0)
+            {
+                <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Doktor</th>
+                                <th>Datum pregleda</th>
+                                <th class="text-center">Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var termin in Model.ZakazaniTermini)
+                            {
+                                <tr>
+                                    <td>@termin.ImeDoktora</td>
+                                    <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
+                                    <td class="text-center">
+                                        <a asp-controller="Profil" asp-action="IzmijeniTermin" asp-route-terminId="@termin.TerminId" class="btn btn-outline-primary btn-sm me-1">
+                                            <i class="bi bi-pencil"></i> Izmijeni
+                                        </a>
+                                        <form asp-controller="Profil" asp-action="OtkaziTermin" method="post" class="d-inline" onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
+                                            <input type="hidden" name="terminId" value="@termin.TerminId" />
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-x-circle"></i> Otkaži
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
