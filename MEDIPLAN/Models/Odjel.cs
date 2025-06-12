@@ -2,6 +2,7 @@
 using System;
 public enum Odjel
 {
+    NemaOdjela,
     InternaMedicina,
     Kardiologija,
     Oftamologija,
