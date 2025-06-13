@@ -123,15 +123,43 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
 
 <script>
-    flatpickr("#datum", {
+    const now = new Date();
+
+    const picker = flatpickr("#datum", {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
         altInput: true,
         altFormat: "d.m.Y. H:i",
-        minDate: "today",
         time_24hr: true,
-        minTime: "08:00",
-        maxTime: "16:00",
-        minuteIncrement: 60
+        minuteIncrement: 60,
+        minDate: now, // minimalno dozvoljen datum je trenutni trenutak
+        onReady: updateMinTime,
+        onChange: updateMinTime
     });
+
+    function updateMinTime(selectedDates, dateStr, instance) {
+        const selectedDate = selectedDates[0];
+        const now = new Date();
+
+        if (!selectedDate) return;
+
+        // Poredi samo datume, bez vremena
+        const selectedDay = selectedDate.toDateString();
+        const today = now.toDateString();
+
+        if (selectedDay === today) {
+            // Ako je danas - postavi vrijeme na trenutno
+            const currentHour = now.getHours();
+            const currentMinute = now.getMinutes();
+
+            // Ako je npr. 15:28 → korisnik može zakazati tek od 16:00
+            instance.set('minTime', `${currentHour + 1}:00`);
+        } else {
+            // Za buduće datume - vraćamo na radno vrijeme
+            instance.set('minTime', "08:00");
+        }
+
+        instance.set('maxTime', "16:00");
+    }
 </script>
+
