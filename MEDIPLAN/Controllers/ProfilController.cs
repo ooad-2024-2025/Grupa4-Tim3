@@ -1,5 +1,4 @@
-﻿// ProfilController.cs
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MEDIPLAN.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
@@ -8,6 +7,7 @@ using System.Linq;
 using System;
 using System.Collections.Generic;
 using MEDIPLAN.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MEDIPLAN.Controllers
 {
@@ -23,20 +23,16 @@ namespace MEDIPLAN.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var KorisniciIdString = HttpContext.Session.GetString("KorisniciId");
-            if (string.IsNullOrEmpty(KorisniciIdString) || !int.TryParse(KorisniciIdString, out int KorisniciId))
-            {
+            var korisniciIdString = HttpContext.Session.GetString("KorisniciId");
+            if (string.IsNullOrEmpty(korisniciIdString) || !int.TryParse(korisniciIdString, out int korisniciId))
                 return RedirectToAction("Login", "Account");
-            }
 
-            var Korisnici = await _context.Korisnici.FindAsync(KorisniciId);
-            if (Korisnici == null)
-            {
+            var korisnik = await _context.Korisnici.FindAsync(korisniciId);
+            if (korisnik == null)
                 return RedirectToAction("Login", "Account");
-            }
 
             var sviTermini = await _context.Termini
-                .Where(t => t.PacijentId == KorisniciId)
+                .Where(t => t.PacijentId == korisniciId)
                 .ToListAsync();
 
             var doktorIds = sviTermini.Select(t => t.DoktorId).Distinct().ToList();
@@ -56,8 +52,7 @@ namespace MEDIPLAN.Controllers
                         ? doktori[t.DoktorId].Ime + " " + doktori[t.DoktorId].Prezime
                         : "Nepoznat",
                     DatumPregleda = t.DatumVrijemePocetak
-                })
-                .ToList();
+                }).ToList();
 
             var zavrseniTermini = sviTermini
                 .Where(t => t.DatumVrijemePocetak <= danas)
@@ -68,14 +63,13 @@ namespace MEDIPLAN.Controllers
                         ? doktori[t.DoktorId].Ime + " " + doktori[t.DoktorId].Prezime
                         : "Nepoznat",
                     DatumPregleda = t.DatumVrijemePocetak
-                })
-                .ToList();
+                }).ToList();
 
             var model = new ProfilViewModel
             {
-                Ime = Korisnici.Ime,
-                Prezime = Korisnici.Prezime,
-                DatumRodjenja = Korisnici.DatumRodjenja,
+                Ime = korisnik.Ime,
+                Prezime = korisnik.Prezime,
+                DatumRodjenja = korisnik.DatumRodjenja,
                 ZakazaniTermini = zakazaniTermini,
                 ZavrseniTermini = zavrseniTermini
             };
@@ -86,38 +80,154 @@ namespace MEDIPLAN.Controllers
         [HttpPost]
         public async Task<IActionResult> OtkaziTermini(int Terminid)
         {
-            var Termini = await _context.Termini.FindAsync(Terminid);
-            if (Termini != null)
+            var termin = await _context.Termini.FindAsync(Terminid);
+            if (termin != null)
             {
-                _context.Termini.Remove(Termini);
+                var razlika = termin.DatumVrijemePocetak - DateTime.Now;
+
+                if (razlika.TotalHours < 24)
+                {
+                    TempData["Greska"] = "Termin se može otkazati samo ako je udaljen više od 24 sata.";
+                    return RedirectToAction("Index");
+                }
+
+                _context.Termini.Remove(termin);
                 await _context.SaveChangesAsync();
             }
+
             return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public IActionResult IzmijeniTermini(int Terminid)
+        public async Task<IActionResult> IzmijeniTermine(int Terminid)
         {
-            // Preusmjeri Korisnicia na "Zakazite" u Termini kontroleru
-            return RedirectToAction("Zakazite", "Termini");
+            var termin = await _context.Termini.FindAsync(Terminid);
+            if (termin == null)
+            {
+                TempData["Greska"] = "Termin nije pronađen.";
+                return RedirectToAction("Index");
+            }
+
+            if ((termin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
+            {
+                TempData["Greska"] = "Termin se može mijenjati samo ako je udaljen više od 24 sata.";
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.Doktori = new SelectList(
+                await _context.Korisnici
+                    .Where(k => k.Uloga == (int)Uloga.Doktor)
+                    .Select(k => new {
+                        k.Id,
+                        ImePrezime = k.Ime + " " + k.Prezime + " (" + k.Odjel.ToString() + ")"
+                    }).ToListAsync(),
+                "Id", "ImePrezime");
+
+            ViewBag.Lokacije = new SelectList(
+                Enum.GetValues(typeof(Lokacija)).Cast<Lokacija>().Select(l => new {
+                    Value = (int)l,
+                    Text = l.ToString()
+                }),
+                "Value", "Text");
+
+            ViewBag.MedicinskeUsluge = new SelectList(
+                await _context.Usluge.Select(u => new { u.Id, u.Naziv }).ToListAsync(),
+                "Id", "Naziv");
+
+            var model = new TerminiEditViewModel
+            {
+                Id = termin.Id,
+                DoktorId = termin.DoktorId,
+                Lokacija = (Lokacija)termin.Lokacija,
+                MedicinskeUslugeId = termin.MedicinskeUslugeId,
+                DatumVrijemePocetak = termin.DatumVrijemePocetak,
+                DatumVrijemeKraj = termin.DatumVrijemeKraj
+            };
+
+            return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> IzmijeniTermini(TerminiEditViewModel model)
+        public async Task<IActionResult> IzmijeniTermine(TerminiEditViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var stariTermin = await _context.Termini.FindAsync(model.Id);
+            if (stariTermin == null)
+                return NotFound();
+
+            if ((stariTermin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
             {
-                var Termini = await _context.Termini.FindAsync(model.Id);
-                if (Termini == null)
-                    return NotFound();
-
-                Termini.DatumVrijemePocetak = model.DatumVrijemePocetak;
-                Termini.DatumVrijemeKraj = model.DatumVrijemeKraj;
-
-                await _context.SaveChangesAsync();
+                TempData["Greska"] = "Termin se može mijenjati samo ako je udaljen više od 24 sata.";
                 return RedirectToAction("Index");
             }
-            return View(model);
+
+            // Provjeri da li je novi termin zauzet za odabranog doktora
+            var noviPocetak = model.DatumVrijemePocetak;
+            var noviKraj = model.DatumVrijemeKraj;
+
+            bool zauzet = await _context.Termini.AnyAsync(t =>
+                t.DoktorId == model.DoktorId &&
+                t.Id != model.Id && // izuzmi trenutni (koji ćemo izbrisati)
+                (
+                    (noviPocetak >= t.DatumVrijemePocetak && noviPocetak < t.DatumVrijemeKraj) ||
+                    (noviKraj > t.DatumVrijemePocetak && noviKraj <= t.DatumVrijemeKraj) ||
+                    (noviPocetak <= t.DatumVrijemePocetak && noviKraj >= t.DatumVrijemeKraj)
+                )
+            );
+
+            if (zauzet)
+            {
+                TempData["Greska"] = "Termin u to vrijeme kod izabranog doktora je zauzet.";
+                return View(model);
+            }
+
+            int pacijentId = int.Parse(HttpContext.Session.GetString("KorisniciId"));
+
+            // 1. Obriši stari termin
+            _context.Termini.Remove(stariTermin);
+
+            // 2. Dodaj novi termin
+            var noviTermin = new Termini
+            {
+                DoktorId = model.DoktorId,
+                PacijentId = pacijentId,
+                DatumVrijemePocetak = noviPocetak,
+                DatumVrijemeKraj = noviKraj,
+                Lokacija = (int)model.Lokacija,
+                MedicinskeUslugeId = model.MedicinskeUslugeId
+            };
+
+            _context.Termini.Add(noviTermin);
+            await _context.SaveChangesAsync();
+
+            TempData["Poruka"] = "Termin je uspješno izmijenjen.";
+            return RedirectToAction("Index");
+        }
+
+
+        private async Task UcitajViewBagove()
+        {
+            ViewBag.Doktori = new SelectList(
+                await _context.Korisnici
+                    .Where(k => k.Uloga == (int)Uloga.Doktor)
+                    .Select(k => new {
+                        k.Id,
+                        ImePrezime = k.Ime + " " + k.Prezime + " (" + k.Odjel.ToString() + ")"
+                    }).ToListAsync(),
+                "Id", "ImePrezime");
+
+            ViewBag.Lokacije = new SelectList(
+                Enum.GetValues(typeof(Lokacija)).Cast<Lokacija>().Select(l => new {
+                    Value = (int)l,
+                    Text = l.ToString()
+                }),
+                "Value", "Text");
+
+            ViewBag.MedicinskeUsluge = new SelectList(
+                await _context.Usluge.Select(u => new { u.Id, u.Naziv }).ToListAsync(),
+                "Id", "Naziv");
         }
     }
 }

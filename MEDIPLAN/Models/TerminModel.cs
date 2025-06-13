@@ -5,6 +5,8 @@ namespace MEDIPLAN.Models
 {
     public class TerminModel
     {
+        public int Id { get; set; }  // DODAJ OVU LINIJU
+
         [Required]
         public int DoktorId { get; set; }
 

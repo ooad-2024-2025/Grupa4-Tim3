@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {}
+    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MEDIPLAN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {
+    "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MEDIPLAN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
+        "projectUniqueName": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MEDIPLAN.csproj",
         "projectName": "MEDIPLAN",
-        "projectPath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
+        "projectPath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MEDIPLAN.csproj",
         "packagesPath": "C:\\Users\\AmilaB\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\obj\\",
         "projectStyle": "PackageReference",

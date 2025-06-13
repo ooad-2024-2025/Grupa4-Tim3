@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "StZMj2X2N18=",
+  "dgSpecHash": "ShGmbprrKTM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
+  "projectFilePath": "C:\\Users\\AmilaB\\Documents\\4.SEMESTAR\\OOAD\\Grupa4-Tim3\\MediPlan\\MEDIPLAN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AmilaB\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\AmilaB\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
