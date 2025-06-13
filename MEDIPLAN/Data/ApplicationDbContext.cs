@@ -16,6 +16,24 @@ namespace MEDIPLAN.Data
         public DbSet<HistorijaNalaza> HistorijaNalaza { get; set; }
         public DbSet<MedicinskeUsluge> MedicinskeUsluge { get; set; }
         public DbSet<Usluge> Usluge { get; set; }
-        // Dodaj ostale DbSet-ove ako imaš još entiteta
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Konfiguracija 1:1 veza između Termini i Korisnici (Doktor)
+            modelBuilder.Entity<Termini>()
+                .HasOne(t => t.Doktor)
+                .WithOne(k => k.TerminiDoktor)
+                .HasForeignKey<Termini>(t => t.DoktorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Konfiguracija 1:1 veza između Termini i Korisnici (Pacijent)
+            modelBuilder.Entity<Termini>()
+                .HasOne(t => t.Pacijent)
+                .WithOne(k => k.TerminiPacijent)
+                .HasForeignKey<Termini>(t => t.PacijentId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
     }
 }

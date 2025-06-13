@@ -37,17 +37,18 @@ public partial class DbAba416MediplanContext : DbContext
         {
             entity.ToTable("HistorijaNalaza");
 
-            entity.HasIndex(e => e.Terminid, "IX_HistorijaNalaza_Terminid");
+            entity.HasIndex(e => e.TerminId, "IX_HistorijaNalaza_TerminId");
         });
 
         modelBuilder.Entity<Korisnici>(entity =>
         {
             entity.ToTable("Korisnici");
 
-            entity.HasOne(d => d.MedicinskaUsluga).WithMany(p => p.Korisnici)
-    .HasForeignKey(d => d.MedicinskaUslugaId)
-    .HasConstraintName("FK_Korisnici_MedicinskeUsluge");
+            entity.Property(e => e.PhotoFileName).HasMaxLength(255);
 
+            entity.HasOne(d => d.MedicinskaUsluga).WithMany(p => p.Korisnicis)
+                .HasForeignKey(d => d.MedicinskaUslugaId)
+                .HasConstraintName("FK_Korisnici_MedicinskeUsluge");
         });
 
         modelBuilder.Entity<MedicinskeUsluge>(entity =>
@@ -63,6 +64,20 @@ public partial class DbAba416MediplanContext : DbContext
         modelBuilder.Entity<Termini>(entity =>
         {
             entity.ToTable("Termini");
+
+            entity.HasIndex(e => e.DoktorId, "UX_Termini_DoktorId").IsUnique();
+
+            entity.HasIndex(e => e.PacijentId, "UX_Termini_PacijentId").IsUnique();
+
+            entity.HasOne(d => d.Doktor).WithOne(p => p.TerminiDoktor)
+                .HasForeignKey<Termini>(d => d.DoktorId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Termini_Doktor");
+
+            entity.HasOne(d => d.Pacijent).WithOne(p => p.TerminiPacijent)
+                .HasForeignKey<Termini>(d => d.PacijentId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Termini_Pacijent");
         });
 
         modelBuilder.Entity<Usluge>(entity =>

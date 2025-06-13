@@ -9,5 +9,5 @@ public partial class MedicinskeUsluge
 
     public string Napomena { get; set; } = null!;
 
-    public virtual ICollection<Korisnici> Korisnici { get; set; } = new List<Korisnici>();
+    public virtual ICollection<Korisnici> Korisnicis { get; set; } = new List<Korisnici>();
 }
