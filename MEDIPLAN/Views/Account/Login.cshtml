@@ -4,7 +4,15 @@
     ViewData["Title"] = "Prijava";
 }
 
+@if (TempData["Greska"] != null)
+{
+        <div class="alert alert-danger text-center">
+        @TempData["Greska"]
+        </div>
+}
+
 <h2 class="mb-4 text-center">Prijava</h2>
+
 
 <div class="d-flex justify-content-center">
     <form asp-action="Login" method="post" class="p-4 border rounded shadow-sm" style="width: 320px; background-color: #f8f9fa;">

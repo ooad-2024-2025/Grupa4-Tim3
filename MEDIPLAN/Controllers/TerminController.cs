@@ -24,6 +24,7 @@ namespace MEDIPLAN.Controllers
             // Provjera je li korisnik prijavljen u sesiji
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("KorisniciId")))
             {
+                TempData["Greska"] = "Morate biti prijavljeni da biste zakazali termin.";
                 return RedirectToAction("Login", "Account");
             }
 
@@ -60,6 +61,7 @@ namespace MEDIPLAN.Controllers
             var pacijentIdString = HttpContext.Session.GetString("KorisniciId");
             if (!int.TryParse(pacijentIdString, out int pacijentId))
             {
+                TempData["Greska"] = "Morate biti prijavljeni da biste zakazali termin.";
                 return RedirectToAction("Login", "Account");
             }
 
