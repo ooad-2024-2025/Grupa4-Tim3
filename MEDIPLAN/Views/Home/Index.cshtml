@@ -43,6 +43,30 @@
         .medi-highlight {
             color: #00bfff; /* Svijetloplava boja za “MediPlan” */
         }
+
+        .btn-recenzije {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+            .btn-recenzije a {
+                background-color: #003366;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: bold;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                transition: background-color 0.3s ease;
+                display: inline-block;
+            }
+
+                .btn-recenzije a:hover {
+                    background-color: #005599;
+                }
+
     </style>
 
     <div class="hero-section">
@@ -53,10 +77,11 @@
     </div>
 
 
-    <div class="position-fixed bottom-0 end-0 m-4">
-        <a href="@Url.Action("Index", "Recenzije")" class="btn btn-info btn-lg shadow">
+    <div class="btn-recenzije">
+        <a href="@Url.Action("Index", "Recenzije")">
             📝 Recenzije klinike
         </a>
     </div>
+
 
 </div>
