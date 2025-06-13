@@ -15,6 +15,8 @@ namespace MEDIPLAN.Models
         public int Uloga { get; set; }
         public string QrKod { get; set; } = null!;
         public int Odjel { get; set; }
+        public string? PhotoFileName { get; set; }
+
         public int? MedicinskaUslugaId { get; set; }
 
         public virtual MedicinskeUsluge? MedicinskaUsluga { get; set; }
