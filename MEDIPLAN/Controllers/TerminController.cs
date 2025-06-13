@@ -147,12 +147,19 @@ namespace MEDIPLAN.Controllers
 
         private async Task PopuniViewBagove()
         {
-            ViewBag.Doktori = new SelectList(
-                await _context.Korisnici
-                    .Where(k => k.Uloga == (int)Uloga.Doktor)
-                    .Select(k => new { k.Id, ImePrezime = $"{k.Ime} {k.Prezime} ({k.Odjel})" })
-                    .ToListAsync(),
-                "Id", "ImePrezime");
+            var doktoriLista = await _context.Korisnici
+                .Where(k => k.Uloga == (int)Uloga.Doktor)
+                .ToListAsync();
+
+            var doktoriSaOdjelom = doktoriLista
+                .Select(k => new
+                {
+                    k.Id,
+                    ImePrezime = $"{k.Ime} {k.Prezime} ({Enum.GetName(typeof(Odjel), k.Odjel) ?? "Nepoznat odjel"})"
+                })
+                .ToList();
+
+            ViewBag.Doktori = new SelectList(doktoriSaOdjelom, "Id", "ImePrezime");
 
             ViewBag.Lokacije = new SelectList(
                 Enum.GetValues(typeof(Lokacija))
@@ -164,5 +171,6 @@ namespace MEDIPLAN.Controllers
                 await _context.Usluge.ToListAsync(),
                 "Id", "Naziv");
         }
+
     }
 }
