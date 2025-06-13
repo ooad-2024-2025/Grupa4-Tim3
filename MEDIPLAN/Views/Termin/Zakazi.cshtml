@@ -12,15 +12,13 @@
         margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background: #f0f2f5;
-        /* Uklonjeno centriranje sa body */
     }
 
-    /* Kontejner ispod navbar-a koji centira formu */
     .form-container {
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Formu poravnaj od vrha kontejnera */
-        min-height: calc(100vh - 60px); /* visina viewporta minus navbar visina (pretpostavka da navbar ima 60px visine) */
+        align-items: flex-start;
+        min-height: calc(100vh - 60px);
         padding: 40px 20px;
         box-sizing: border-box;
     }
@@ -35,11 +33,11 @@
         box-sizing: border-box;
     }
 
-    .card h2 {
-        margin-bottom: 20px;
-        color: #333;
-        text-align: center;
-    }
+        .card h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
 
     form label {
         display: block;
@@ -59,11 +57,11 @@
         box-sizing: border-box;
     }
 
-    form select:focus, form input[type="text"]:focus {
-        outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
-    }
+        form select:focus, form input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+        }
 
     .field-validation-error {
         color: #d93025;
@@ -86,14 +84,22 @@
         transition: background-color 0.3s ease;
     }
 
-    button[type="submit"]:hover {
-        background-color: #0056b3;
-    }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
 </style>
 
 <div class="form-container">
     <div class="card">
         <h2>Zakažite Termin</h2>
+
+        @if (TempData["Izmjena"] != null)
+        {
+            <div class="alert alert-warning text-center mb-3" style="font-size: 14px;">
+                @TempData["Izmjena"]
+            </div>
+        }
+
         @Html.ValidationSummary(true, "", new { @class = "field-validation-error" })
 
         <form method="post" asp-action="Zakazi">
@@ -111,9 +117,9 @@
             <select asp-for="Lokacija" asp-items="ViewBag.Lokacije" id="lokacija"></select>
             <span asp-validation-for="Lokacija" class="field-validation-error"></span>
 
-   
-
-            <button type="submit">Zakaži Termin</button>
+            <button type="submit" class="btn btn-primary">
+                @(Model.Id > 0 ? "Izmijeni" : "Zakaži")
+            </button>
         </form>
     </div>
 </div>
@@ -132,7 +138,7 @@
         altFormat: "d.m.Y. H:i",
         time_24hr: true,
         minuteIncrement: 60,
-        minDate: now, // minimalno dozvoljen datum je trenutni trenutak
+        minDate: now,
         onReady: updateMinTime,
         onChange: updateMinTime
     });
@@ -143,23 +149,16 @@
 
         if (!selectedDate) return;
 
-        // Poredi samo datume, bez vremena
         const selectedDay = selectedDate.toDateString();
         const today = now.toDateString();
 
         if (selectedDay === today) {
-            // Ako je danas - postavi vrijeme na trenutno
             const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
-
-            // Ako je npr. 15:28 → korisnik može zakazati tek od 16:00
             instance.set('minTime', `${currentHour + 1}:00`);
         } else {
-            // Za buduće datume - vraćamo na radno vrijeme
             instance.set('minTime', "08:00");
         }
 
         instance.set('maxTime', "16:00");
     }
 </script>
-
