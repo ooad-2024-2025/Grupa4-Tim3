@@ -3,8 +3,8 @@ using MEDIPLAN.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;  // za Session
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace MEDIPLAN.Controllers
@@ -21,6 +21,12 @@ namespace MEDIPLAN.Controllers
         [HttpGet]
         public async Task<IActionResult> Zakazi()
         {
+            // Provjera je li korisnik prijavljen u sesiji
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("KorisniciId")))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             var doktori = await _context.Korisnici
                 .Where(k => k.Uloga == (int)Uloga.Doktor)
                 .Select(k => new { k.Id, ImePrezime = k.Ime + " " + k.Prezime + " (" + k.Odjel.ToString() + ")" })
@@ -34,6 +40,11 @@ namespace MEDIPLAN.Controllers
         [HttpPost]
         public async Task<IActionResult> Zakazi(TerminModel model)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("KorisniciId")))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             if (!ModelState.IsValid)
             {
                 var doktori = await _context.Korisnici
@@ -46,10 +57,13 @@ namespace MEDIPLAN.Controllers
                 return View(model);
             }
 
-            var pacijentIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int pacijentId = int.Parse(pacijentIdString);
+            var pacijentIdString = HttpContext.Session.GetString("KorisniciId");
+            if (!int.TryParse(pacijentIdString, out int pacijentId))
+            {
+                return RedirectToAction("Login", "Account");
+            }
 
-            var Termini = new Termini
+            var termini = new Termini
             {
                 DoktorId = model.DoktorId,
                 PacijentId = pacijentId,
@@ -57,17 +71,11 @@ namespace MEDIPLAN.Controllers
                 DatumVrijemeKraj = model.Datum.Value.AddHours(1)
             };
 
-            _context.Termini.Add(Termini);
+            _context.Termini.Add(termini);
             await _context.SaveChangesAsync();
 
-            TempData["Poruka"] = $"Uspješno ste zakazali Termini.";
+            TempData["Poruka"] = "Uspješno ste zakazali termin.";
             return RedirectToAction("Potvrda");
-        }
-
-        public IActionResult Potvrda()
-        {
-            ViewBag.Poruka = TempData["Poruka"];
-            return View();
         }
     }
 }
