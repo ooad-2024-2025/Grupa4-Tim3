@@ -2,17 +2,17 @@
 
 @if (Model == null)
 {
-        <div class="alert alert-danger text-center mt-5">
-            <p>Greška: Podaci profila nisu dostupni.</p>
-        </div>
+    <div class="alert alert-danger text-center mt-5">
+        <p>Greška: Podaci profila nisu dostupni.</p>
+    </div>
     return;
 }
 
 @if (TempData["Greska"] != null)
 {
-        <div class="alert alert-danger text-center mt-3">
+    <div class="alert alert-danger text-center mt-3">
         @TempData["Greska"]
-        </div>
+    </div>
 }
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
@@ -30,41 +30,45 @@
 
             @if (Model.ZakazaniTermini == null || Model.ZakazaniTermini.Count == 0)
             {
-                    <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
+                <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
             }
             else
             {
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Doktor</th>
-                                    <th>Datum pregleda</th>
-                                    <th class="text-center">Akcije</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            @foreach (var Termini in Model.ZakazaniTermini)
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Doktor</th>
+                                <th>Datum pregleda</th>
+                                <th class="text-center">Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var termin in Model.ZakazaniTermini)
                             {
-                                        <tr>
-                                            <td>@Termini.ImeDoktora</td>
-                                            <td>@Termini.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
-                                            <td class="text-center">
-                                                <a asp-controller="Termin" asp-action="Zakazi" asp-route-Terminid="@Termini.Terminid" class="btn btn-outline-primary btn-sm me-1">
-                                                    <i class="bi bi-pencil"></i> Izmijeni
-                                                </a>
-                                                <form asp-controller="Profil" asp-action="OtkaziTermini" method="post" class="d-inline" onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
-                                                    <input type="hidden" name="Terminid" value="@Termini.Terminid" />
-                                                    <button type="submit" class="btn btn-outline-danger btn-sm">
-                                                        <i class="bi bi-x-circle"></i> Otkaži
-                                                    </button>
-                                                </form>
-                                            </td>
-                                        </tr>
+                                <tr>
+                                    <td>@termin.ImeDoktora</td>
+                                    <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
+                                    <td class="text-center">
+                                        <!-- Promijenjeno: Koristi samo TerminController za izmjenu -->
+                                        <a asp-controller="Termin" asp-action="Zakazi" asp-route-id="@termin.Terminid"
+                                           class="btn btn-outline-primary btn-sm me-1">
+                                            <i class="bi bi-pencil"></i> Izmijeni
+                                        </a>
+                                        <form asp-controller="Profil" asp-action="OtkaziTermini" method="post"
+                                              class="d-inline"
+                                              onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
+                                            <input type="hidden" name="Terminid" value="@termin.Terminid" />
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-x-circle"></i> Otkaži
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
                             }
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
+                </div>
             }
         </div>
     </div>
