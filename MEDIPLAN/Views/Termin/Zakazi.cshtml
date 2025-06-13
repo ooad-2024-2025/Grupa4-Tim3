@@ -4,90 +4,120 @@
     ViewData["Title"] = "Zakaži Termin";
 }
 
-<!-- Uključi Flatpickr stil -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 <style>
-    body {
-        background-color: #f4f8fb;
+    body, html {
+        height: 100%;
+        margin: 0;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        /* Uklonjeno centriranje sa body */
     }
 
-    .zakazi-wrapper {
-        max-width: 550px;
-        margin: 50px auto;
-        padding: 30px 40px;
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-        .zakazi-wrapper h2 {
-            text-align: center;
-            color: #084c7e;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-
-    label {
-        font-weight: 600;
-        color: #333;
-        margin-top: 15px;
-        display: block;
-    }
-
-    select, input[type="text"] {
-        width: 100%;
-        padding: 12px;
-        margin-top: 6px;
-        margin-bottom: 18px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
+    /* Kontejner ispod navbar-a koji centira formu */
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Formu poravnaj od vrha kontejnera */
+        min-height: calc(100vh - 60px); /* visina viewporta minus navbar visina (pretpostavka da navbar ima 60px visine) */
+        padding: 40px 20px;
         box-sizing: border-box;
     }
 
-    button {
+    .card {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         width: 100%;
-        padding: 14px;
-        background-color: #084c7e;
-        color: white;
+        max-width: 420px;
+        box-sizing: border-box;
+    }
+
+    .card h2 {
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    form select, form input[type="text"] {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 18px;
+        border: 1.8px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    form select:focus, form input[type="text"]:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+    }
+
+    .field-validation-error {
+        color: #d93025;
+        font-size: 13px;
+        margin-top: -14px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
         border: none;
         border-radius: 6px;
-        font-size: 17px;
-        font-weight: bold;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
-        button:hover {
-            background-color: #063b60;
-        }
-
-    .field-validation-error {
-        color: red;
-        font-size: 14px;
-        margin-top: -12px;
-        margin-bottom: 10px;
+    button[type="submit"]:hover {
+        background-color: #0056b3;
     }
 </style>
 
-<div class="zakazi-wrapper">
-    <h2>Zakažite Termini</h2>
+<div class="form-container">
+    <div class="card">
+        <h2>Zakažite Termin</h2>
+        @Html.ValidationSummary(true, "", new { @class = "field-validation-error" })
 
-    <form method="post" asp-controller="Termini" asp-action="Zakazi">
-        <label for="doktor">Odaberite doktora:</label>
-        <select asp-for="DoktorId" asp-items="ViewBag.Doktori" id="doktor"></select>
-        <span asp-validation-for="DoktorId" class="field-validation-error"></span>
+        <form method="post" asp-action="Zakazi">
+            @Html.AntiForgeryToken()
 
-        <label for="datum">Odaberite datum i vrijeme:</label>
-        <input asp-for="Datum" type="text" id="datum" placeholder="Odaberite datum i vrijeme..." />
-        <span asp-validation-for="Datum" class="field-validation-error"></span>
+            <label for="doktor">Odaberite doktora:</label>
+            <select asp-for="DoktorId" asp-items="ViewBag.Doktori" id="doktor"></select>
+            <span asp-validation-for="DoktorId" class="field-validation-error"></span>
 
-        <button type="submit">Zakaži Termin</button>
-    </form>
+            <label for="datum">Odaberite datum i vrijeme:</label>
+            <input asp-for="Datum" type="text" id="datum" placeholder="Odaberite datum i vrijeme..." />
+            <span asp-validation-for="Datum" class="field-validation-error"></span>
+
+            <label for="lokacija">Odaberite lokaciju:</label>
+            <select asp-for="Lokacija" asp-items="ViewBag.Lokacije" id="lokacija"></select>
+            <span asp-validation-for="Lokacija" class="field-validation-error"></span>
+
+   
+
+            <button type="submit">Zakaži Termin</button>
+        </form>
+    </div>
 </div>
 
-<!-- Uključi Flatpickr i validaciju -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
@@ -102,6 +132,6 @@
         time_24hr: true,
         minTime: "08:00",
         maxTime: "16:00",
-        minuteIncrement: 60 // Samo puni sat vremena
+        minuteIncrement: 60
     });
 </script>

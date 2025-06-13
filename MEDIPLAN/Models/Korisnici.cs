@@ -31,7 +31,6 @@ public partial class Korisnici
 
     public virtual MedicinskeUsluge? MedicinskaUsluga { get; set; }
 
-    public virtual Termini? TerminiDoktor { get; set; }
-
-    public virtual Termini? TerminiPacijent { get; set; }
+    public virtual ICollection<Termini> TerminiDoktor { get; set; } = new List<Termini>();
+    public virtual ICollection<Termini> TerminiPacijent { get; set; } = new List<Termini>();
 }

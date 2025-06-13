@@ -1,14 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MEDIPLAN.Models;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace MEDIPLAN.Models
 {
     public class TerminModel
     {
-        [Required(ErrorMessage = "Morate odabrati doktora.")]
-        public int DoktorId { get; set; }  
+        [Required]
+        public int DoktorId { get; set; }
 
-        [Required(ErrorMessage = "Morate odabrati datum.")]
+        [Required]
         public DateTime? Datum { get; set; }
+
+        [Required]
+        public int Lokacija { get; set; }
+
+        [Required]
+        public int MedicinskeUslugeId { get; set; }
     }
 }

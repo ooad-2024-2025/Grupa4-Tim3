@@ -21,18 +21,18 @@ namespace MEDIPLAN.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Konfiguracija 1:1 veza između Termini i Korisnici (Doktor)
+            // Konfigurišemo odnos za doktora
             modelBuilder.Entity<Termini>()
                 .HasOne(t => t.Doktor)
-                .WithOne(k => k.TerminiDoktor)
-                .HasForeignKey<Termini>(t => t.DoktorId)
+                .WithMany(k => k.TerminiDoktor)
+                .HasForeignKey(t => t.DoktorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Konfiguracija 1:1 veza između Termini i Korisnici (Pacijent)
+            // Konfigurišemo odnos za pacijenta
             modelBuilder.Entity<Termini>()
                 .HasOne(t => t.Pacijent)
-                .WithOne(k => k.TerminiPacijent)
-                .HasForeignKey<Termini>(t => t.PacijentId)
+                .WithMany(k => k.TerminiPacijent)
+                .HasForeignKey(t => t.PacijentId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

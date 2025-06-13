@@ -69,15 +69,23 @@ public partial class DbAba416MediplanContext : DbContext
 
             entity.HasIndex(e => e.PacijentId, "UX_Termini_PacijentId").IsUnique();
 
-            entity.HasOne(d => d.Doktor).WithOne(p => p.TerminiDoktor)
-                .HasForeignKey<Termini>(d => d.DoktorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Termini_Doktor");
+            entity.HasOne(d => d.Doktor)
 
-            entity.HasOne(d => d.Pacijent).WithOne(p => p.TerminiPacijent)
-                .HasForeignKey<Termini>(d => d.PacijentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Termini_Pacijent");
+    .WithMany(p => p.TerminiDoktor)
+
+    .HasForeignKey(d => d.DoktorId)
+
+    .OnDelete(DeleteBehavior.ClientSetNull);
+
+
+
+            entity.HasOne(d => d.Pacijent)
+
+                .WithMany(p => p.TerminiPacijent)
+
+                .HasForeignKey(d => d.PacijentId)
+
+                .OnDelete(DeleteBehavior.ClientSetNull);
         });
 
         modelBuilder.Entity<Usluge>(entity =>
