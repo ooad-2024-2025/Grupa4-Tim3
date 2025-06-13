@@ -145,7 +145,7 @@
 
     function updateMinTime(selectedDates, dateStr, instance) {
         const selectedDate = selectedDates[0];
-        const now = new Date();
+        const now = new Date();   
 
         if (!selectedDate) return;
 
@@ -154,7 +154,8 @@
 
         if (selectedDay === today) {
             const currentHour = now.getHours();
-            instance.set('minTime', `${currentHour + 1}:00`);
+            instance.set('minTime', (currentHour + 1) + ":00");
+
         } else {
             instance.set('minTime', "08:00");
         }

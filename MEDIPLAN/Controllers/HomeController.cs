@@ -12,7 +12,6 @@ namespace MEDIPLAN.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        // Konstruktor za Dependency Injection DbContext-a
         public HomeController(ApplicationDbContext context)
         {
             _context = context;
@@ -24,7 +23,6 @@ namespace MEDIPLAN.Controllers
 
         public IActionResult Usluge()
         {
-            // Hardkodirana lista usluga
             var usluge = new List<Usluge>
             {
                 new Usluge { Naziv = "Interna Medicina", Ikona = "images/interna-medicina.png" },
@@ -62,37 +60,44 @@ namespace MEDIPLAN.Controllers
             return View(model);
         }
 
-        // ** DODATAK: Statistika akcija **
         public async Task<IActionResult> Statistika()
         {
-            // Grupisanje po godini i mjesecu, broj jedinstvenih pacijenata po mjesecu
+            // Statistika 1: Pregledi po mjesecima i godinama
             var preglediPoMjesecima = await _context.Termini
-                .GroupBy(t => new { Godina = t.DatumVrijemePocetak.Year, Mjesec = t.DatumVrijemePocetak.Month })
-                .Select(g => new
+                .GroupBy(t => new { t.DatumVrijemePocetak.Year, t.DatumVrijemePocetak.Month })
+                .Select(g => new PregledPoMjesecu
                 {
-                    Godina = g.Key.Godina,
-                    Mjesec = g.Key.Mjesec,
-                    BrojPacijenata = g.Select(x => x.PacijentId).Distinct().Count()
+                    Godina = g.Key.Year,
+                    Mjesec = g.Key.Month,
+                    BrojPregleda = g.Count()
                 })
-                .OrderByDescending(x => x.Godina).ThenByDescending(x => x.Mjesec)
+                .OrderByDescending(x => x.Godina)
+                .ThenByDescending(x => x.Mjesec)
                 .ToListAsync();
 
-            // Ukupno jedinstvenih pacijenata kroz cijelo vrijeme
+            // Statistika 2: Produktivnost doktora
+            var produktivnostDoktora = await _context.Termini
+                .Include(t => t.Doktor)
+                .GroupBy(t => new { t.DoktorId, t.Doktor.Ime, t.Doktor.Prezime })
+                .Select(g => new ProduktivnostDoktora
+                {
+                    DoktorId = g.Key.DoktorId,
+                    ImePrezime = g.Key.Ime + " " + g.Key.Prezime,
+                    BrojPregleda = g.Count()
+                })
+                .OrderByDescending(x => x.BrojPregleda)
+                .ToListAsync();
+
+            // Ukupan broj pacijenata
             var ukupnoPacijenata = await _context.Termini
                 .Select(t => t.PacijentId)
                 .Distinct()
                 .CountAsync();
 
-            // Mapiranje u ViewModel
             var model = new StatistikaViewModel
             {
-                PreglediPoMjesecima = preglediPoMjesecima.Select(x => new PregledPoMjesecu
-                {
-                    Godina = x.Godina,
-                    Mjesec = x.Mjesec,
-                    BrojPregleda = x.BrojPacijenata
-                }).ToList(),
-
+                PreglediPoMjesecima = preglediPoMjesecima,
+                ProduktivnostDoktora = produktivnostDoktora,
                 UkupnoPacijenata = ukupnoPacijenata
             };
 
@@ -124,20 +129,11 @@ namespace MEDIPLAN.Controllers
             return View(lokacije);
         }
 
-        public IActionResult MojProfil()
-        {
-            return View();
-        }
+        public IActionResult MojProfil() => View();
 
-        public IActionResult Cjenovnik()
-        {
-            return View();
-        }
+        public IActionResult Cjenovnik() => View();
 
-        public IActionResult ZakaziTermini()
-        {
-            return View();
-        }
+        public IActionResult ZakaziTermini() => View();
 
         public IActionResult Privacy() => View();
     }
