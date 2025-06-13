@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MEDIPLAN.Models.StatistikaViewModel
+
+@{
     ViewData["Title"] = "Statistika naše klinike";
 }
 
@@ -18,3 +20,27 @@
 <p class="lead text-center">
     Ove informacije pomažu vam da bolje razumijete naš rad, dok nama služe za kontinuirano unapređenje usluga koje pružamo.
 </p>
+
+<hr />
+
+<h3 class="text-center">Ukupan broj jedinstvenih pacijenata: @Model.UkupnoPacijenata</h3>
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>Godina</th>
+            <th>Mjesec</th>
+            <th>Broj pacijenata</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pregled in Model.PreglediPoMjesecima)
+        {
+            <tr>
+                <td>@pregled.Godina</td>
+                <td>@pregled.Mjesec</td>
+                <td>@pregled.BrojPregleda</td>
+            </tr>
+        }
+    </tbody>
+</table>
