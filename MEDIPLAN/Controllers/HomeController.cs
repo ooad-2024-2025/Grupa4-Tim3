@@ -60,7 +60,18 @@ namespace MEDIPLAN.Controllers
 			return View(model);
 		}
 
-		public IActionResult Kontakt()
+
+
+       
+
+            public IActionResult Statistika()
+            {
+                // Ovdje možeš pripremiti model sa podacima za statistiku ako treba
+                return View();
+            }
+        
+
+        public IActionResult Kontakt()
 		{
 			var lokacije = new List<LokacijaInfo>
 			{
