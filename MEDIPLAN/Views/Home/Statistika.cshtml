@@ -1,11 +1,19 @@
-﻿@model StatistikaViewModel
+﻿@using System.Globalization
+
+@model StatistikaViewModel
 @{
     ViewData["Title"] = "Statistika";
+
+    // Funkcija za dobijanje imena mjeseca po broju
+    string GetMonthName(int monthNumber)
+    {
+        return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber);
+    }
 }
 
-<h2>Specijalistički pregledi po mjesecima</h2>
-<table class="table">
-    <thead>
+<h2 class="mb-4">Specijalistički pregledi po mjesecima</h2>
+<table class="table table-striped table-hover table-bordered shadow-sm">
+    <thead class="table-primary">
         <tr>
             <th>Godina</th>
             <th>Mjesec</th>
@@ -15,18 +23,19 @@
     <tbody>
         @foreach (var p in Model.PreglediPoMjesecima)
         {
+            var monthName = GetMonthName(p.Mjesec);
             <tr>
                 <td>@p.Godina</td>
-                <td>@p.Mjesec</td>
+                <td>@monthName</td>
                 <td>@p.BrojPregleda</td>
             </tr>
         }
     </tbody>
 </table>
 
-<h2>Produktivnost doktora</h2>
-<table class="table">
-    <thead>
+<h2 class="mt-5 mb-4">Produktivnost doktora</h2>
+<table class="table table-striped table-hover table-bordered shadow-sm">
+    <thead class="table-success">
         <tr>
             <th>Doktor</th>
             <th>Broj pregleda</th>
@@ -43,4 +52,44 @@
     </tbody>
 </table>
 
-<p><strong>Ukupno jedinstvenih pacijenata:</strong> @Model.UkupnoPacijenata</p>
+<div class="alert alert-info mt-4" role="alert" style="max-width: 350px;">
+    <strong>Ukupno jedinstvenih pacijenata:</strong> @Model.UkupnoPacijenata
+</div>
+
+<style>
+    /* Poboljšan spacing i font */
+    table {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.95rem;
+    }
+
+        /* Blagi shadow i zaokruženje */
+        table.shadow-sm {
+            border-radius: 0.35rem;
+            overflow: hidden;
+        }
+
+    /* Hover efekat za redove */
+    tbody tr:hover {
+        background-color: #e9f5ff;
+        cursor: default;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Heading margin */
+    h2 {
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    /* Alert stil za broj pacijenata */
+    .alert-info {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+        text-align: center;
+        border-radius: 0.3rem;
+    }
+</style>
