@@ -532,3 +532,13 @@ C:\Users\WIN10\Desktop\novi\Grupa4-Tim3\MEDIPLAN\obj\Debug\net8.0\refint\MEDIPLA
 C:\Users\WIN10\Desktop\novi\Grupa4-Tim3\MEDIPLAN\obj\Debug\net8.0\MEDIPLAN.pdb
 C:\Users\WIN10\Desktop\novi\Grupa4-Tim3\MEDIPLAN\obj\Debug\net8.0\MEDIPLAN.genruntimeconfig.cache
 C:\Users\WIN10\Desktop\novi\Grupa4-Tim3\MEDIPLAN\obj\Debug\net8.0\ref\MEDIPLAN.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MailKit.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\PdfSharpCore.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\SixLabors.ImageSharp.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\de\PdfSharpCore.resources.dll
+C:\Users\Korisnik\Documents\GitHub\Grupa4-Tim3\MEDIPLAN\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
