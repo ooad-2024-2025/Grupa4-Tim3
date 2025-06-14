@@ -34,7 +34,18 @@ namespace MEDIPLAN.Controllers
         public IActionResult Detalji(int doktorId)
         {
             var doktor = _context.Korisnici
-                .FirstOrDefault(d => d.Id == doktorId && d.Uloga == (int)Uloga.Doktor);
+                .Where(d => d.Id == doktorId && d.Uloga == (int)Uloga.Doktor)
+                .Select(d => new ViewModels.Doktor
+                {
+                    Ime = d.Ime,
+                    Prezime = d.Prezime,
+                    Email = d.Email,
+                    MedicinskaUsluga = new ViewModels.MedicinskaUsluga
+                    {
+                        Napomena = d.MedicinskaUsluga!.Napomena
+                    }
+                })
+                .FirstOrDefault();
 
             if (doktor == null)
                 return NotFound();
@@ -42,12 +53,22 @@ namespace MEDIPLAN.Controllers
             var recenzije = _context.Recenzije
                 .Where(r => r.DoktorId == doktorId)
                 .Include(r => r.Korisnik)
+                .Select(r => new ViewModels.Recenzija
+                {
+                    Tekst = r.Tekst,
+                    Korisnik = new ViewModels.Korisnik
+                    {
+                        Ime = r.Korisnik.Ime
+                    },
+                    OcjenaDoktor = r.OcjenaDoktor,
+                    OcjenaKlinika = r.OcjenaKlinika
+                })
                 .ToList();
 
             double prosjekOcjenaDoktor = recenzije.Count > 0 ? recenzije.Average(r => r.OcjenaDoktor) : 0;
             double prosjekOcjenaKlinika = recenzije.Count > 0 ? recenzije.Average(r => r.OcjenaKlinika) : 0;
 
-            var model = new DoktorDetaljiViewModel
+            var model = new ViewModels.DoktorDetaljiViewModel
             {
                 Doktor = doktor,
                 Recenzije = recenzije,
@@ -57,6 +78,5 @@ namespace MEDIPLAN.Controllers
 
             return View(model);
         }
-
     }
 }

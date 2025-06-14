@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MEDIPLAN.Models;
 
-namespace MEDIPLAN.ViewModels
+namespace MEDIPLAN.Models // Updated namespace to match folder structure
 {
     public class DoktorDetaljiViewModel
     {

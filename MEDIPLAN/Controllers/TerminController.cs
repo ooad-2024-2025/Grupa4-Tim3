@@ -14,10 +14,7 @@ namespace MEDIPLAN.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public TerminController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        public TerminController(ApplicationDbContext context) => _context = context;
 
         // GET: Termin/Zakazi (za prikaz forme za zakazivanje ili izmjenu)
         [HttpGet]
@@ -30,6 +27,13 @@ namespace MEDIPLAN.Controllers
             }
 
             var pacijentId = HttpContext.Session.GetInt32("KorisniciId");
+
+            if (!pacijentId.HasValue)
+            {
+                TempData["Greska"] = "Pacijent nije prijavljen.";
+                return RedirectToAction("Login", "Account");
+            }
+
             var uloga = HttpContext.Session.GetInt32("Uloga");
 
             ViewBag.Layout = uloga == (int)Uloga.Doktor
@@ -82,13 +86,19 @@ namespace MEDIPLAN.Controllers
 
             var pacijentId = HttpContext.Session.GetInt32("KorisniciId");
 
+            if (!pacijentId.HasValue)
+            {
+                TempData["Greska"] = "Pacijent nije prijavljen.";
+                return RedirectToAction("Login", "Account");
+            }
+
             if (!ModelState.IsValid)
             {
                 await PopuniViewBagove();
                 return View(model);
             }
 
-            var pocetakTermina = model.Datum.Value;
+            var pocetakTermina = model.Datum ?? throw new InvalidOperationException("Datum termina nije definisan.");
             var krajTermina = pocetakTermina.AddHours(1);
 
             if (model.Id > 0)
@@ -96,15 +106,14 @@ namespace MEDIPLAN.Controllers
                 var stariTermin = await _context.Termini
                     .FirstOrDefaultAsync(t => t.Id == model.Id && t.PacijentId == pacijentId.Value);
 
-                if (stariTermin == null)
+                if (stariTermin != null)
+                {
+                    _context.Termini.Remove(stariTermin);
+                    await _context.SaveChangesAsync();
+                }
+                else
                 {
                     TempData["Greska"] = "Termin nije pronađen.";
-                    return RedirectToAction("Index", "Profil");
-                }
-
-                if ((stariTermin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
-                {
-                    TempData["Greska"] = "Termin se ne može mijenjati unutar 24 sata.";
                     return RedirectToAction("Index", "Profil");
                 }
             }
@@ -132,8 +141,16 @@ namespace MEDIPLAN.Controllers
                         var stariTermin = await _context.Termini
                             .FirstOrDefaultAsync(t => t.Id == model.Id && t.PacijentId == pacijentId.Value);
 
-                        _context.Termini.Remove(stariTermin);
-                        await _context.SaveChangesAsync();
+                        if (stariTermin != null)
+                        {
+                            _context.Termini.Remove(stariTermin);
+                            await _context.SaveChangesAsync();
+                        }
+                        else
+                        {
+                            TempData["Greska"] = "Termin nije pronađen.";
+                            return RedirectToAction("Index", "Profil");
+                        }
                     }
 
                     var noviTermin = new Termini

@@ -34,8 +34,8 @@ namespace MEDIPLAN.Controllers
 
         public class UslugaViewModel
         {
-            public string Naziv { get; set; }
-            public string SlikaUrl { get; set; }
+            public required string Naziv { get; set; }
+            public required string SlikaUrl { get; set; }
         }
 
         public IActionResult Index()
@@ -59,7 +59,7 @@ namespace MEDIPLAN.Controllers
                 return NotFound();
 
             // Funkcija koja mapira Odjel iz baze na enum offset (bez NemaOdjela)
-            int OdjelIdBezOffseta(int odjel)
+            static int OdjelIdBezOffseta(int odjel)
             {
                 return odjel; // odjel iz baze je 0-based, dakle 0=InternaMedicina
             }

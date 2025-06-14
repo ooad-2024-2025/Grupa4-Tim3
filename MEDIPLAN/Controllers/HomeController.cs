@@ -25,14 +25,14 @@ namespace MEDIPLAN.Controllers
         {
             var usluge = new List<Usluge>
             {
-                new Usluge { Naziv = "Interna Medicina", Ikona = "images/interna-medicina.png", Opis = "Opis za Internu Medicinu" },
-                new Usluge { Naziv = "Kardiologija", Ikona = "images/kardiologija.png", Opis = "Opis za Kardiologiju" },
-                new Usluge { Naziv = "Oftamologija", Ikona = "images/oftamologija.png", Opis = "Opis za Oftamologiju" },
-                new Usluge { Naziv = "Dermatologija", Ikona = "images/dermatologija.png", Opis = "Opis za Dermatologiju" },
-                new Usluge { Naziv = "Endokrinologija", Ikona = "images/endokrinologija.png", Opis = "Opis za Endokrinologiju" },
-                new Usluge { Naziv = "Ginekologija", Ikona = "images/gynecology.png", Opis = "Opis za Ginekologiju" },
-                new Usluge { Naziv = "Neurologija", Ikona = "images/neurologija.png", Opis = "Opis za Neurologiju" },
-                new Usluge { Naziv = "Radiologija", Ikona = "images/radiology.png", Opis = "Opis za Radiologiju" }
+                new() { Naziv = "Interna Medicina", Ikona = "images/interna-medicina.png", Opis = "Opis za Internu Medicinu" },
+                new() { Naziv = "Kardiologija", Ikona = "images/kardiologija.png", Opis = "Opis za Kardiologiju" },
+                new() { Naziv = "Oftamologija", Ikona = "images/oftamologija.png", Opis = "Opis za Oftamologiju" },
+                new() { Naziv = "Dermatologija", Ikona = "images/dermatologija.png", Opis = "Opis za Dermatologiju" },
+                new() { Naziv = "Endokrinologija", Ikona = "images/endokrinologija.png", Opis = "Opis za Endokrinologiju" },
+                new() { Naziv = "Ginekologija", Ikona = "images/gynecology.png", Opis = "Opis za Ginekologiju" },
+                new() { Naziv = "Neurologija", Ikona = "images/neurologija.png", Opis = "Opis za Neurologiju" },
+                new() { Naziv = "Radiologija", Ikona = "images/radiology.png", Opis = "Opis za Radiologiju" }
             };
 
             return View(usluge);
