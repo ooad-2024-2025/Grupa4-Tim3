@@ -1,14 +1,19 @@
 ﻿@model MEDIPLAN.ViewModels.DoktorDetaljiViewModel
 
-
 @{
     ViewData["Title"] = "Detalji doktora";
 }
 
-<h2>@Model.Doktor.Ime @Model.Doktor.Prezime</h2>
+<div class="text-center my-4">
+    <h2 style="text-transform: uppercase; font-weight: 700;">
+        @Model.Doktor.Ime @Model.Doktor.Prezime
+    </h2>
+    <p>@Model.Doktor.Email</p>
+</div>
 
-<p>Email: @Model.Doktor.Email</p>
-<p>Specijalizacija: @Model.Doktor.MedicinskaUsluga?.Napomena</p>
+<p class="text-center">
+    Specijalizacija: @Model.Doktor.MedicinskaUsluga?.Napomena
+</p>
 
 <hr />
 
