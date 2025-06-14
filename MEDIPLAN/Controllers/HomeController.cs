@@ -25,14 +25,14 @@ namespace MEDIPLAN.Controllers
         {
             var usluge = new List<Usluge>
             {
-                new Usluge { Naziv = "Interna Medicina", Ikona = "images/interna-medicina.png" },
-                new Usluge { Naziv = "Kardiologija", Ikona = "images/kardiologija.png" },
-                new Usluge { Naziv = "Oftamologija", Ikona = "images/oftamologija.png" },
-                new Usluge { Naziv = "Dermatologija", Ikona = "images/dermatologija.png" },
-                new Usluge { Naziv = "Endokrinologija", Ikona = "images/endokrinologija.png" },
-                new Usluge { Naziv = "Ginekologija", Ikona = "images/gynecology.png" },
-                new Usluge { Naziv = "Neurologija", Ikona = "images/neurologija.png" },
-                new Usluge { Naziv = "Radiologija", Ikona = "images/radiology.png" }
+                new Usluge { Naziv = "Interna Medicina", Ikona = "images/interna-medicina.png", Opis = "Opis za Internu Medicinu" },
+                new Usluge { Naziv = "Kardiologija", Ikona = "images/kardiologija.png", Opis = "Opis za Kardiologiju" },
+                new Usluge { Naziv = "Oftamologija", Ikona = "images/oftamologija.png", Opis = "Opis za Oftamologiju" },
+                new Usluge { Naziv = "Dermatologija", Ikona = "images/dermatologija.png", Opis = "Opis za Dermatologiju" },
+                new Usluge { Naziv = "Endokrinologija", Ikona = "images/endokrinologija.png", Opis = "Opis za Endokrinologiju" },
+                new Usluge { Naziv = "Ginekologija", Ikona = "images/gynecology.png", Opis = "Opis za Ginekologiju" },
+                new Usluge { Naziv = "Neurologija", Ikona = "images/neurologija.png", Opis = "Opis za Neurologiju" },
+                new Usluge { Naziv = "Radiologija", Ikona = "images/radiology.png", Opis = "Opis za Radiologiju" }
             };
 
             return View(usluge);
@@ -43,7 +43,18 @@ namespace MEDIPLAN.Controllers
             if (string.IsNullOrEmpty(naziv))
                 return RedirectToAction("Usluge");
 
-            var usluga = _context.Usluge.FirstOrDefault(u => u.Naziv == naziv);
+            var usluga = _context.Usluge
+                .Select(u => new Models.Usluge
+                { 
+
+                    Id = u.Id,
+                    Naziv = u.Naziv,
+                    Opis = u.Opis,
+                    Ikona = u.Ikona,
+                    Odjel = u.Odjel
+                })
+                .FirstOrDefault(u => u.Naziv == naziv);
+
             if (usluga == null)
                 return NotFound();
 
