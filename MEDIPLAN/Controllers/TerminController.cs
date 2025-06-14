@@ -30,6 +30,12 @@ namespace MEDIPLAN.Controllers
             }
 
             var pacijentId = HttpContext.Session.GetInt32("KorisniciId");
+            var uloga = HttpContext.Session.GetInt32("Uloga");
+
+            ViewBag.Layout = uloga == (int)Uloga.Doktor
+                ? "~/Views/Shared/_LayoutDoktor.cshtml"
+                : "~/Views/Shared/_LayoutPacijent.cshtml";
+
             await PopuniViewBagove();
 
             var model = new TerminModel();
@@ -56,11 +62,12 @@ namespace MEDIPLAN.Controllers
                 model.Datum = termin.DatumVrijemePocetak;
                 model.Lokacija = termin.Lokacija;
 
-                TempData["IzmjenaPoruka"] = "Napomena: U pitanju je izmjena termina. Originalni termin će biti uklonjen.";
+                TempData["Izmjena"] = "Napomena: U pitanju je izmjena termina. Originalni termin će biti uklonjen.";
             }
 
             return View(model);
         }
+
 
         // POST: Termin/Zakazi (za slanje podataka o terminu)
         [HttpPost]

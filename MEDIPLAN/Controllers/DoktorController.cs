@@ -62,6 +62,21 @@ namespace MEDIPLAN.Controllers
             return View(); // za sada prazan
         }
 
+        [HttpGet]
+        public IActionResult PreuzmiNalaz(string naziv)
+        {
+            if (string.IsNullOrEmpty(naziv))
+                return NotFound();
+
+            var putanja = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "nalazi", naziv);
+
+            if (!System.IO.File.Exists(putanja))
+                return NotFound();
+
+            var contentType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"; // .docx MIME tip
+            return PhysicalFile(putanja, contentType, naziv);
+        }
+
 
     }
 }

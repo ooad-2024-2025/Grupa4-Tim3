@@ -136,21 +136,15 @@
         altFormat: "d.m.Y. H:i",
         time_24hr: true,
         minuteIncrement: 60,
-        minDate: "today",
+        minDate: new Date(), // ograniči na sadašnji dan i dalje
         defaultHour: 8,
+        defaultMinute: 0,
         minTime: "08:00",
         maxTime: "15:00",
-        disable: [
-            function (date) {
-                const hour = date.getHours();
-                return false; // NE onemogućuj prikaz datuma u kalendaru
-            }
-        ],
-        onReady: updateTimeWindow,
-        onChange: updateTimeWindow,
-        // >>> OVO JE KLJUČNO ZA PRIKAZ KALENDARA <<<
         inline: false,
-        allowInput: true
+        allowInput: true,
+        onReady: updateTimeWindow,
+        onChange: updateTimeWindow
     });
 
     function updateTimeWindow(selectedDates, dateStr, instance) {
@@ -162,11 +156,20 @@
         const isToday = selectedDate.toDateString() === now.toDateString();
 
         if (isToday) {
-            const nextFullHour = Math.ceil(now.getHours() + (now.getMinutes() > 0 ? 1 : 0));
-            const validHour = Math.max(8, nextFullHour);
+            let nextHour = now.getHours();
+            if (now.getMinutes() > 0) nextHour += 1;
+            nextHour = Math.max(8, nextHour);
 
-            instance.set('minTime', validHour + ":00");
-            instance.set('maxTime', "15:00");
+            // Ako je trenutno poslije 15h, zabrani danasnje termine
+            if (nextHour >= 15) {
+                instance.set('minTime', null);
+                instance.set('maxTime', null);
+                instance.setDate(null); // resetuj izbor
+                alert("Za danas više nije moguće zakazati termin. Odaberite neki drugi dan.");
+            } else {
+                instance.set('minTime', `${nextHour}:00`);
+                instance.set('maxTime', "15:00");
+            }
         } else {
             instance.set('minTime', "08:00");
             instance.set('maxTime', "15:00");
