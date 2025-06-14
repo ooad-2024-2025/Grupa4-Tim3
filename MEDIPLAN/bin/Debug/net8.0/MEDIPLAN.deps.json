@@ -9,6 +9,7 @@
       "MEDIPLAN/1.0.0": {
         "dependencies": {
           "MailKit": "4.12.1",
+          "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
           "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.6",
