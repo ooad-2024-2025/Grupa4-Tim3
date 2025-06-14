@@ -1,0 +1,23 @@
+@model List<MEDIPLAN.Models.TerminPrikazViewModel>
+
+    <h2>Moji termini</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Pacijent</th>
+                <th>Datum</th>
+                <th>Usluga</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var termin in Model)
+        {
+            <tr>
+                <td>@termin.PacijentImePrezime</td>
+                <td>@termin.Datum?.ToString("dd.MM.yyyy HH:mm") ?? ""</td>
+                <td>@termin.NazivUsluge</td>
+
+            </tr>
+        }
+        </tbody>
+    </table>
