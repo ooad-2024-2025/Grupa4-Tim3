@@ -83,7 +83,7 @@ public class AccountController : Controller
         var korisnik = await _context.Korisnici
             .FirstOrDefaultAsync(x => x.Username == model.Username && x.Lozinka == lozinkaHash);
 
-        if (korisnik == null || !korisnik.IsVerified)
+        if (korisnik == null || (korisnik.Uloga != (int)Uloga.Doktor && !korisnik.IsVerified))
         {
             ModelState.AddModelError("", "Neispravni podaci ili nije verifikovan nalog.");
             return View(model);
@@ -91,9 +91,16 @@ public class AccountController : Controller
 
         HttpContext.Session.SetString("KorisniciId", korisnik.Id.ToString());
         HttpContext.Session.SetString("Username", korisnik.Username);
+        HttpContext.Session.SetString("Uloga", korisnik.Uloga.ToString());
+
+        if (korisnik.Uloga == (int)Uloga.Doktor)
+        {
+            return RedirectToAction("Dashboard", "Doktor"); // ili "Doktor" controller ako postoji
+        }
 
         return RedirectToAction("Index", "Home");
     }
+
 
     public IActionResult Logout()
     {
