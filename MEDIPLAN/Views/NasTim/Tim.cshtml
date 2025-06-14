@@ -30,6 +30,11 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="color:#003366;">@doktor.Ime @doktor.Prezime</h5>
                                 <p class="card-text" style="color:#003366;"><em>@doktor.Email</em></p>
+
+                                <!-- Link za detalje doktora -->
+                                <a href="@Url.Action("Detalji", "NasTim", new { doktorId = doktor.Id })" class="btn btn-primary mt-2">
+                                    Pogledaj detalje
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +66,7 @@
         const strelica = document.getElementById("strelicaNaVrh");
 
         window.addEventListener("scroll", function () {
-            if (window.pageYOffset > 300) {
+            if (window.scrollY > 300) {
                 strelica.style.display = "block";
             } else {
                 strelica.style.display = "none";
