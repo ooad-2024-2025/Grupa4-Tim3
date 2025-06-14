@@ -1,0 +1,38 @@
+﻿@model MEDIPLAN.ViewModels.DoktorDetaljiViewModel
+
+
+@{
+    ViewData["Title"] = "Detalji doktora";
+}
+
+<h2>@Model.Doktor.Ime @Model.Doktor.Prezime</h2>
+
+<p>Email: @Model.Doktor.Email</p>
+<p>Specijalizacija: @Model.Doktor.MedicinskaUsluga?.Napomena</p>
+
+<hr />
+
+<h3>Prosječna ocjena doktora: @Model.ProsjekOcjenaDoktor.ToString("0.0") ★</h3>
+<h3>Prosječna ocjena klinike: @Model.ProsjekOcjenaKlinika.ToString("0.0") ★</h3>
+
+<hr />
+
+<h3>Recenzije</h3>
+
+@if (Model.Recenzije.Any())
+{
+    foreach (var rec in Model.Recenzije)
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <strong>@rec.Korisnik.Ime:</strong>
+                <span> - Ocjena doktora: @rec.OcjenaDoktor ★, Ocjena klinike: @rec.OcjenaKlinika ★</span>
+                <p>@rec.Tekst</p>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <p>Nema recenzija za ovog doktora.</p>
+}
