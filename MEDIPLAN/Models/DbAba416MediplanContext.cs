@@ -65,26 +65,12 @@ public partial class DbAba416MediplanContext : DbContext
         {
             entity.ToTable("Termini");
 
-            entity.HasIndex(e => e.DoktorId, "UX_Termini_DoktorId").IsUnique();
+            entity.HasOne(d => d.Doktor).WithMany(p => p.TerminiDoktor)
+                .HasForeignKey(d => d.DoktorId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
-            entity.HasIndex(e => e.PacijentId, "UX_Termini_PacijentId").IsUnique();
-
-            entity.HasOne(d => d.Doktor)
-
-    .WithMany(p => p.TerminiDoktor)
-
-    .HasForeignKey(d => d.DoktorId)
-
-    .OnDelete(DeleteBehavior.ClientSetNull);
-
-
-
-            entity.HasOne(d => d.Pacijent)
-
-                .WithMany(p => p.TerminiPacijent)
-
+            entity.HasOne(d => d.Pacijent).WithMany(p => p.TerminiPacijent)
                 .HasForeignKey(d => d.PacijentId)
-
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
 

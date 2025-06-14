@@ -1,4 +1,5 @@
 using MEDIPLAN.Data;
+using MEDIPLAN.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 // ?? Dodaj autentifikaciju preko cookie-a
 builder.Services.AddAuthentication("Cookies")

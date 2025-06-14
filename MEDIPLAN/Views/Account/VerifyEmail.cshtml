@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Email Verification";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Message"]
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Nevažeći verifikacioni link.
+                </div>
+            }
+        </div>
+    </div>
+</div>

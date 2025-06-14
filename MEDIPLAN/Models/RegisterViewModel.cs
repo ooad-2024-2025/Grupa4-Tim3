@@ -1,35 +1,38 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 public class RegisterViewModel
 {
-    [Required(ErrorMessage = "Obavezno polje")]
-    [StringLength(50, MinimumLength = 3, ErrorMessage = "Korisničko ime mora imati između 3 i 50 karaktera")]
+    [Required(ErrorMessage = "Korisničko ime je obavezno")]
+    [StringLength(20, MinimumLength = 3, ErrorMessage = "Korisničko ime mora imati 3-20 karaktera")]
     public string Username { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
+    [Required(ErrorMessage = "Ime je obavezno")]
     public string Ime { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
+    [Required(ErrorMessage = "Prezime je obavezno")]
     public string Prezime { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
-    [EmailAddress]
+    [Required(ErrorMessage = "Email je obavezan")]
+    [EmailAddress(ErrorMessage = "Neispravan format emaila")]
     public string Email { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
+    [Required(ErrorMessage = "Lozinka je obavezna")]
     [DataType(DataType.Password)]
+    [StringLength(100, MinimumLength = 6, ErrorMessage = "Lozinka mora imati najmanje 6 karaktera")]
     public string Lozinka { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
     [DataType(DataType.Password)]
-    [Compare("Lozinka", ErrorMessage = "Lozinke se ne podudaraju.")]
+    [Compare("Lozinka", ErrorMessage = "Lozinke se ne podudaraju")]
     public string PotvrdiLozinku { get; set; }
 
-    [Required(ErrorMessage = "Obavezno polje")]
+    [Required(ErrorMessage = "Datum rođenja je obavezan")]
     [DataType(DataType.Date)]
     public DateTime DatumRodjenja { get; set; }
 }
 
-
-
+public class ResendVerificationModel
+{
+    [Required(ErrorMessage = "Email je obavezan")]
+    [EmailAddress(ErrorMessage = "Neispravan format emaila")]
+    public string Email { get; set; }
+}

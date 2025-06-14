@@ -22,7 +22,4 @@ public partial class Termini
     public virtual Korisnici Doktor { get; set; } = null!;
 
     public virtual Korisnici Pacijent { get; set; } = null!;
-
-
-    public virtual MedicinskeUsluge MedicinskeUsluge { get; set; } = null!;
 }
