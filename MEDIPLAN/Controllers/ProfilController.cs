@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Linq;
 using System;
 using MEDIPLAN.Models;
+using QRCoder;
+
 
 namespace MEDIPLAN.Controllers
 {
@@ -41,6 +43,7 @@ namespace MEDIPLAN.Controllers
                 Ime = korisnik.Ime,
                 Prezime = korisnik.Prezime,
                 DatumRodjenja = korisnik.DatumRodjenja,
+                QrKodBase64 = korisnik.QrKod,
                 ZakazaniTermini = sviTermini
                     .Where(t => t.DatumVrijemePocetak > danas)
                     .Select(t => new TerminViewModel
@@ -93,3 +96,4 @@ namespace MEDIPLAN.Controllers
         }
     }
 }
+

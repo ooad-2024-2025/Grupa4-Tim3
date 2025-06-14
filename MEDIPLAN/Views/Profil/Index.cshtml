@@ -2,17 +2,17 @@
 
 @if (Model == null)
 {
-    <div class="alert alert-danger text-center mt-5">
-        <p>Greška: Podaci profila nisu dostupni.</p>
-    </div>
+        <div class="alert alert-danger text-center mt-5">
+            <p>Greška: Podaci profila nisu dostupni.</p>
+        </div>
     return;
 }
 
 @if (TempData["Greska"] != null)
 {
-    <div class="alert alert-danger text-center mt-3">
+        <div class="alert alert-danger text-center mt-3">
         @TempData["Greska"]
-    </div>
+        </div>
 }
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
@@ -23,6 +23,18 @@
             <h4 class="text-primary">Lični podaci</h4>
             <p><strong>Ime i prezime:</strong> @Model.Ime @Model.Prezime</p>
             <p><strong>Datum rođenja:</strong> @Model.DatumRodjenja.ToString("dd.MM.yyyy")</p>
+            <div class="mb-4">
+    <h4 class="text-primary">Moj QR Kod</h4>
+                @if (!string.IsNullOrEmpty(Model.QrKodBase64))
+                {
+                <img src="data:image/png;base64,@Model.QrKodBase64" alt="QR kod" class="img-fluid" style="max-width: 200px;" />
+                }
+                else
+                {
+                <p class="text-muted">QR kod nije dostupan.</p>
+                }
+</div>
+
         </div>
 
         <div>
@@ -30,46 +42,72 @@
 
             @if (Model.ZakazaniTermini == null || Model.ZakazaniTermini.Count == 0)
             {
-                <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
+                    <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
             }
             else
             {
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle">
-                        <thead class="table-light">
-                            <tr>
-                                <th>Doktor</th>
-                                <th>Datum pregleda</th>
-                                <th class="text-center">Akcije</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Doktor</th>
+                                    <th>Datum pregleda</th>
+                                    <th class="text-center">Akcije</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                             @foreach (var termin in Model.ZakazaniTermini)
                             {
-                                <tr>
-                                    <td>@termin.ImeDoktora</td>
-                                    <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
-                                    <td class="text-center">
-                                        <!-- Promijenjeno: Koristi samo TerminController za izmjenu -->
-                                        <a asp-controller="Termin" asp-action="Zakazi" asp-route-id="@termin.Terminid"
-                                           class="btn btn-outline-primary btn-sm me-1">
-                                            <i class="bi bi-pencil"></i> Izmijeni
-                                        </a>
-                                        <form asp-controller="Profil" asp-action="OtkaziTermini" method="post"
-                                              class="d-inline"
-                                              onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
-                                            <input type="hidden" name="Terminid" value="@termin.Terminid" />
-                                            <button type="submit" class="btn btn-outline-danger btn-sm">
-                                                <i class="bi bi-x-circle"></i> Otkaži
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
+                                        <tr>
+                                            <td>@termin.ImeDoktora</td>
+                                            <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                <!-- Promijenjeno: Koristi samo TerminController za izmjenu -->
+                                                <a asp-controller="Termin" asp-action="Zakazi" asp-route-id="@termin.Terminid"
+                                                   class="btn btn-outline-primary btn-sm me-1">
+                                                    <i class="bi bi-pencil"></i> Izmijeni
+                                                </a>
+                                                <form asp-controller="Profil" asp-action="OtkaziTermini" method="post"
+                                                      class="d-inline"
+                                                      onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
+                                                    <input type="hidden" name="Terminid" value="@termin.Terminid" />
+                                                    <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                        <i class="bi bi-x-circle"></i> Otkaži
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
                             }
-                        </tbody>
-                    </table>
-                </div>
+                            </tbody>
+                        </table>
+                    </div>
             }
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+CSPROJ
+
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="QRCoder" Version="1.4.3" />
+        <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    </ItemGroup>
+
+</Project>
+

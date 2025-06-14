@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MEDIPLAN.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using System.Security.Cryptography;
 using System.Text;
+using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using QRCoder;
+using System.IO;
+using System.Threading.Tasks;
+using MEDIPLAN.Data;
 using MEDIPLAN.Models;
+
 
 public class AccountController : Controller
 {
@@ -17,65 +23,90 @@ public class AccountController : Controller
         _context = context;
     }
 
-    // GET: /Account/Register
     [HttpGet]
     public IActionResult Register()
     {
         return View();
     }
 
-    // POST: /Account/Register
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel model)
     {
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
-            // Provera da li već postoji
-            var postoji = await _context.Korisnici
-                .FirstOrDefaultAsync(x => x.Username == model.Username);
-            if (postoji != null)
+            // Ispisi sve validacijske greške u konzolu
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
             {
-                ModelState.AddModelError("", "Korisničko ime već postoji!");
+                Console.WriteLine($"VALIDACIJSKA GREŠKA: {error.ErrorMessage}");
+            }
+            return View(model);
+        }
+
+        try
+        {
+            // Provjeri da li korisničko ime već postoji
+            if (await _context.Korisnici.AnyAsync(x => x.Username == model.Username))
+            {
+                ModelState.AddModelError("Username", "Korisničko ime već postoji");
                 return View(model);
             }
 
-            // Heširaj lozinku (preporuka!)
-            var hashedLozinka = HashLozinka(model.Lozinka);
+            // Generisanje QR koda
+            string qrBase64;
+            try
+            {
+                qrBase64 = GenerisiQrKod(model.Username);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", $"Greška pri generisanju QR koda: {ex.Message}");
+                return View(model);
+            }
 
-            var Korisnik = new Korisnici 
+            // Kreiranje novog korisnika
+            var korisnik = new Korisnici
             {
                 Username = model.Username,
+                Lozinka = HashLozinka(model.Lozinka),
+                QrKod = qrBase64,
+                Email = model.Email,
                 Ime = model.Ime,
                 Prezime = model.Prezime,
-                Email = model.Email,
-                Lozinka = hashedLozinka,
                 DatumRodjenja = model.DatumRodjenja,
-                Uloga = (int)Uloga.Pacijent, // ili šta god ti treba kao default
-                QrKod = "" // Postavi praznu vrednost ili generiši neki kod ako treba
+                Uloga = (int)Uloga.Pacijent,
+                Odjel = 0 // obavezno ako nije nullable u bazi!
             };
 
-            _context.Korisnici.Add(Korisnik);
+            _context.Korisnici.Add(korisnik);
             await _context.SaveChangesAsync();
 
-            // Nakon registracije - možeš ga automatski logovati
-            HttpContext.Session.SetString("KorisniciId", Korisnik.Id.ToString());
-            HttpContext.Session.SetString("Username", Korisnik.Username);
-
+            // Postavi sesiju i preusmjeri na Home
+            HttpContext.Session.SetString("KorisniciId", korisnik.Id.ToString());
             return RedirectToAction("Index", "Home");
         }
-
-        return View(model);
+        catch (DbUpdateException ex)
+        {
+            Console.WriteLine($"Database error: {ex.InnerException?.Message ?? ex.Message}");
+            ModelState.AddModelError("", "Došlo je do greške pri čuvanju podataka");
+            return View(model);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Neočekivana greška: {ex.Message}");
+            ModelState.AddModelError("", "Došlo je do neočekivane greške");
+            return View(model);
+        }
     }
 
-    // GET: /Account/Login
+
+
     [HttpGet]
     public IActionResult Login()
     {
         return View();
     }
 
-    // POST: /Account/Login
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel model)
@@ -89,7 +120,6 @@ public class AccountController : Controller
 
             if (Korisnici != null)
             {
-                // Prijava - koristi Session
                 HttpContext.Session.SetString("KorisniciId", Korisnici.Id.ToString());
                 HttpContext.Session.SetString("Username", Korisnici.Username);
 
@@ -102,7 +132,6 @@ public class AccountController : Controller
         return View(model);
     }
 
-    // GET: /Account/Logout
     [HttpGet]
     public IActionResult Logout()
     {
@@ -110,7 +139,7 @@ public class AccountController : Controller
         return RedirectToAction("Index", "Home");
     }
 
-    // Heširanje lozinke (MD5 primer, možeš koristiti i SHA256)
+    // Heširanje lozinke
     private string HashLozinka(string lozinka)
     {
         using (var md5 = MD5.Create())
@@ -123,6 +152,32 @@ public class AccountController : Controller
                 sb.Append(b.ToString("X2"));
 
             return sb.ToString();
+        }
+    }
+
+    // Generisanje QR koda kao Base64 string koristeći SkiaSharp
+
+    private string GenerisiQrKod(string tekst)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(tekst))
+                throw new ArgumentException("Tekst ne sme biti prazan");
+
+            using (var qrGenerator = new QRCodeGenerator())
+            using (var qrCodeData = qrGenerator.CreateQrCode(tekst, QRCodeGenerator.ECCLevel.Q, forceUtf8: true))
+            using (var qrCode = new PngByteQRCode(qrCodeData))
+            {
+                byte[] pngBytes = qrCode.GetGraphic(20);
+                string base64 = Convert.ToBase64String(pngBytes);
+
+                return base64;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Greška pri generisanju QR koda: {ex}");
+            throw;
         }
     }
 

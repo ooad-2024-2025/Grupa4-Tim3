@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MEDIPLAN.Models;
 
@@ -21,6 +22,7 @@ public partial class Korisnici
 
     public int Uloga { get; set; }
 
+    [Column(TypeName = "nvarchar(MAX)")] // Dodajte ovaj atribut
     public string QrKod { get; set; } = null!;
 
     public int Odjel { get; set; }
@@ -34,3 +36,6 @@ public partial class Korisnici
     public virtual ICollection<Termini> TerminiDoktor { get; set; } = new List<Termini>();
     public virtual ICollection<Termini> TerminiPacijent { get; set; } = new List<Termini>();
 }
+
+
+
