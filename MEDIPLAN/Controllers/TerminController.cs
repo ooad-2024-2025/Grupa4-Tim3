@@ -44,6 +44,13 @@ namespace MEDIPLAN.Controllers
                     return RedirectToAction("Index", "Profil");
                 }
 
+                // ➕ Provjera 24h ograničenja
+                if ((termin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
+                {
+                    TempData["Greska"] = "Termin se ne može mijenjati unutar 24 sata.";
+                    return RedirectToAction("Index", "Profil");
+                }
+
                 model.Id = termin.Id;
                 model.DoktorId = termin.DoktorId;
                 model.Datum = termin.DatumVrijemePocetak;
@@ -77,6 +84,25 @@ namespace MEDIPLAN.Controllers
             var pocetakTermina = model.Datum.Value;
             var krajTermina = pocetakTermina.AddHours(1);
 
+            // ➕ Ako se radi o izmjeni, provjeri da li je više od 24h
+            if (model.Id > 0)
+            {
+                var stariTermin = await _context.Termini
+                    .FirstOrDefaultAsync(t => t.Id == model.Id && t.PacijentId == pacijentId);
+
+                if (stariTermin == null)
+                {
+                    TempData["Greska"] = "Termin nije pronađen.";
+                    return RedirectToAction("Index", "Profil");
+                }
+
+                if ((stariTermin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
+                {
+                    TempData["Greska"] = "Termin se ne može mijenjati unutar 24 sata.";
+                    return RedirectToAction("Index", "Profil");
+                }
+            }
+
             // Provjera zauzetosti termina
             bool terminZauzet = await _context.Termini
                 .AnyAsync(t => t.DoktorId == model.DoktorId &&
@@ -96,23 +122,15 @@ namespace MEDIPLAN.Controllers
             {
                 try
                 {
-                    // Brisanje starog termina ako postoji
                     if (model.Id > 0)
                     {
                         var stariTermin = await _context.Termini
                             .FirstOrDefaultAsync(t => t.Id == model.Id && t.PacijentId == pacijentId);
 
-                        if (stariTermin == null)
-                        {
-                            TempData["Greska"] = "Termin nije pronađen.";
-                            return RedirectToAction("Index", "Profil");
-                        }
-
                         _context.Termini.Remove(stariTermin);
                         await _context.SaveChangesAsync();
                     }
 
-                    // Kreiranje novog termina
                     var noviTermin = new Termini
                     {
                         DoktorId = model.DoktorId,
@@ -171,6 +189,5 @@ namespace MEDIPLAN.Controllers
                 await _context.Usluge.ToListAsync(),
                 "Id", "Naziv");
         }
-
     }
 }

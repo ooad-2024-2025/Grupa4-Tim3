@@ -95,9 +95,9 @@
 
         @if (TempData["Izmjena"] != null)
         {
-            <div class="alert alert-warning text-center mb-3" style="font-size: 14px;">
-                @TempData["Izmjena"]
-            </div>
+        <div class="alert alert-warning text-center mb-3" style="font-size: 14px;">
+            @TempData["Izmjena"]
+        </div>
         }
 
         @Html.ValidationSummary(true, "", new { @class = "field-validation-error" })
@@ -141,7 +141,7 @@
         minTime: "08:00",
         maxTime: "15:00",
         disable: [
-            function(date) {
+            function (date) {
                 const hour = date.getHours();
                 return false; // NE onemogućuj prikaz datuma u kalendaru
             }
