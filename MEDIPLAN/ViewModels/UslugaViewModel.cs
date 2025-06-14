@@ -2,7 +2,7 @@
 {
     public class UslugaViewModel
     {
-        public string Naziv { get; set; }
-        public string SlikaUrl { get; set; }
+        public required string Naziv { get; set; }
+        public required string SlikaUrl { get; set; }
     }
 }
