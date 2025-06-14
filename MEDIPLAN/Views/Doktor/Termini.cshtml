@@ -1,5 +1,9 @@
 @model List<MEDIPLAN.Models.TerminPrikazViewModel>
 
+@{
+    Layout = "~/Views/Shared/_LayoutDoktor.cshtml";
+}
+
     <h2>Moji termini</h2>
     <table class="table">
         <thead>
@@ -14,7 +18,7 @@
         {
             <tr>
                 <td>@termin.PacijentImePrezime</td>
-                <td>@termin.Datum?.ToString("dd.MM.yyyy HH:mm") ?? ""</td>
+                <td>@termin.Datum?.ToString("dd.MM.yyyy HH:mm")</td>
                 <td>@termin.NazivUsluge</td>
 
             </tr>

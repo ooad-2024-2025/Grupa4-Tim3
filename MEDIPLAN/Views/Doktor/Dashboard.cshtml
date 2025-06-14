@@ -1,6 +1,9 @@
-@{
+﻿@{
     Layout = "~/Views/Shared/_LayoutDoktor.cshtml";
     ViewData["Title"] = "Home";
 }
-<h2>Dobrodo�li doktore/doktorice!</h2>
-<p>Ovo je va�a po?etna stranica.</p>
+
+<h2>Dobrodošli doktore/doktorice!</h2>
+<p>Ovo je vaša početna stranica.</p>
+
+<a href="@Url.Action("Termini", "Doktor")" class="btn btn-primary mt-3">Moji termini</a>

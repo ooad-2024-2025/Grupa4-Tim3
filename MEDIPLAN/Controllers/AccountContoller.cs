@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using QRCoder;
 using System;
-using System.IO;
 using System.Linq;
-using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,18 +87,19 @@ public class AccountController : Controller
             return View(model);
         }
 
-        HttpContext.Session.SetString("KorisniciId", korisnik.Id.ToString());
+        // Postavi sesiju s int za Id i string za ostale
+        HttpContext.Session.SetInt32("KorisniciId", korisnik.Id);
         HttpContext.Session.SetString("Username", korisnik.Username);
         HttpContext.Session.SetString("Uloga", korisnik.Uloga.ToString());
 
+        // Ako je doktor, preusmjeri ga na Doktor/Dashboard
         if (korisnik.Uloga == (int)Uloga.Doktor)
         {
-            return RedirectToAction("Dashboard", "Doktor"); // ili "Doktor" controller ako postoji
+            return RedirectToAction("Dashboard", "Doktor");
         }
 
         return RedirectToAction("Index", "Home");
     }
-
 
     public IActionResult Logout()
     {
