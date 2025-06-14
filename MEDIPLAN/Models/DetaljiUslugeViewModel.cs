@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models
 {
