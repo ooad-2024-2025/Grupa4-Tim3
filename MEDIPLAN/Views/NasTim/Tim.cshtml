@@ -15,40 +15,24 @@
             <h3 class="border-bottom pb-2" style="color:#003366; font-weight: 700; font-size: 1.8rem; padding-left: 15px;">
                 @grupa.Key.ToString()
             </h3>
-            <div class="row">
+            <div class="row justify-content-center gap-4">
                 @{
                     var doktori = grupa.Value;
                 }
-                @if (doktori.Count == 2)
+
+                @foreach (var doktor in doktori)
                 {
-                    <div class="col-md-6 d-flex justify-content-start text-center mb-4 px-4">
-                        <div>
-                            <h5 class="mt-2" style="color:#003366;">@doktori[0].Ime @doktori[0].Prezime</h5>
-                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
-                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
-                            <p style="color:#003366;"><em>@doktori[0].Email</em></p>
+                    <div class="col-md-4 d-flex justify-content-center mb-4">
+                        <div class="card shadow-sm border-0" style="width: 100%; max-width: 300px;">
+                            <img src="~/images/@(string.IsNullOrEmpty(doktor.PhotoFileName) ? "default.jpg" : doktor.PhotoFileName)"
+                                 class="card-img-top"
+                                 style="height: 250px; object-fit: cover;" alt="Doktor" />
+                            <div class="card-body text-center">
+                                <h5 class="card-title" style="color:#003366;">@doktor.Ime @doktor.Prezime</h5>
+                                <p class="card-text" style="color:#003366;"><em>@doktor.Email</em></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-end text-center mb-4 px-4">
-                        <div>
-                            <h5 class="mt-2" style="color:#003366;">@doktori[1].Ime @doktori[1].Prezime</h5>
-                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
-                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
-                            <p style="color:#003366;"><em>@doktori[1].Email</em></p>
-                        </div>
-                    </div>
-                }
-                else
-                {
-                    foreach (var doktor in doktori)
-                    {
-                        <div class="col-md-4 text-center mb-4 px-4">
-                            <h5 class="mt-2" style="color:#003366;">@doktor.Ime @doktor.Prezime</h5>
-                            <img src="~/slike/doktor.jpg" class="rounded-circle img-thumbnail"
-                                 style="width: 150px; height: 150px; object-fit: cover; margin-top: 10px;" alt="Doktor" />
-                            <p style="color:#003366;"><em>@doktor.Email</em></p>
-                        </div>
-                    }
                 }
             </div>
         </div>
@@ -81,5 +65,20 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+        .row.gap-4 > div {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
     </style>
 }
