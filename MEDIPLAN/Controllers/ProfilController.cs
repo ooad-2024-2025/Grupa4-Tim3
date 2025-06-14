@@ -7,6 +7,13 @@ using System.Linq;
 using System;
 using MEDIPLAN.Models;
 using QRCoder;
+using System.Drawing;              // za Bitmap
+using System.Drawing.Imaging;      // za ImageFormat
+using System.IO;
+using PdfSharpCore.Pdf;
+using PdfSharpCore.Drawing;
+using System.Security.Claims;      // za User Claims
+
 
 
 namespace MEDIPLAN.Controllers
@@ -93,6 +100,78 @@ namespace MEDIPLAN.Controllers
         public IActionResult PokreniIzmjenuTermina(int id)
         {
             return RedirectToAction("Zakazi", "Termin", new { id });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PreuzmiQrPdf()
+        {
+            try
+            {
+                // Get user ID from session
+                var korisniciIdString = HttpContext.Session.GetString("KorisniciId");
+                if (string.IsNullOrEmpty(korisniciIdString) || !int.TryParse(korisniciIdString, out int korisniciId))
+                {
+                    TempData["Greska"] = "Korisnik nije prijavljen.";
+                    return RedirectToAction("Index");
+                }
+
+                // Get user data
+                var korisnik = await _context.Korisnici.FindAsync(korisniciId);
+                if (korisnik == null)
+                {
+                    TempData["Greska"] = "Korisnik nije pronađen.";
+                    return RedirectToAction("Index");
+                }
+
+                // Check if QR code exists
+                if (string.IsNullOrEmpty(korisnik.QrKod))
+                {
+                    TempData["Greska"] = "QR kod nije dostupan.";
+                    return RedirectToAction("Index");
+                }
+
+                // Convert Base64 QR code to bytes
+                byte[] qrBytes = Convert.FromBase64String(korisnik.QrKod);
+
+                // Create PDF
+                using var document = new PdfDocument();
+                var page = document.AddPage();
+                page.Size = PdfSharpCore.PageSize.A4;
+
+                using (var gfx = XGraphics.FromPdfPage(page))
+                {
+                    // Create image from bytes using the required Func<Stream>
+                    var image = XImage.FromStream(() => new MemoryStream(qrBytes));
+                    gfx.DrawImage(image, 50, 50, 200, 200);
+
+                    // Draw user information
+                    var titleFont = new XFont("Arial", 16, XFontStyle.Bold);
+                    var textFont = new XFont("Arial", 12, XFontStyle.Regular);
+
+                    gfx.DrawString("MediPlan - Vaš QR Kod", titleFont, XBrushes.Black,
+                        new XRect(0, 20, page.Width, 20), XStringFormats.TopCenter);
+
+                    gfx.DrawString($"Ime: {korisnik.Ime}", textFont, XBrushes.Black,
+                        new XPoint(50, 300));
+                    gfx.DrawString($"Prezime: {korisnik.Prezime}", textFont, XBrushes.Black,
+                        new XPoint(50, 320));
+                    gfx.DrawString($"Datum izdavanja: {DateTime.Now:dd.MM.yyyy}", textFont, XBrushes.Black,
+                        new XPoint(50, 340));
+                }
+
+                // Save PDF to memory stream
+                using var msPdf = new MemoryStream();
+                document.Save(msPdf);
+                msPdf.Position = 0;
+
+                return File(msPdf.ToArray(), "application/pdf",
+                    $"QR_Kod_{korisnik.Ime}_{korisnik.Prezime}.pdf");
+            }
+            catch (Exception ex)
+            {
+                TempData["Greska"] = $"Došlo je do greške: {ex.Message}";
+                return RedirectToAction("Index");
+            }
         }
     }
 }
