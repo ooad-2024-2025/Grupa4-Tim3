@@ -72,8 +72,7 @@ namespace MEDIPLAN.Migrations
                     DoktorId = table.Column<int>(type: "int", nullable: false),
                     DatumVrijemePocetak = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DatumVrijemeKraj = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Lokacija = table.Column<int>(type: "int", nullable: false),
-                    MedicinskeUslugeId = table.Column<int>(type: "int", nullable: false)
+                    Lokacija = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

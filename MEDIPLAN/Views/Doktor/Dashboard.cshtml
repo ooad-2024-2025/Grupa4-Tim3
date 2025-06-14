@@ -1,8 +1,22 @@
 ﻿@{
     Layout = "~/Views/Shared/_LayoutDoktor.cshtml";
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Početna stranica doktora";
 }
 
-<h2>Dobrodošli doktore/doktorice!</h2>
-<p>Ovo je vaša početna stranica.</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg rounded-lg border-0">
+                <div class="card-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="bi bi-person-badge-fill" style="font-size: 4rem; color: #0d6efd;"></i>
+                    </div>
+                    <h1 class="display-5 fw-bold mb-3">Dobrodošli, doktore/doktorice!</h1>
+                    <p class="lead text-muted mb-4">Ovo je vaša početna stranica. Tu možete upravljati vašim terminima, pregledima i nalazima.</p>
+                    <a href="/Doktor/Termini" class="btn btn-primary btn-lg px-4 me-2">Pregled termina</a>
 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

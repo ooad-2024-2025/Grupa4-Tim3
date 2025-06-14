@@ -81,18 +81,24 @@ public class AccountController : Controller
         var korisnik = await _context.Korisnici
             .FirstOrDefaultAsync(x => x.Username == model.Username && x.Lozinka == lozinkaHash);
 
-        if (korisnik == null || (korisnik.Uloga != (int)Uloga.Doktor && !korisnik.IsVerified))
+        if (korisnik == null)
         {
-            ModelState.AddModelError("", "Neispravni podaci ili nije verifikovan nalog.");
+            ModelState.AddModelError("", "Neispravni podaci za prijavu.");
             return View(model);
         }
 
-        // Postavi sesiju s int za Id i string za ostale
+        // Only check verification for patients (uloga = Pacijent)
+        if (korisnik.Uloga == (int)Uloga.Pacijent && !korisnik.IsVerified)
+        {
+            ModelState.AddModelError("", "Vaš nalog nije verifikovan. Provjerite email za verifikacioni link.");
+            return View(model);
+        }
+
+        // Set session
         HttpContext.Session.SetInt32("KorisniciId", korisnik.Id);
         HttpContext.Session.SetString("Username", korisnik.Username);
         HttpContext.Session.SetString("Uloga", korisnik.Uloga.ToString());
 
-        // Ako je doktor, preusmjeri ga na Doktor/Dashboard
         if (korisnik.Uloga == (int)Uloga.Doktor)
         {
             return RedirectToAction("Dashboard", "Doktor");

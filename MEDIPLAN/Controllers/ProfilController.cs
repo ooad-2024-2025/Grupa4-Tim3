@@ -8,14 +8,9 @@ using PdfSharpCore.Drawing;
 using PdfSharpCore.Pdf;
 using QRCoder;
 using System;
-using System.Drawing;              // za Bitmap
-using System.Drawing.Imaging;      // za ImageFormat
 using System.IO;
 using System.Linq;
-using System.Security.Claims;      // za User Claims
 using System.Threading.Tasks;
-
-
 
 namespace MEDIPLAN.Controllers
 {
@@ -33,13 +28,20 @@ namespace MEDIPLAN.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var korisniciIdString = HttpContext.Session.GetString("KorisniciId");
-            if (string.IsNullOrEmpty(korisniciIdString) || !int.TryParse(korisniciIdString, out int korisniciId))
+            if (!IsUserLoggedIn())
+            {
+                TempData["Greska"] = "Morate biti prijavljeni da biste pristupili profilu.";
                 return RedirectToAction("Login", "Account");
+            }
 
+            var korisniciId = HttpContext.Session.GetInt32("KorisniciId");
             var korisnik = await _context.Korisnici.FindAsync(korisniciId);
+
             if (korisnik == null)
+            {
+                TempData["Greska"] = "Korisnički podaci nisu pronađeni.";
                 return RedirectToAction("Login", "Account");
+            }
 
             var sviTermini = await _context.Termini
                 .Where(t => t.PacijentId == korisniciId)
@@ -78,10 +80,24 @@ namespace MEDIPLAN.Controllers
         [HttpPost]
         public async Task<IActionResult> OtkaziTermini(int Terminid)
         {
+            if (!IsUserLoggedIn())
+            {
+                TempData["Greska"] = "Morate biti prijavljeni da biste otkazali termin.";
+                return RedirectToAction("Login", "Account");
+            }
+
             var termin = await _context.Termini.FindAsync(Terminid);
             if (termin == null)
             {
                 TempData["Greska"] = "Termin nije pronađen.";
+                return RedirectToAction("Index");
+            }
+
+            // Verify the termin belongs to the logged-in user
+            var korisniciId = HttpContext.Session.GetInt32("KorisniciId");
+            if (termin.PacijentId != korisniciId)
+            {
+                TempData["Greska"] = "Nemate pravo da otkažete ovaj termin.";
                 return RedirectToAction("Index");
             }
 
@@ -102,6 +118,11 @@ namespace MEDIPLAN.Controllers
         [HttpGet]
         public IActionResult PokreniIzmjenuTermina(int id)
         {
+            if (!IsUserLoggedIn())
+            {
+                TempData["Greska"] = "Morate biti prijavljeni da biste mijenjali termin.";
+                return RedirectToAction("Login", "Account");
+            }
             return RedirectToAction("Zakazi", "Termin", new { id });
         }
 
@@ -110,15 +131,13 @@ namespace MEDIPLAN.Controllers
         {
             try
             {
-                // Get user ID from session
-                var korisniciIdString = HttpContext.Session.GetString("KorisniciId");
-                if (string.IsNullOrEmpty(korisniciIdString) || !int.TryParse(korisniciIdString, out int korisniciId))
+                if (!IsUserLoggedIn())
                 {
-                    TempData["Greska"] = "Korisnik nije prijavljen.";
-                    return RedirectToAction("Index");
+                    TempData["Greska"] = "Morate biti prijavljeni da biste preuzeli QR kod.";
+                    return RedirectToAction("Login", "Account");
                 }
 
-                // Get user data
+                var korisniciId = HttpContext.Session.GetInt32("KorisniciId");
                 var korisnik = await _context.Korisnici.FindAsync(korisniciId);
                 if (korisnik == null)
                 {
@@ -126,28 +145,22 @@ namespace MEDIPLAN.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // Check if QR code exists
                 if (string.IsNullOrEmpty(korisnik.QrKod))
                 {
                     TempData["Greska"] = "QR kod nije dostupan.";
                     return RedirectToAction("Index");
                 }
 
-                // Convert Base64 QR code to bytes
                 byte[] qrBytes = Convert.FromBase64String(korisnik.QrKod);
-
-                // Create PDF
                 using var document = new PdfDocument();
                 var page = document.AddPage();
                 page.Size = PdfSharpCore.PageSize.A4;
 
                 using (var gfx = XGraphics.FromPdfPage(page))
                 {
-                    // Create image from bytes using the required Func<Stream>
                     var image = XImage.FromStream(() => new MemoryStream(qrBytes));
                     gfx.DrawImage(image, 50, 50, 200, 200);
 
-                    // Draw user information
                     var titleFont = new XFont("Arial", 16, XFontStyle.Bold);
                     var textFont = new XFont("Arial", 12, XFontStyle.Regular);
 
@@ -162,7 +175,6 @@ namespace MEDIPLAN.Controllers
                         new XPoint(50, 340));
                 }
 
-                // Save PDF to memory stream
                 using var msPdf = new MemoryStream();
                 document.Save(msPdf);
                 msPdf.Position = 0;
@@ -182,13 +194,13 @@ namespace MEDIPLAN.Controllers
         {
             try
             {
-                var korisniciIdString = HttpContext.Session.GetString("KorisniciId");
-                if (string.IsNullOrEmpty(korisniciIdString) || !int.TryParse(korisniciIdString, out int korisniciId))
+                if (!IsUserLoggedIn())
                 {
-                    TempData["Greska"] = "Korisnik nije prijavljen.";
-                    return RedirectToAction("Index");
+                    TempData["Greska"] = "Morate biti prijavljeni da biste poslali QR kod.";
+                    return RedirectToAction("Login", "Account");
                 }
 
+                var korisniciId = HttpContext.Session.GetInt32("KorisniciId");
                 var korisnik = await _context.Korisnici.FindAsync(korisniciId);
                 if (korisnik == null)
                 {
@@ -202,7 +214,6 @@ namespace MEDIPLAN.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // Kreiranje PDF (isto kao u PreuzmiQrPdf)
                 byte[] qrBytes = Convert.FromBase64String(korisnik.QrKod);
                 using var document = new PdfDocument();
                 var page = document.AddPage();
@@ -231,13 +242,11 @@ namespace MEDIPLAN.Controllers
                 document.Save(msPdf);
                 msPdf.Position = 0;
 
-                // Slanje emaila sa PDF prilogom
                 var pdfBytes = msPdf.ToArray();
 
                 var subject = "Vaš MediPlan QR Kod";
                 var body = $"Poštovani {korisnik.Ime},<br/><br/>U prilogu vam šaljemo vaš QR kod.<br/><br/>Srdačan pozdrav,<br/>MediPlan tim";
 
-                // Pozovi servis za slanje emaila sa prilogom
                 await _emailService.SendEmailWithAttachmentAsync(
                     korisnik.Email,
                     subject,
@@ -255,6 +264,13 @@ namespace MEDIPLAN.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        private bool IsUserLoggedIn()
+        {
+            var korisniciId = HttpContext.Session.GetInt32("KorisniciId");
+            var username = HttpContext.Session.GetString("Username");
+
+            return korisniciId.HasValue && !string.IsNullOrEmpty(username);
+        }
     }
 }
-
