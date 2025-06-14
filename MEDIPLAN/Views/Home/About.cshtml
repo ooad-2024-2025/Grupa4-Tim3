@@ -76,7 +76,7 @@
         color: #555;
     }
 
-    /* Dugme za vrh */
+    /* Strelica za vrh */
     .btn-to-top {
         position: fixed;
         bottom: 30px;
@@ -91,7 +91,7 @@
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: opacity 0.3s ease, transform 0.2s ease;
         opacity: 0.85;
     }
@@ -194,14 +194,45 @@
 </div>
 
 <!-- Dugme za povratak na vrh -->
-<a href="#" class="btn btn-to-top" title="Idi na vrh">
-    <span class="arrow-up">↑</span>
-</a>
+<button id="strelicaNaVrh" title="Vrati se na vrh">&#8679;</button>
 
-<!-- JS za glatki skrol -->
 <script>
-    document.querySelector('.btn-to-top').addEventListener('click', function (e) {
-        e.preventDefault();
+    const strelica = document.getElementById("strelicaNaVrh");
+
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+            strelica.style.display = "block";
+        } else {
+            strelica.style.display = "none";
+        }
+    });
+
+    strelica.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
+
+<style>
+    #strelicaNaVrh {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        background-color: #004080; /* Tamnoplava ista kao u tvom dizajnu */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        #strelicaNaVrh:hover {
+            background-color: #0059b3;
+            transform: scale(1.1);
+        }
+</style>
