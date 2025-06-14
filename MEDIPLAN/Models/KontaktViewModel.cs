@@ -1,4 +1,6 @@
-﻿public class LokacijaInfo
+﻿using MEDIPLAN.Models;
+
+public class LokacijaInfo
 {
     public string Grad { get; set; }
     public string Adresa { get; set; }
