@@ -6,13 +6,12 @@
 
 @if (TempData["Greska"] != null)
 {
-        <div class="alert alert-danger text-center">
+            <div class="alert alert-danger text-center">
         @TempData["Greska"]
-        </div>
+            </div>
 }
 
 <h2 class="mb-4 text-center">Prijava</h2>
-
 
 <div class="d-flex justify-content-center">
     <form asp-action="Login" method="post" class="p-4 border rounded shadow-sm" style="width: 320px; background-color: #f8f9fa;">
@@ -28,6 +27,13 @@
         </div>
         <button type="submit" class="btn btn-primary w-100">Prijavi se</button>
     </form>
+</div>
+
+<div class="text-center mt-3">
+    <p class="text-muted" style="font-size: 0.95rem;">
+        Nemate profil? 
+        <a asp-controller="Account" asp-action="Register" class="text-decoration-none">Kreirajte profil</a>
+    </p>
 </div>
 
 @section Scripts {
