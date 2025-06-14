@@ -55,7 +55,6 @@ namespace MEDIPLAN.Controllers
                 model.DoktorId = termin.DoktorId;
                 model.Datum = termin.DatumVrijemePocetak;
                 model.Lokacija = termin.Lokacija;
-                model.MedicinskeUslugeId = termin.MedicinskeUslugeId;
 
                 TempData["IzmjenaPoruka"] = "Napomena: U pitanju je izmjena termina. Originalni termin će biti uklonjen.";
             }
@@ -137,8 +136,7 @@ namespace MEDIPLAN.Controllers
                         PacijentId = pacijentId,
                         DatumVrijemePocetak = pocetakTermina,
                         DatumVrijemeKraj = krajTermina,
-                        Lokacija = model.Lokacija,
-                        MedicinskeUslugeId = model.MedicinskeUslugeId
+                        Lokacija = model.Lokacija
                     };
 
                     _context.Termini.Add(noviTermin);

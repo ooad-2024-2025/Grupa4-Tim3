@@ -17,8 +17,6 @@ public partial class Termini
 
     public int Lokacija { get; set; }
 
-    public int MedicinskeUslugeId { get; set; }
-
     public virtual Korisnici Doktor { get; set; } = null!;
 
     public virtual Korisnici Pacijent { get; set; } = null!;

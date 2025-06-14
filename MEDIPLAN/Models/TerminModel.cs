@@ -15,8 +15,5 @@ namespace MEDIPLAN.Models
 
         [Required]
         public int Lokacija { get; set; }
-
-        [Required]
-        public int MedicinskeUslugeId { get; set; }
     }
 }

@@ -43,8 +43,7 @@ namespace MEDIPLAN.Controllers
             var viewModel = termini.Select(t => new TerminPrikazViewModel
             {
                 PacijentImePrezime = $"{t.Pacijent?.Ime} {t.Pacijent?.Prezime}",
-                Datum = t.DatumVrijemePocetak,
-                NazivUsluge = usluge.FirstOrDefault(u => u.Id == t.MedicinskeUslugeId)?.Naziv ?? "Nepoznato"
+                Datum = t.DatumVrijemePocetak
             }).ToList();
 
             return View(viewModel);
