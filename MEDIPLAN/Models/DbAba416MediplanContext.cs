@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models;
 
@@ -21,7 +23,7 @@ public partial class DbAba416MediplanContext : DbContext
 
     public virtual DbSet<MedicinskeUsluge> MedicinskeUsluges { get; set; }
 
-    public virtual DbSet<Recenzije> Recenzijes { get; set; }
+    public virtual DbSet<Recenzija> Recenzijes { get; set; }
 
     public virtual DbSet<Termini> Terminis { get; set; }
 
@@ -56,7 +58,7 @@ public partial class DbAba416MediplanContext : DbContext
             entity.ToTable("MedicinskeUsluge");
         });
 
-        modelBuilder.Entity<Recenzije>(entity =>
+        modelBuilder.Entity<Recenzija>(entity =>
         {
             entity.ToTable("Recenzije");
         });
