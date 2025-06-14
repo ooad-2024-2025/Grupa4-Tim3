@@ -1,4 +1,6 @@
 ﻿using System;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models
 {
