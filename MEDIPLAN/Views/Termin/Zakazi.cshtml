@@ -129,8 +129,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
 
 <script>
-    const now = new Date();
-
     const picker = flatpickr("#datum", {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
@@ -138,28 +136,40 @@
         altFormat: "d.m.Y. H:i",
         time_24hr: true,
         minuteIncrement: 60,
-        minDate: now,
-        onReady: updateMinTime,
-        onChange: updateMinTime
+        minDate: "today",
+        defaultHour: 8,
+        minTime: "08:00",
+        maxTime: "15:00",
+        disable: [
+            function(date) {
+                const hour = date.getHours();
+                return false; // NE onemogućuj prikaz datuma u kalendaru
+            }
+        ],
+        onReady: updateTimeWindow,
+        onChange: updateTimeWindow,
+        // >>> OVO JE KLJUČNO ZA PRIKAZ KALENDARA <<<
+        inline: false,
+        allowInput: true
     });
 
-    function updateMinTime(selectedDates, dateStr, instance) {
+    function updateTimeWindow(selectedDates, dateStr, instance) {
+        const now = new Date();
         const selectedDate = selectedDates[0];
-        const now = new Date();   
 
         if (!selectedDate) return;
 
-        const selectedDay = selectedDate.toDateString();
-        const today = now.toDateString();
+        const isToday = selectedDate.toDateString() === now.toDateString();
 
-        if (selectedDay === today) {
-            const currentHour = now.getHours();
-            instance.set('minTime', (currentHour + 1) + ":00");
+        if (isToday) {
+            const nextFullHour = Math.ceil(now.getHours() + (now.getMinutes() > 0 ? 1 : 0));
+            const validHour = Math.max(8, nextFullHour);
 
+            instance.set('minTime', validHour + ":00");
+            instance.set('maxTime', "15:00");
         } else {
             instance.set('minTime', "08:00");
+            instance.set('maxTime', "15:00");
         }
-
-        instance.set('maxTime', "16:00");
     }
 </script>
