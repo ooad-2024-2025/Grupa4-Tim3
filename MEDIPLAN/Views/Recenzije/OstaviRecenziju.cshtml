@@ -1,0 +1,29 @@
+﻿@model RecenzijaViewModel
+
+<h2>Ostavite recenziju za vaš termin kod @Model.DoktorIme</h2>
+
+<form asp-action="OstaviRecenziju" method="post">
+    <input type="hidden" asp-for="TerminId" />
+    <input type="hidden" asp-for="DoktorId" />
+
+    <label>Ocjena doktora (1-5):</label>
+    <select asp-for="OcjenaDoktor" class="form-control">
+        @for (int i = 1; i <= 5; i++)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+
+    <label>Ocjena klinike (1-5):</label>
+    <select asp-for="OcjenaKlinika" class="form-control">
+        @for (int i = 1; i <= 5; i++)
+        {
+            <option value="@i">@i</option>
+        }
+    </select>
+
+    <label>Komentar:</label>
+    <textarea asp-for="Tekst" class="form-control"></textarea>
+
+    <button type="submit" class="btn btn-primary mt-2">Objavi recenziju</button>
+</form>
