@@ -2,17 +2,17 @@
 
 @if (Model == null)
 {
-<div class="alert alert-danger text-center mt-5">
-    <p>Greška: Podaci profila nisu dostupni.</p>
-</div>
+    <div class="alert alert-danger text-center mt-5">
+        <p>Greška: Podaci profila nisu dostupni.</p>
+    </div>
     return;
 }
 
 @if (TempData["Greska"] != null)
 {
-<div class="alert alert-danger text-center mt-3">
-    @TempData["Greska"]
-</div>
+    <div class="alert alert-danger text-center mt-3">
+        @TempData["Greska"]
+    </div>
 }
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
@@ -28,16 +28,23 @@
                 <h4 class="text-primary">Moj QR Kod</h4>
                 @if (!string.IsNullOrEmpty(Model.QrKodBase64))
                 {
-                <img src="data:image/png;base64,@Model.QrKodBase64" alt="QR kod" class="img-fluid" style="max-width: 200px;" />
-                <form asp-controller="Profil" asp-action="PreuzmiQrPdf" method="post" class="mt-3">
-                    <button type="submit" class="btn btn-outline-secondary">
-                        <i class="bi bi-download"></i> Preuzmi QR kao PDF
-                    </button>
-                </form>
+                    <img src="data:image/png;base64,@Model.QrKodBase64" alt="QR kod" class="img-fluid" style="max-width: 200px;" />
+
+                    <form asp-controller="Profil" asp-action="PreuzmiQrPdf" method="post" class="mt-3">
+                        <button type="submit" class="btn btn-outline-secondary">
+                            <i class="bi bi-download"></i> Preuzmi QR kao PDF
+                        </button>
+                    </form>
+
+                    <form asp-controller="Profil" asp-action="PosaljiQrPdfEmail" method="post" class="mt-2">
+                        <button type="submit" class="btn btn-outline-primary">
+                            <i class="bi bi-envelope"></i> Pošalji QR kod na email
+                        </button>
+                    </form>
                 }
                 else
                 {
-                <p class="text-muted">QR kod nije dostupan.</p>
+                    <p class="text-muted">QR kod nije dostupan.</p>
                 }
             </div>
         </div>
@@ -47,44 +54,44 @@
 
             @if (Model.ZakazaniTermini == null || Model.ZakazaniTermini.Count == 0)
             {
-            <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
+                <p class="text-muted">Nemate trenutno zakazanih pregleda.</p>
             }
             else
             {
-            <div class="table-responsive">
-                <table class="table table-hover align-middle">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Doktor</th>
-                            <th>Datum pregleda</th>
-                            <th class="text-center">Akcije</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var termin in Model.ZakazaniTermini)
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Doktor</th>
+                                <th>Datum pregleda</th>
+                                <th class="text-center">Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var termin in Model.ZakazaniTermini)
                             {
-                        <tr>
-                            <td>@termin.ImeDoktora</td>
-                            <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
-                            <td class="text-center">
-                                <a asp-controller="Termin" asp-action="Zakazi" asp-route-id="@termin.Terminid"
-                                   class="btn btn-outline-primary btn-sm me-1">
-                                    <i class="bi bi-pencil"></i> Izmijeni
-                                </a>
-                                <form asp-controller="Profil" asp-action="OtkaziTermini" method="post"
-                                      class="d-inline"
-                                      onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
-                                    <input type="hidden" name="Terminid" value="@termin.Terminid" />
-                                    <button type="submit" class="btn btn-outline-danger btn-sm">
-                                        <i class="bi bi-x-circle"></i> Otkaži
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
+                                <tr>
+                                    <td>@termin.ImeDoktora</td>
+                                    <td>@termin.DatumPregleda.ToString("dd.MM.yyyy HH:mm")</td>
+                                    <td class="text-center">
+                                        <a asp-controller="Termin" asp-action="Zakazi" asp-route-id="@termin.Terminid"
+                                           class="btn btn-outline-primary btn-sm me-1">
+                                            <i class="bi bi-pencil"></i> Izmijeni
+                                        </a>
+                                        <form asp-controller="Profil" asp-action="OtkaziTermini" method="post"
+                                              class="d-inline"
+                                              onsubmit="return confirm('Da li ste sigurni da želite otkazati ovaj pregled?');">
+                                            <input type="hidden" name="Terminid" value="@termin.Terminid" />
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-x-circle"></i> Otkaži
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
                             }
-                    </tbody>
-                </table>
-            </div>
+                        </tbody>
+                    </table>
+                </div>
             }
         </div>
     </div>

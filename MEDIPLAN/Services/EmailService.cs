@@ -40,4 +40,41 @@ public class EmailService : IEmailService
         await client.SendAsync(emailMessage);
         await client.DisconnectAsync(true);
     }
+
+    public async Task SendEmailWithAttachmentAsync(string email, string subject, string message, byte[] attachmentBytes, string attachmentName)
+    {
+        var emailMessage = new MimeMessage();
+
+        emailMessage.From.Add(new MailboxAddress(
+            _configuration["EmailSettings:SenderName"],
+            _configuration["EmailSettings:SenderEmail"]));
+
+        emailMessage.To.Add(new MailboxAddress("", email));
+        emailMessage.Subject = subject;
+
+        var builder = new BodyBuilder
+        {
+            HtmlBody = message
+        };
+
+        // Dodaj prilog
+        builder.Attachments.Add(attachmentName, attachmentBytes);
+
+        emailMessage.Body = builder.ToMessageBody();
+
+        using var client = new SmtpClient();
+
+        await client.ConnectAsync(
+            _configuration["EmailSettings:MailServer"],
+            int.Parse(_configuration["EmailSettings:MailPort"]),
+            MailKit.Security.SecureSocketOptions.StartTls);
+
+        await client.AuthenticateAsync(
+            _configuration["EmailSettings:Username"],
+            _configuration["EmailSettings:Password"]);
+
+        await client.SendAsync(emailMessage);
+        await client.DisconnectAsync(true);
+    }
+
 }
