@@ -16,7 +16,6 @@ namespace MEDIPLAN.Controllers
 
         public TerminController(ApplicationDbContext context) => _context = context;
 
-        // GET: Termin/Zakazi (za prikaz forme za zakazivanje ili izmjenu)
         [HttpGet]
         public async Task<IActionResult> Zakazi(int? id)
         {
@@ -72,8 +71,6 @@ namespace MEDIPLAN.Controllers
             return View(model);
         }
 
-
-        // POST: Termin/Zakazi (za slanje podataka o terminu)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Zakazi(TerminModel model)
@@ -99,25 +96,18 @@ namespace MEDIPLAN.Controllers
             }
 
             var pocetakTermina = model.Datum ?? throw new InvalidOperationException("Datum termina nije definisan.");
-            var krajTermina = pocetakTermina.AddHours(1);
 
-            if (model.Id > 0)
+            // **VALIDACIJA - nema nedjelje**
+            if (pocetakTermina.DayOfWeek == DayOfWeek.Sunday)
             {
-                var stariTermin = await _context.Termini
-                    .FirstOrDefaultAsync(t => t.Id == model.Id && t.PacijentId == pacijentId.Value);
-
-                if (stariTermin != null)
-                {
-                    _context.Termini.Remove(stariTermin);
-                    await _context.SaveChangesAsync();
-                }
-                else
-                {
-                    TempData["Greska"] = "Termin nije pronađen.";
-                    return RedirectToAction("Index", "Profil");
-                }
+                ModelState.AddModelError("Datum", "Nedjelja je neradni dan, molimo izaberite drugi datum.");
+                await PopuniViewBagove();
+                return View(model);
             }
 
+            var krajTermina = pocetakTermina.AddHours(1);
+
+            // Provjeri da li je termin zauzet
             bool terminZauzet = await _context.Termini
                 .AnyAsync(t => t.DoktorId == model.DoktorId &&
                               t.Id != model.Id &&
@@ -179,7 +169,6 @@ namespace MEDIPLAN.Controllers
             }
         }
 
-        // GET: Termin/Potvrda - Prikaz potvrde o uspješnom zakazivanju
         [HttpGet]
         public IActionResult Potvrda()
         {

@@ -1,11 +1,11 @@
 ﻿@model MEDIPLAN.Models.Termini
 
-<h2>Zakazi novi Termini</h2>
+<h2>Zakazi novi Termin</h2>
 
 <form asp-action="Zakazi" method="post">
     <div class="form-group">
         <label asp-for="DatumVrijemePocetak">Datum i vrijeme početka</label>
-        <input asp-for="DatumVrijemePocetak" type="datetime-local" class="form-control" />
+        <input asp-for="DatumVrijemePocetak" type="datetime-local" class="form-control" id="pocetak" />
     </div>
 
     <div class="form-group">
@@ -22,6 +22,21 @@
         <label asp-for="PacijentId">Pacijent ID</label>
         <input asp-for="PacijentId" class="form-control" />
     </div>
-w
+
     <button type="submit" class="btn btn-success mt-3">Zakaži</button>
 </form>
+
+<!-- ✅ JavaScript validacija da spriječi izbor nedjelje -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const datumPocetak = document.getElementById('pocetak');
+
+        datumPocetak.addEventListener('change', function () {
+            const odabrano = new Date(this.value);
+            if (odabrano.getDay() === 0) {
+                alert("Nedjelja je neradni dan. Molimo izaberite drugi datum.");
+                this.value = ''; // Očisti vrijednost
+            }
+        });
+    });
+</script>
