@@ -4,40 +4,61 @@
     ViewData["Title"] = "Detalji doktora";
 }
 
-<div class="text-center my-4">
-    <h2 style="text-transform: uppercase; font-weight: 700;">
+<div class="text-center my-5">
+    <h2 class="text-uppercase fw-bold" style="color: #003366;">
         @Model.Doktor.Ime @Model.Doktor.Prezime
     </h2>
-    <p>@Model.Doktor.Email</p>
+    <p class="text-muted">@Model.Doktor.Email</p>
 </div>
 
-<p class="text-center">
-    Specijalizacija: @Model.Doktor.MedicinskaUsluga?.Napomena
+<p class="text-center fs-5 mb-4">
+    <strong>Specijalizacija:</strong> @Model.Doktor.MedicinskaUsluga?.Napomena
 </p>
 
 <hr />
 
-<h3>Prosječna ocjena doktora: @Model.ProsjekOcjenaDoktor.ToString("0.0") ★</h3>
-<h3>Prosječna ocjena klinike: @Model.ProsjekOcjenaKlinika.ToString("0.0") ★</h3>
+<h3 class="text-center mb-4" style="color: #003366;">
+    Prosječna ocjena doktora: <span style="font-weight: 700;">@Model.ProsjekOcjenaDoktor.ToString("0.0") ★</span>
+</h3>
 
 <hr />
 
-<h3>Recenzije</h3>
+<h3 class="mb-3" style="color: #003366;">Recenzije</h3>
 
 @if (Model.Recenzije.Any())
 {
     foreach (var rec in Model.Recenzije)
     {
-        <div class="card mb-3">
+        <div class="card mb-3 shadow-sm">
             <div class="card-body">
                 <strong>@rec.Korisnik.Ime:</strong>
-                <span> - Ocjena doktora: @rec.OcjenaDoktor ★, Ocjena klinike: @rec.OcjenaKlinika ★</span>
-                <p>@rec.Tekst</p>
+                <span class="text-muted"> - Ocjena doktora: @rec.OcjenaDoktor ★, Ocjena klinike: @rec.OcjenaKlinika ★</span>
+                <p class="mt-2">@rec.Tekst</p>
             </div>
         </div>
     }
 }
 else
 {
-    <p>Nema recenzija za ovog doktora.</p>
+    <p class="text-center fst-italic text-muted">Nema recenzija za ovog doktora.</p>
 }
+
+<hr />
+
+<div class="text-center mt-4">
+    <a href="@Url.Action("Tim", "NasTim")"
+       class="btn"
+       style="
+           background-color: #003366;
+           color: white;
+           font-weight: bold;
+           padding: 10px 30px;
+           border-radius: 8px;
+           text-decoration: none;
+           transition: background-color 0.3s ease;
+       "
+       onmouseover="this.style.backgroundColor='#0055a5'"
+       onmouseout="this.style.backgroundColor='#003366'">
+        ← Nazad
+    </a>
+</div>

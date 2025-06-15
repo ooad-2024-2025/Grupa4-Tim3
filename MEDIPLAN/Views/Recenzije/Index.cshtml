@@ -1,0 +1,69 @@
+﻿@model List<MEDIPLAN.Models.Recenzija>
+@{
+    ViewData["Title"] = "Recenzije klinike";
+}
+
+<style>
+    .recenzije-pozadina {
+        background-image: url('/images/pozadina.png'); /* Promijeni ime slike ako treba */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* prozirna bijela pozadina za bolju čitljivost */
+        background-blend-mode: lighten;
+    }
+
+    .recenzije-naslov {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #003366;
+    }
+
+    .recenzije-linija {
+        width: 80px;
+        height: 4px;
+        background-color: #003366;
+        margin: 10px auto 20px auto;
+        border-radius: 2px;
+    }
+
+    .recenzije-prosjek {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #444;
+    }
+</style>
+
+<div class="recenzije-pozadina">
+    <div class="container">
+        <h2 class="recenzije-naslov">Recenzije klinike</h2>
+        <div class="recenzije-linija"></div>
+        <div class="recenzije-prosjek">
+            Prosječna ocjena klinike: @ViewBag.ProsjekKlinike.ToString("0.0") ★
+        </div>
+
+        @if (!Model.Any())
+        {
+            <p class="text-center">Još nema recenzija klinike.</p>
+        }
+        else
+        {
+            <div class="mt-4">
+                @foreach (var rec in Model)
+                {
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body">
+                            <strong>@rec.Korisnik.Ime:</strong>
+                            <span> - Ocjena klinike: @rec.OcjenaKlinika ★</span>
+                            <p class="mt-2">@rec.Tekst</p>
+                            <small>Datum: @rec.Datum.ToShortDateString()</small>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

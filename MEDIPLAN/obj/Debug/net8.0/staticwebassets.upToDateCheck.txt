@@ -32,6 +32,7 @@ wwwroot\images\logo.jpg
 wwwroot\images\mediplan.jpg
 wwwroot\images\neurologija.png
 wwwroot\images\oftamologija.png
+wwwroot\images\pozadina.png
 wwwroot\images\radiology.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
