@@ -1,6 +1,39 @@
+@model List<MEDIPLAN.Models.Recenzija>
+
 @{
     Layout = "~/Views/Shared/_LayoutDoktor.cshtml";
     ViewData["Title"] = "Recenzije";
 }
-<h2>Pregled recenzija</h2>
-<p>(Još nije implementirano)</p>
+
+<h2 class="mb-4">Recenzije pacijenata</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">Nema dostupnih recenzija.</div>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+            <tr>
+                <th>Pacijent</th>
+                <th>Datum termina</th>
+                <th>Ocjena doktora</th>
+                <th>Ocjena klinike</th>
+                <th>Tekst recenzije</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recenzija in Model)
+            {
+                <tr>
+                    <td>@recenzija.Korisnik.Ime @recenzija.Korisnik.Prezime</td>
+                    <td>@recenzija.Termin.DatumVrijemePocetak.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@recenzija.OcjenaDoktor/5</td>
+                    <td>@recenzija.OcjenaKlinika/5</td>
+                    <td>@recenzija.Tekst</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

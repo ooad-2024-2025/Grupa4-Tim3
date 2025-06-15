@@ -52,10 +52,27 @@ namespace MEDIPLAN.Controllers
 
 
 
-        public IActionResult Recenzije()
+        public async Task<IActionResult> Recenzije()
         {
-            return View(); // za sada prazan
+            int? doktorId = HttpContext.Session.GetInt32("KorisniciId");
+            string? uloga = HttpContext.Session.GetString("Uloga");
+
+            if (doktorId == null || uloga != ((int)Uloga.Doktor).ToString())
+            {
+                TempData["Greska"] = "Morate biti prijavljeni kao doktor.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var recenzije = await _context.Recenzije
+                .Include(r => r.Korisnik) // pacijent koji je ostavio recenziju
+                .Include(r => r.Termin)
+                .Where(r => r.DoktorId == doktorId)
+                .OrderByDescending(r => r.Datum)
+                .ToListAsync();
+
+            return View(recenzije);
         }
+
 
         public IActionResult FormaNalaza()
         {
