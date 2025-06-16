@@ -6,24 +6,39 @@
     <input type="hidden" asp-for="TerminId" />
     <input type="hidden" asp-for="DoktorId" />
 
-    <label>Ocjena doktora (1-5):</label>
-    <select asp-for="OcjenaDoktor" class="form-control">
-        @for (int i = 1; i <= 5; i++)
-        {
-            <option value="@i">@i</option>
-        }
-    </select>
+    <div class="form-group">
+        <label asp-for="OcjenaDoktor"></label>
+        <select asp-for="OcjenaDoktor" class="form-control" asp-validation-for="OcjenaDoktor">
+            <option value="">-- Odaberite ocjenu --</option>
+            @for (int i = 1; i <= 5; i++)
+            {
+                <option value="@i" selected="@(Model.OcjenaDoktor == i)">@i</option>
+            }
+        </select>
+        <span asp-validation-for="OcjenaDoktor" class="text-danger"></span>
+    </div>
 
-    <label>Ocjena klinike (1-5):</label>
-    <select asp-for="OcjenaKlinika" class="form-control">
-        @for (int i = 1; i <= 5; i++)
-        {
-            <option value="@i">@i</option>
-        }
-    </select>
+    <div class="form-group">
+        <label asp-for="OcjenaKlinika"></label>
+        <select asp-for="OcjenaKlinika" class="form-control" asp-validation-for="OcjenaKlinika">
+            <option value="">-- Odaberite ocjenu --</option>
+            @for (int i = 1; i <= 5; i++)
+            {
+                <option value="@i" selected="@(Model.OcjenaKlinika == i)">@i</option>
+            }
+        </select>
+        <span asp-validation-for="OcjenaKlinika" class="text-danger"></span>
+    </div>
 
-    <label>Komentar:</label>
-    <textarea asp-for="Tekst" class="form-control"></textarea>
+    <div class="form-group">
+        <label asp-for="Tekst"></label>
+        <textarea asp-for="Tekst" rows="5" class="form-control"></textarea>
+        <span asp-validation-for="Tekst" class="text-danger"></span>
+    </div>
 
-    <button type="submit" class="btn btn-primary mt-2">Objavi recenziju</button>
+    <button type="submit" class="btn btn-primary">Objavi recenziju</button>
 </form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

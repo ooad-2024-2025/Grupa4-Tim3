@@ -18,6 +18,7 @@ public partial class Termini
     public DateTime DatumVrijemeKraj { get; set; }
 
     public int Lokacija { get; set; }
+    public bool JeRecenziran { get; set; } = false;
 
     public virtual Korisnici Doktor { get; set; } = null!;
 
