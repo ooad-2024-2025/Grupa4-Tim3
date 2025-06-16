@@ -4,11 +4,84 @@
     ViewData["Title"] = Model.Usluge.Naziv;
 }
 
+<style>
+    .naslov-Usluge {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #003366;
+        text-align: center;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+        .naslov-Usluge::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #003366;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+    .detalji-ikonica {
+        max-width: 100%;
+        margin-right: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        display: block;
+    }
+
+        .detalji-ikonica:hover {
+            transform: scale(1.05);
+        }
+
+    .doktor-kartica {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+        background-color: #fff;
+    }
+
+    .doktor-ime {
+        font-weight: 600;
+        color: #003366;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .btn-nazad {
+        display: block;
+        margin: 30px auto 0 auto;
+        background-color: #003366;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+    }
+
+        .btn-nazad:hover {
+            background-color: #005599;
+            color: white;
+            text-decoration: none;
+        }
+</style>
+
 <div class="container py-5">
     <h2 class="naslov-Usluge">@Model.Usluge.Naziv</h2>
     <div class="row align-items-center">
         <div class="col-md-4 d-flex justify-content-center">
-            <img src="~/images/@Model.Usluge.Ikona" alt="@Model.Usluge.Naziv" class="img-fluid detalji-ikonica" style="margin-right: 40px;" />
+            <img src="~/images/@Model.Usluge.Ikona" alt="@Model.Usluge.Naziv" class="img-fluid detalji-ikonica" />
         </div>
         <div class="col-md-8">
             <p style="font-size:1.2rem;">@Model.Usluge.Opis</p>
@@ -30,7 +103,8 @@
                 <p>Nema dostupnih doktora za ovu uslugu.</p>
             }
 
-            <a href="@Url.Action("Usluge", "Home")" class="btn btn-nazad mt-3">Nazad na usluge</a>
+            <a href="@Url.Action("Usluge", "Home")" class="btn-nazad">Nazad na usluge</a>
         </div>
     </div>
 </div>
+
