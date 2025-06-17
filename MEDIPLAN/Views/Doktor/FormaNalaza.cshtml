@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDoktor.cshtml";
+    ViewData["Title"] = "Forma Nalaza";
+}
+
+<h2 class="text-center mb-5">Forma Nalaza</h2>
+
+<div class="d-flex flex-column align-items-center gap-4" style="max-width: 400px; margin: 0 auto;">
+    <a class="btn btn-primary custom-btn d-flex align-items-center gap-3" asp-action="PreuzmiNalaz" asp-route-naziv="nalaz1.docx" role="button">
+        <i class="bi bi-file-earmark-medical"></i> Preuzmi MEDICINSKI IZVJEŠTAJ
+    </a>
+    <a class="btn btn-success custom-btn d-flex align-items-center gap-3" asp-action="PreuzmiNalaz" asp-route-naziv="nalaz2.docx" role="button">
+        <i class="bi bi-file-earmark-text"></i> Preuzmi MEDICINSKI NALAZ
+    </a>
+    <a class="btn btn-info custom-btn d-flex align-items-center gap-3" asp-action="PreuzmiNalaz" asp-route-naziv="nalaz3.docx" role="button">
+        <i class="bi bi-file-earmark-check"></i> Preuzmi GODIŠNJI NALAZ
+    </a>
+</div>
+
+<style>
+    .custom-btn {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 1.3rem;
+        justify-content: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border-radius: 8px;
+    }
+
+        .custom-btn:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            text-decoration: none;
+            color: white !important;
+        }
+
+        /* Da ikone budu malo veće i poravnate vertikalno */
+        .custom-btn i {
+            font-size: 1.5rem;
+        }
+</style>

@@ -30,6 +30,11 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="color:#003366;">@doktor.Ime @doktor.Prezime</h5>
                                 <p class="card-text" style="color:#003366;"><em>@doktor.Email</em></p>
+
+                                <!-- Link za detalje doktora -->
+                                <a href="@Url.Action("Detalji", "NasTim", new { doktorId = doktor.Id })" class="btn btn-primary mt-2">
+                                    Pogledaj detalje
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -39,8 +44,12 @@
     }
 </div>
 
+<!-- Dugme za povratak na vrh -->
+<button id="strelicaNaVrh" title="Vrati se na vrh">&#8679;</button>
+
 @section Scripts {
     <script>
+        // Fade-in efekat
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -51,6 +60,21 @@
 
         document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
             observer.observe(el);
+        });
+
+        // Strelica za povratak na vrh
+        const strelica = document.getElementById("strelicaNaVrh");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                strelica.style.display = "block";
+            } else {
+                strelica.style.display = "none";
+            }
+        });
+
+        strelica.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 
@@ -80,5 +104,27 @@
             margin-left: 1rem;
             margin-right: 1rem;
         }
+
+        #strelicaNaVrh {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+            #strelicaNaVrh:hover {
+                background-color: #005999;
+            }
     </style>
 }

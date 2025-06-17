@@ -1,4 +1,5 @@
 ﻿using System;
+using MEDIPLAN.Models;
 
 public enum Ocjena
 {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models;
 
@@ -16,13 +18,9 @@ public partial class Termini
     public DateTime DatumVrijemeKraj { get; set; }
 
     public int Lokacija { get; set; }
-
-    public int MedicinskeUslugeId { get; set; }
+    public bool JeRecenziran { get; set; } = false;
 
     public virtual Korisnici Doktor { get; set; } = null!;
 
     public virtual Korisnici Pacijent { get; set; } = null!;
-
-
-    public virtual MedicinskeUsluge MedicinskeUsluge { get; set; } = null!;
 }

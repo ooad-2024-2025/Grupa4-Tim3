@@ -5,6 +5,18 @@
 }
 
 <h2 class="mb-4 text-center">Registracija</h2>
+@if (!ViewData.ModelState.IsValid)
+{
+            <div class="alert alert-danger">
+                <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                            <li>@error.ErrorMessage</li>
+            }
+                </ul>
+            </div>
+}
+
 
 <div class="d-flex justify-content-center">
     <form asp-action="Register" method="post" class="p-4 border rounded shadow-sm" style="width: 400px; background-color: #f9f9f9;">
@@ -50,3 +62,4 @@
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
+

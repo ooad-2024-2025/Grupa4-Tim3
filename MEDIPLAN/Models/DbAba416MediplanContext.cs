@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models;
 
@@ -21,15 +23,24 @@ public partial class DbAba416MediplanContext : DbContext
 
     public virtual DbSet<MedicinskeUsluge> MedicinskeUsluges { get; set; }
 
-    public virtual DbSet<Recenzije> Recenzijes { get; set; }
+    public virtual DbSet<Recenzija> Recenzijes { get; set; }
 
     public virtual DbSet<Termini> Terminis { get; set; }
 
     public virtual DbSet<Usluge> Usluges { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=SQL6032.site4now.net;Initial Catalog=db_aba416_mediplan;User Id=db_aba416_mediplan_admin;Password=ooadprojekat2025");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            var connectionString = Environment.GetEnvironmentVariable("MEDIPLAN_DB_CONNECTION");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("Connection string is not configured. Please set the MEDIPLAN_DB_CONNECTION environment variable.");
+            }
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -56,7 +67,7 @@ public partial class DbAba416MediplanContext : DbContext
             entity.ToTable("MedicinskeUsluge");
         });
 
-        modelBuilder.Entity<Recenzije>(entity =>
+        modelBuilder.Entity<Recenzija>(entity =>
         {
             entity.ToTable("Recenzije");
         });
@@ -65,26 +76,12 @@ public partial class DbAba416MediplanContext : DbContext
         {
             entity.ToTable("Termini");
 
-            entity.HasIndex(e => e.DoktorId, "UX_Termini_DoktorId").IsUnique();
+            entity.HasOne(d => d.Doktor).WithMany(p => p.TerminiDoktor)
+                .HasForeignKey(d => d.DoktorId)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
-            entity.HasIndex(e => e.PacijentId, "UX_Termini_PacijentId").IsUnique();
-
-            entity.HasOne(d => d.Doktor)
-
-    .WithMany(p => p.TerminiDoktor)
-
-    .HasForeignKey(d => d.DoktorId)
-
-    .OnDelete(DeleteBehavior.ClientSetNull);
-
-
-
-            entity.HasOne(d => d.Pacijent)
-
-                .WithMany(p => p.TerminiPacijent)
-
+            entity.HasOne(d => d.Pacijent).WithMany(p => p.TerminiPacijent)
                 .HasForeignKey(d => d.PacijentId)
-
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });
 

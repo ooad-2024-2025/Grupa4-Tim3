@@ -95,9 +95,9 @@
 
         @if (TempData["Izmjena"] != null)
         {
-            <div class="alert alert-warning text-center mb-3" style="font-size: 14px;">
-                @TempData["Izmjena"]
-            </div>
+        <div class="alert alert-warning text-center mb-3" style="font-size: 14px;">
+            @TempData["Izmjena"]
+        </div>
         }
 
         @Html.ValidationSummary(true, "", new { @class = "field-validation-error" })
@@ -129,8 +129,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
 
 <script>
-    const now = new Date();
-
     const picker = flatpickr("#datum", {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
@@ -138,28 +136,43 @@
         altFormat: "d.m.Y. H:i",
         time_24hr: true,
         minuteIncrement: 60,
-        minDate: now,
-        onReady: updateMinTime,
-        onChange: updateMinTime
+        minDate: new Date(), // ograniči na sadašnji dan i dalje
+        defaultHour: 8,
+        defaultMinute: 0,
+        minTime: "08:00",
+        maxTime: "15:00",
+        inline: false,
+        allowInput: true,
+        onReady: updateTimeWindow,
+        onChange: updateTimeWindow
     });
 
-    function updateMinTime(selectedDates, dateStr, instance) {
+    function updateTimeWindow(selectedDates, dateStr, instance) {
+        const now = new Date();
         const selectedDate = selectedDates[0];
-        const now = new Date();   
 
         if (!selectedDate) return;
 
-        const selectedDay = selectedDate.toDateString();
-        const today = now.toDateString();
+        const isToday = selectedDate.toDateString() === now.toDateString();
 
-        if (selectedDay === today) {
-            const currentHour = now.getHours();
-            instance.set('minTime', (currentHour + 1) + ":00");
+        if (isToday) {
+            let nextHour = now.getHours();
+            if (now.getMinutes() > 0) nextHour += 1;
+            nextHour = Math.max(8, nextHour);
 
+            // Ako je trenutno poslije 15h, zabrani danasnje termine
+            if (nextHour >= 15) {
+                instance.set('minTime', null);
+                instance.set('maxTime', null);
+                instance.setDate(null); // resetuj izbor
+                alert("Za danas više nije moguće zakazati termin. Odaberite neki drugi dan.");
+            } else {
+                instance.set('minTime', `${nextHour}:00`);
+                instance.set('maxTime', "15:00");
+            }
         } else {
             instance.set('minTime', "08:00");
+            instance.set('maxTime', "15:00");
         }
-
-        instance.set('maxTime', "16:00");
     }
 </script>

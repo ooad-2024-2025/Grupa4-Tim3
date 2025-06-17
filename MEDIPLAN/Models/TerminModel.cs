@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models
 {
@@ -15,8 +17,5 @@ namespace MEDIPLAN.Models
 
         [Required]
         public int Lokacija { get; set; }
-
-        [Required]
-        public int MedicinskeUslugeId { get; set; }
     }
 }

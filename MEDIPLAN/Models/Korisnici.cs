@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using MEDIPLAN.Models;
+
 
 namespace MEDIPLAN.Models;
 
@@ -21,7 +23,7 @@ public partial class Korisnici
 
     public int Uloga { get; set; }
 
-    public string QrKod { get; set; } = null!;
+    public string? QrKod { get; set; }
 
     public int Odjel { get; set; }
 
@@ -29,8 +31,13 @@ public partial class Korisnici
 
     public string? PhotoFileName { get; set; }
 
+    public string? VerificationToken { get; set; }
+
+    public bool IsVerified { get; set; }
+
     public virtual MedicinskeUsluge? MedicinskaUsluga { get; set; }
 
     public virtual ICollection<Termini> TerminiDoktor { get; set; } = new List<Termini>();
+
     public virtual ICollection<Termini> TerminiPacijent { get; set; } = new List<Termini>();
 }

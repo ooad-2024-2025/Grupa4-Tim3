@@ -12,7 +12,7 @@ namespace MEDIPLAN.Data
 
         public DbSet<Korisnici> Korisnici { get; set; }
         public DbSet<Termini> Termini { get; set; }
-        public DbSet<Recenzije> Recenzije { get; set; }
+        public DbSet<Recenzija> Recenzije { get; set; }
         public DbSet<HistorijaNalaza> HistorijaNalaza { get; set; }
         public DbSet<MedicinskeUsluge> MedicinskeUsluge { get; set; }
         public DbSet<Usluge> Usluge { get; set; }
