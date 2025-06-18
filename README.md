@@ -24,25 +24,8 @@ Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeć
 
 Ovo je lista username-a doktora iz baze podataka MediPlan projekta:
 
-**Sifra svakog:** password1234
-- doktor_im_1  
-- doktor_im_2  
-- doktor_kr_1  
-- doktor_kr_2  
-- doktor_of_1  
-- doktor_of_2  
-- doktor_de_1  
-- doktor_de_2  
-- doktor_en_1  
-- doktor_en_2  
-- doktor_gi_1  
-- doktor_gi_2  
-- doktor_ne_1  
-- doktor_ne_2  
-- doktor_ra_1  
-- doktor_ra_2  
-- doktor_la_1  
-- doktor_la_2  
+**Sifra svakog:** password123
+- doktor_im_1   
 ---
 ## Konekcijski stringovi za bazu
 
