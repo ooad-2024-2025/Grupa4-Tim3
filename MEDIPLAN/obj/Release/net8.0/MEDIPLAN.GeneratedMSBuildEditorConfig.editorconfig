@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXEZvcm1hTmFsYXphLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Doktor/Notifikacije.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXE5vdGlmaWthY2lqZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Doktor/Recenzije.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXFJlY2VuemlqZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,12 +96,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2x1Z2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/NasTim/Detalji.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFzVGltXERldGFsamkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/NasTim/Tim.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmFzVGltXFRpbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Profil/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Recenzije/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZW56aWplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Recenzije/OstaviRecenziju.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZW56aWplXE9zdGF2aVJlY2VuemlqdS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/WIN10/Desktop/novi/Grupa4-Tim3/MEDIPLAN/Views/Shared/Error.cshtml]

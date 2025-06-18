@@ -94,6 +94,16 @@ namespace MEDIPLAN.Controllers
             return PhysicalFile(putanja, contentType, naziv);
         }
 
+        public IActionResult Notifikacije()
+        {
+            int? doktorId = HttpContext.Session.GetInt32("KorisniciId");
+            string? uloga = HttpContext.Session.GetString("Uloga");
+
+            if (doktorId == null || uloga != ((int)Uloga.Doktor).ToString())
+                return RedirectToAction("Login", "Account");
+
+            return View(); // Prazan view za sada
+        }
 
     }
 }
