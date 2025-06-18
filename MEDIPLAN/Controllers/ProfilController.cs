@@ -85,6 +85,39 @@ namespace MEDIPLAN.Controllers
 
 
         [HttpPost]
+        public async Task<IActionResult> OtkaziTermini(int Terminid)
+        {
+            int? pacijentId = HttpContext.Session.GetInt32("KorisniciId");
+
+            if (pacijentId == null)
+            {
+                TempData["Greska"] = "Morate biti prijavljeni.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            var termin = await _context.Termini
+                .FirstOrDefaultAsync(t => t.Id == Terminid && t.PacijentId == pacijentId);
+
+            if (termin == null)
+            {
+                TempData["Greska"] = "Termin nije pronađen.";
+                return RedirectToAction("Index", "Profil");
+            }
+
+            if ((termin.DatumVrijemePocetak - DateTime.Now).TotalHours < 24)
+            {
+                TempData["Greska"] = "Termin se ne može otkazati unutar 24 sata.";
+                return RedirectToAction("Index", "Profil");
+            }
+
+            _context.Termini.Remove(termin);
+            await _context.SaveChangesAsync();
+
+            TempData["Poruka"] = "Termin je uspješno otkazan.";
+            return RedirectToAction("Index", "Profil");
+        }
+
+        [HttpPost]
         public async Task<IActionResult> PreuzmiQrPdf()
         {
             try
