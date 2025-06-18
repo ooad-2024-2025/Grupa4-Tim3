@@ -1,16 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
 namespace MEDIPLAN.Models
 {
     public class Notifikacije
     {
         public int Id { get; set; }
         public int DoktorId { get; set; }
-        public string Poruka { get; set; } = null!;
-        public DateTime VrijemeKreiranja { get; set; }
-        public bool Procitano { get; set; }
+        public string Poruka { get; set; } = string.Empty; 
 
-        [ForeignKey("DoktorId")]
-        public virtual Korisnici Doktor { get; set; } = null!;
+        public Korisnici? Doktor { get; set; } 
     }
 }

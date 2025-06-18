@@ -153,17 +153,6 @@ namespace MEDIPLAN.Controllers
                     _context.Termini.Add(noviTermin);
                     await _context.SaveChangesAsync();
 
-                    // 🔔 Dodavanje notifikacije doktoru
-                    var notifikacija = new Notifikacije
-                    {
-                        DoktorId = model.DoktorId,
-                        Poruka = $"Pacijent je zakazao termin za {pocetakTermina:dd.MM.yyyy HH:mm}.",
-                        VrijemeKreiranja = DateTime.Now
-                    };
-
-                    _context.Notifikacije.Add(notifikacija);
-                    await _context.SaveChangesAsync();
-
                     await transaction.CommitAsync();
 
                     TempData["Poruka"] = model.Id > 0 ? "Termin je uspješno izmijenjen." : "Termin je uspješno zakazan.";

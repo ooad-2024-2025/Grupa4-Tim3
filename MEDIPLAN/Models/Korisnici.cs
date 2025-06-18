@@ -34,7 +34,6 @@ public partial class Korisnici
     public string? VerificationToken { get; set; }
 
     public bool IsVerified { get; set; }
-    public virtual ICollection<Notifikacije> Notifikacije { get; set; } = new List<Notifikacije>();
 
 
     public virtual MedicinskeUsluge? MedicinskaUsluga { get; set; }
