@@ -1,7 +1,29 @@
-﻿@{
+﻿@model List<MEDIPLAN.Models.Notifikacije>
+
+@{
     ViewData["Title"] = "Notifikacije";
+    Layout = "_LayoutDoktor";
 }
 
-<h2>Notifikacije</h2>
+<div class="container mt-5">
+    <h2 class="text-primary text-center mb-4">Notifikacije</h2>
+    <hr class="w-50 mx-auto" />
 
-<p>Ovdje će biti prikazane notifikacije za doktora.</p>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Trenutno nema notifikacija.
+        </div>
+    }
+    else
+    {
+        <ul class="list-group shadow">
+            @foreach (var notifikacija in Model)
+            {
+                <li class="list-group-item">
+                    🔔 @notifikacija.Poruka
+                </li>
+            }
+        </ul>
+    }
+</div>

@@ -3,10 +3,9 @@ using MEDIPLAN.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
-using System;
 
 namespace MEDIPLAN.Controllers
 {
@@ -153,6 +152,21 @@ namespace MEDIPLAN.Controllers
                     _context.Termini.Add(noviTermin);
                     await _context.SaveChangesAsync();
 
+                    
+                    var doktor = await _context.Korisnici.FindAsync(model.DoktorId);
+                    if (doktor != null)
+                    {
+                        var notifikacija = new Notifikacije
+                        {
+                            DoktorId = doktor.Id,
+                            Poruka = $"Zakazan novi termin sa pacijentom {HttpContext.Session.GetString("Username")} za {pocetakTermina:dd.MM.yyyy. HH:mm} na lokaciji {((Lokacija)model.Lokacija)}"
+
+                        };
+
+                        _context.Notifikacije.Add(notifikacija);
+                        await _context.SaveChangesAsync();
+                    }
+
                     await transaction.CommitAsync();
 
                     TempData["Poruka"] = model.Id > 0 ? "Termin je uspješno izmijenjen." : "Termin je uspješno zakazan.";
@@ -161,7 +175,7 @@ namespace MEDIPLAN.Controllers
                 catch (Exception ex)
                 {
                     await transaction.RollbackAsync();
-                    TempData["Greska"] = $"Došlo je do greške prilikom obrade zahtjeva: {ex.Message}";
+                    TempData["Greska"] = $"Greška: {ex.Message}";
                     return RedirectToAction("Index", "Profil");
                 }
             }

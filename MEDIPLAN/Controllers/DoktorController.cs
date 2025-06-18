@@ -102,8 +102,14 @@ namespace MEDIPLAN.Controllers
             if (doktorId == null || uloga != ((int)Uloga.Doktor).ToString())
                 return RedirectToAction("Login", "Account");
 
-            return View(); // Prazan view za sada
+            var notifikacije = _context.Notifikacije
+                .Where(n => n.DoktorId == doktorId)
+                .OrderByDescending(n => n.Id)
+                .ToList();
+
+            return View(notifikacije);
         }
+
 
     }
 }
