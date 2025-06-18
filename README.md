@@ -34,7 +34,7 @@ Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeć
 
 ## Link za aplikaciju
 
-- **URL:** [http://amilaje-001-site1.qtempurl.com/](http://amilaje-001-site1.qtempurl.com/)
+- **URL:** [http://amilaje-001-site1.qtempurl.com/]http://amilaje-001-site1.qtempurl.com/
 - **Privremeni Username:** 11248662  
 - **Privremeni Password:** 60-dayfreetrial
 
