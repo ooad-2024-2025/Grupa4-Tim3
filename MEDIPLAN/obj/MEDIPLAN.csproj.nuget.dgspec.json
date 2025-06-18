@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Harun\\Desktop\\OOADG4T3\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {}
+    "C:\\Users\\Korisnik\\Documents\\GitHub\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Harun\\Desktop\\OOADG4T3\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {
+    "C:\\Users\\Korisnik\\Documents\\GitHub\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Documents\\GitHub\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
         "projectName": "MEDIPLAN",
-        "projectPath": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
-        "packagesPath": "C:\\Users\\Harun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Harun\\Desktop\\OOADG4T3\\Grupa4-Tim3\\MEDIPLAN\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Documents\\GitHub\\Grupa4-Tim3\\MEDIPLAN\\MEDIPLAN.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Documents\\GitHub\\Grupa4-Tim3\\MEDIPLAN\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Harun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -110,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
