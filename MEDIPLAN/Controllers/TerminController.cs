@@ -97,7 +97,6 @@ namespace MEDIPLAN.Controllers
 
             var pocetakTermina = model.Datum ?? throw new InvalidOperationException("Datum termina nije definisan.");
 
-            // **VALIDACIJA - nema nedjelje**
             if (pocetakTermina.DayOfWeek == DayOfWeek.Sunday)
             {
                 ModelState.AddModelError("Datum", "Nedjelja je neradni dan, molimo izaberite drugi datum.");
@@ -107,7 +106,6 @@ namespace MEDIPLAN.Controllers
 
             var krajTermina = pocetakTermina.AddHours(1);
 
-            // Provjeri da li je termin zauzet
             bool terminZauzet = await _context.Termini
                 .AnyAsync(t => t.DoktorId == model.DoktorId &&
                               t.Id != model.Id &&
@@ -153,6 +151,17 @@ namespace MEDIPLAN.Controllers
                     };
 
                     _context.Termini.Add(noviTermin);
+                    await _context.SaveChangesAsync();
+
+                    // 🔔 Dodavanje notifikacije doktoru
+                    var notifikacija = new Notifikacije
+                    {
+                        DoktorId = model.DoktorId,
+                        Poruka = $"Pacijent je zakazao termin za {pocetakTermina:dd.MM.yyyy HH:mm}.",
+                        VrijemeKreiranja = DateTime.Now
+                    };
+
+                    _context.Notifikacije.Add(notifikacija);
                     await _context.SaveChangesAsync();
 
                     await transaction.CommitAsync();
