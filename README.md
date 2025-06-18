@@ -13,25 +13,26 @@
 
 Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeće:
 
-### Testni korisnik (Pacijent)
+## ULOGE: 
 
+### 1. Pacijent
 - **Ime i prezime:** Random Osoba  
-- **Email:** `randomosoba86@gmail.com`  
-- **Lozinka:** `ooadprojekat2025`  
-- **Uloga:** Pacijent
+- **Email:** randomosoba86@gmail.com
+- **Lozinka:** ooadprojekat2025
 
-### Doktor (username)
-- doktor_im_1 
+### 2. Doktor 
+- **Username:** doktor_im_1
+- **Sifra:** password123  
 
+### 3.Gost
 
-**Sifra:** password123  
 ---
-## Konekcioni string za bazu
+## Podaci za pristup bazi
 
-> **Lozinka baze:** `ooadprojekat2025`
+- **Username:** ababic4@etf.unsa.ba
+- **Lozinka baze:** ooadprojekat2025
 
-### ASP.NET (.NET Core / EF Core)
-
+### Konekcioni string
 ```json
 "ConnectionStrings": {
   "DefaultConnection": "Data Source=SQL6032.site4now.net;Initial Catalog=db_aba416_mediplan;User Id=db_aba416_mediplan_admin;Password=ooadprojekat2025"
