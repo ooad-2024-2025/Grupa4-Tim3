@@ -32,10 +32,12 @@ Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeć
 - **Username:** ababic4@etf.unsa.ba
 - **Lozinka baze:** ooadprojekat2025
 
-## Link za aplikaciju 
+## Link za aplikaciju
 
-- **URL Username:** 11248662  
-- **URL Password:** 60-dayfreetrial  
+- **URL:** [http://amilaje-001-site1.qtempurl.com/](http://amilaje-001-site1.qtempurl.com/)
+- **Privremeni Username:** 11248662  
+- **Privremeni Password:** 60-dayfreetrial
+
 
 ---
 
