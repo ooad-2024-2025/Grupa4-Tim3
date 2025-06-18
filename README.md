@@ -32,8 +32,16 @@ Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeć
 - **Username:** ababic4@etf.unsa.ba
 - **Lozinka baze:** ooadprojekat2025
 
+## Link za aplikaciju 
+
+- **URL Username:** 11248662  
+- **URL Password:** 60-dayfreetrial  
+
+---
+
 ### Konekcioni string
 ```json
 "ConnectionStrings": {
   "DefaultConnection": "Data Source=SQL6032.site4now.net;Initial Catalog=db_aba416_mediplan;User Id=db_aba416_mediplan_admin;Password=ooadprojekat2025"
 }
+
