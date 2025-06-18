@@ -20,14 +20,13 @@ Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeć
 - **Lozinka:** `ooadprojekat2025`  
 - **Uloga:** Pacijent
 
-### Doktori (username)
+### Doktor (username)
+- doktor_im_1 
 
-Ovo je lista username-a doktora iz baze podataka MediPlan projekta:
 
-**Sifra svakog:** password123
-- doktor_im_1   
+**Sifra:** password123  
 ---
-## Konekcijski stringovi za bazu
+## Konekcioni string za bazu
 
 > **Lozinka baze:** `ooadprojekat2025`
 
