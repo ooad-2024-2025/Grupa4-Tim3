@@ -3,41 +3,54 @@
 
 ![logo](https://github.com/user-attachments/assets/a95bea97-abe7-438d-92fc-48fb5c378c6e)
 
-<!-- O ROJEKTU -->
 ## O projektu
 
-
-**MediPlan** je sistem za upravljanje medicinskom klinikom. Cilj sistema je digitalizacija i optimizacija procesa u radu klinike, uz jednostavno i intuitivno radno okruženje za korisnika, medicinsko osoblje, tako i za pacijente.
-
-Sistem omogućava:
-
-Registraciju i autentifikaciju korisnika (pacijenti i osoblje)
-Zakazivanje, izmjenu i otkazivanje termina
-Slanje email notifikacija o zakazanim pregledima
-QR kod prijavu pacijenata pri dolasku na pregled
-Upravljanje pacijentima, pregledima i ordinacijama
-Unos i prikaz medicinskih nalaza
-Ostavljanje recenzija i povratnih informacija
-Prikaz statistika o radu klinike
-
-
-<p align="right">(<a href="#readme-top">nazad na početak</a>)</p>
-
-
-<details>
-  <summary><strong>Sadržaj</strong></summary>
-  <ol>
-    <li><a href="#o-projektu">O projektu</a></li>
-    <li>
-      <a href="#platforme/i/alati">Platforme i alati</a>
-    </li>
-    
-  </ol>
-</details>
+**MediPlan** je sistem za upravljanje radom medicinske klinike. Omogućava jednostavno zakazivanje termina, upravljanje pacijentima i doktorima, unos medicinskih nalaza, te pruža podršku za recenzije i obavještenja putem emaila.
 
 ---
-## Platforme i alati
-Projekt je izgrađen korištenjem:
-- C# (.NET)
 
+## Testni podaci za pristup 
+
+Ako je potrebno unijeti podatke prilikom pristupa aplikaciji, koristite sljedeće:
+
+### Testni korisnik (Pacijent)
+
+- **Ime i prezime:** Random Osoba  
+- **Email:** `randomosoba86@gmail.com`  
+- **Lozinka:** `ooadprojekat2025`  
+- **Uloga:** Pacijent
+
+### Doktori (username)
+
+Ovo je lista username-a doktora iz baze podataka MediPlan projekta:
+
+**Sifra svakog:** password1234
+- doktor_im_1  
+- doktor_im_2  
+- doktor_kr_1  
+- doktor_kr_2  
+- doktor_of_1  
+- doktor_of_2  
+- doktor_de_1  
+- doktor_de_2  
+- doktor_en_1  
+- doktor_en_2  
+- doktor_gi_1  
+- doktor_gi_2  
+- doktor_ne_1  
+- doktor_ne_2  
+- doktor_ra_1  
+- doktor_ra_2  
+- doktor_la_1  
+- doktor_la_2  
 ---
+## Konekcijski stringovi za bazu
+
+> **Lozinka baze:** `ooadprojekat2025`
+
+### ASP.NET (.NET Core / EF Core)
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Data Source=SQL6032.site4now.net;Initial Catalog=db_aba416_mediplan;User Id=db_aba416_mediplan_admin;Password=ooadprojekat2025"
+}
